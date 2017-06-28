@@ -1,0 +1,94 @@
+@import './mixins';
+@import './variables';
+
+.preview {
+    &-link {
+        vertical-align: top;
+        color: inherit;
+        text-decoration: none;
+        white-space: normal;
+
+        &:hover,
+        &:focus {
+            .preview-title::after {
+                transform: scale(1, 1);
+            }
+        }
+    }
+
+    &-subtitle {
+        display: block;
+        font-size: 0.88888rem;
+        line-height: 1.1;
+        letter-spacing: 0.075rem;
+        text-transform: uppercase;
+
+        @include breakpoint-min(width, $md) {
+            font-size: 0.75rem;
+        }
+    }
+
+    &-title {
+        display: inline-flex;
+        position: relative;
+        max-width: 100%;
+        padding-bottom: $grid-gutter-width / 8;
+        font-size: 1.25rem;
+        font-weight: 700;
+
+        &-label {
+            flex: 1 1 auto;
+            vertical-align: middle;
+        }
+
+        &-arrow {
+            flex: 0 0 auto;
+            margin-left: $grid-gutter-width / 6;
+            vertical-align: middle;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border: 1px solid;
+            transform: scale(0, 1);
+            transform-origin: 0 50%;
+            transition: transform $transition-duration-base $transition-bezier;
+        }
+    }
+}
+
+@include breakpoint-min(width, $md) {
+    .preview {        
+        &-image {
+            width: percentage(8/12);
+            max-width: 500px;
+            height: auto;
+        }
+
+        &-info {
+            display: inline-block;
+            position: relative;
+            max-width: calc(#{percentage(4/12)} - #{$grid-gutter-width});
+            margin-left: $grid-gutter-width;
+        }
+
+        &-subtitle {
+            &::before {
+                content: '';
+                display: inline-block;
+                top: 0.7rem;
+                width: $grid-gutter-width;
+                margin-top: -1px;
+                margin-right: $grid-gutter-width * 0.25;
+                margin-left: -$grid-gutter-width * 1.25;
+                border-top: 1px solid;
+                vertical-align: middle;
+            }
+        }
+    }
+}

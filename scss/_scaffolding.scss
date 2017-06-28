@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $font-size-base;
+
+    @include breakpoint-min(width, $xs) {
+        font-size: calc(#{$font-size-base} + 4 * ((100vw - #{$xs}) / #{($xl - $xs) / 1rem * ($font-size-base / 1px)}));
+    }
+    @include breakpoint-min(width, $xl) {
+        font-size: $font-size-base + 4;
+    }
+}
+
+body {
+    background-color: $body-bg;
+    color: $text-color;
+    font-family: $font-family-base;
+    font-size: 1rem;
+}
+
+.body-content {
+    @include breakpoint-min(width, $md) {
+        margin-left: $header-width-md;
+    }
+}
+
+.page-content {
+    padding: ($grid-gutter-width * 1.5 + $navbar-height) ($grid-gutter-width * 0.5) ($grid-gutter-width * 1.5);
+
+    @include breakpoint-min(width, $md) {
+        padding: $grid-gutter-width * 2;
+    }
+}
+
+.content-set {
+    > * + * {
+        margin-top: $grid-gutter-width * 1.5;
+
+        @include breakpoint-min(width, $md) {
+            margin-top: $grid-gutter-width * 2;
+        }
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+svg {
+    color: inherit;
+    fill: currentColor;
+    width: 1rem;
+    height: 1rem;
+    
+    * {
+        pointer-events: none;
+    }
+}

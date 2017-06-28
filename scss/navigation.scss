@@ -1,0 +1,143 @@
+@import './mixins';
+@import './variables';
+
+.page-nav-toggle {
+    height: $navbar-height;
+    padding: 0;
+    float: right;
+    background-color: transparent;
+    border: 0;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+
+    @include breakpoint-min(width, $md) {
+        display: none;
+    }
+
+    &:focus {
+        outline: 2px solid $btn-focus-outline;
+    }
+
+    img {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 1.5rem;
+        transform: translate(50%, -50%);
+    }
+
+    span {
+        display: inline-block;
+        position: relative;
+        padding-left: $grid-gutter-width / 2;
+        padding-right: $grid-gutter-width / 2;
+    }
+
+    .close {
+        margin-right: $grid-gutter-width / 2;
+    }
+}
+
+@include breakpoint-min(width, $md) {
+    .page-nav {
+        display: block !important;
+        transform: none !important;
+        font-size: 0.8rem;
+
+        &-overlay {
+            display: none !important;
+        }
+    }
+}
+
+@include breakpoint-max(width, $md - 1) {
+    .page-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: ($grid-gutter-width * 1.5 + $navbar-height) ($grid-gutter-width * 0.5) ($grid-gutter-width * 1.5);
+        z-index: 1024;
+        background-color: $body-bg;
+        font-size: 1.2rem;
+        pointer-events: none;
+        transform: translate(0, -100%);
+
+        &-open {
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        &-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            pointer-events: none;
+        }
+    }
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &-item {
+        display: block;
+        position: relative;
+        padding-top: $grid-gutter-width / 3;
+        padding-bottom: $grid-gutter-width / 3;
+        color: inherit;
+        font-weight: 700;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        @include breakpoint-min(width, $md) {
+            padding-top: $grid-gutter-width / 6;
+            padding-bottom: $grid-gutter-width / 6;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: -$grid-gutter-width;
+            width: $grid-gutter-width * 0.75;
+            margin-top: -1px;
+            border: 1px solid;
+            transform: translate(-100%, 0);
+            transition: transform $transition-duration-base $transition-bezier;
+        }
+
+        &:hover,
+        &:focus {
+            &::before {
+                transform: translate(-50%, 0);
+            }
+        }
+
+        &.active {
+            &::before {
+                transform: translate(0, 0);
+            }
+        }
+    }
+}
+
+@include breakpoint-max(width, $md - 1) {
+    html.menu-open {
+        &,
+        body {
+            overflow: hidden;
+        }
+    }
+}

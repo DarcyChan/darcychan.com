@@ -1,0 +1,15 @@
+//////////////////////////////////////////////////
+// Breakpoints
+//////////////////////////////////////////////////
+
+@mixin breakpoint-min($dir, $point) {
+	@media (min-#{$dir}: $point) { @content; }
+}
+
+@mixin breakpoint-max($dir, $point) {
+	@media (max-#{$dir}: $point) { @content; }
+}
+
+@mixin breakpoint-range($dir, $from, $to) {
+	@media (min-#{$dir}: $from) and (max-#{$dir}: $to) { @content; }
+}

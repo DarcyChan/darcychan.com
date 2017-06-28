@@ -1,0 +1,124 @@
+@import './mixins';
+@import './variables';
+
+//////////////////////////////////////////////////
+// Page Header
+//////////////////////////////////////////////////
+
+@include breakpoint-min(width, $md) {
+    .page-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: $header-width-md;
+        height: 100%;
+        padding-left: $grid-gutter-width;
+        padding-right: $grid-gutter-width;
+        border-right: 1px solid $body-border;
+    }
+}
+
+
+
+//////////////////////////////////////////////////
+// Brand
+//////////////////////////////////////////////////
+
+.brand {
+    &-title {
+        display: block;
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: 0.05em;
+    }
+
+    &-subtitle {
+        display: block;
+        opacity: 0.75;
+        font-size: 0.6em;
+        font-weight: 400;
+    }
+}
+
+
+
+//////////////////////////////////////////////////
+// Page Brand
+//////////////////////////////////////////////////
+
+.page-brand {
+    color: inherit;
+    text-decoration: none;
+
+    &-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $navbar-height;
+        margin: 0;
+        padding-left: $grid-gutter-width / 2;
+        z-index: 1025;
+        background-color: rgba($body-bg, 0.95);
+        border-bottom: 1px solid $body-border;
+        font-size: 0.85rem;
+        font-weight: 400;
+        line-height: $navbar-height;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+    }
+
+    &-title,
+    &-subtitle {
+        display: none;
+    }
+
+    &-category {
+        position: relative;
+        margin-left: $grid-gutter-width / 2;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: -$grid-gutter-width / 4;
+            width: 1px;
+            height: 1.1rem;
+            background-color: $body-border;
+            vertical-align: middle;
+            pointer-events: none;
+            transform: translate(0, -50%);
+        }
+    }
+}
+
+@include breakpoint-min(width, $md) {
+    .page-brand {
+        &-wrapper {
+            position: relative;
+            width: auto;
+            height: auto;
+            margin: ($grid-gutter-width * 2) 0 $grid-gutter-width;
+            padding: 0;
+            border-bottom: 0;
+            font-size: 1.25rem;
+            line-height: inherit;
+            letter-spacing: 0;
+        }
+
+        &-title,
+        &-subtitle {
+            display: block;
+        }
+
+        &-subtitle {
+            text-transform: none;
+        }
+
+        &-abbr,
+        &-category {
+            display: none;
+        }
+    }
+}

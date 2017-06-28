@@ -1,0 +1,48 @@
+//////////////////////////////////////////////////
+// Colours
+//////////////////////////////////////////////////
+
+// Branding
+
+// Scaffolding
+$body-bg: #fbfcfa;
+$body-border: #ddd;
+
+// Typography
+$text-color: #222;
+
+// Buttons
+$btn-focus-outline: tomato;
+
+
+
+
+//////////////////////////////////////////////////
+// Settings
+//////////////////////////////////////////////////
+
+// Breakpoints
+$xs: 30rem; // 480px @ 16px
+$sm: 48rem; // 768px @ 16px
+$md: 62rem; // 992px @ 16px
+$lg: 75rem; // 1200px @ 16px
+$xl: 100rem; // 1600px @ 16px
+
+// Tyopography
+$font-family-base: 'Nunito Sans', Arial, Helvetica, sans-serif;
+$font-family-heading: $font-family-base;
+
+// Font Sizes
+$font-size-base: 15px;
+
+// Scaffolding
+$grid-gutter-width: 2.5rem;
+
+// Transitions
+$transition-duration-base: 175ms;
+$transition-duration-long: 300ms;
+$transition-bezier: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+// Header
+$navbar-height: 3rem;
+$header-width-md: 18rem;
