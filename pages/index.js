@@ -1,7 +1,6 @@
 import React from 'react'
-import {Motion, spring} from 'react-motion';
 
-import {getArtworksFromRoute} from 'utils/artwork';
+import { getArtworksFromRoute } from 'utils/artwork';
 import { config } from 'config';
 import { PageTitle, PageSubtitle, PageContent } from 'components/common';
 import PreviewList from 'components/previewList';

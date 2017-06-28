@@ -3,7 +3,6 @@ import sortBy from 'lodash/sortBy';
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { config } from 'config'
-import { Motion, spring } from 'react-motion';
 
 import Header from 'components/header'
 
