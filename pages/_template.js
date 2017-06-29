@@ -22,22 +22,30 @@ export default class Template extends React.Component {
     }
 
     handleMenuToggle(toggle) {
-        const scrollEl = document.getElementsByTagName('html')[0];
-        if (toggle) {
-            if (toggle === 'open') {
-                this.setState({ menuVisible: true });
+        // Only handle the menu toggle for devices < 62rem
+        if (window.outerWidth < (62 * 15)) {
+            const scrollEl = document.getElementsByTagName('html')[0];
+            if (toggle) {
+                if (toggle === 'open') {
+                    this.setState({ menuVisible: true });
+                    scrollEl.classList.add('menu-open');
+                }
+                else if (toggle === 'collapse') {
+                    this.setState({ menuVisible: false });
+                    scrollEl.classList.remove('menu-open');
+                }
             }
-            else if (toggle === 'collapse') {
+            else if (this.state.menuVisible) {
                 this.setState({ menuVisible: false });
+                scrollEl.classList.remove('menu-open');
+            } else {
+                this.setState({ menuVisible: true });
+                scrollEl.classList.add('menu-open');
             }
         }
-        else if (this.state.menuVisible) {
-            this.setState({ menuVisible: false });
-            scrollEl.classList.remove('menu-open');
-        } else {
-            this.setState({ menuVisible: true });
-            scrollEl.classList.add('menu-open');
-        }
+
+        // Blur active element to remove focus styles after click
+        document.activeElement.blur();
     }
 
     render() {

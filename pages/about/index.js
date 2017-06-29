@@ -19,11 +19,20 @@ export default class Projects extends React.Component {
                 <PageTitle>
                     About Me
                 </PageTitle>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Proin ut interdum augue. Sed facilisis sapien a eros volutpat porta. 
-                    Integer semper facilisis mattis. Nulla a elementum urna.
-                </p>
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Proin ut interdum augue. Sed facilisis sapien a eros volutpat porta. 
+                        Integer semper facilisis mattis. Nulla a elementum urna.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Proin ut interdum augue.
+                        {' '}
+                        <a href="#">Sed facilisis</a> sapien a eros volutpat porta. 
+                        Integer semper facilisis mattis. Nulla a elementum urna.
+                    </p>
+                </div>
             </PageContent>
         );
     }

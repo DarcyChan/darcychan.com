@@ -2,12 +2,14 @@
 @import './variables';
 
 .page-nav-toggle {
+    position: relative;
     height: $navbar-height;
     padding: 0;
     float: right;
     background-color: transparent;
-    border: 0;
+    border: 2px solid transparent;
     font-weight: 700;
+    line-height: initial;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
 
@@ -15,8 +17,17 @@
         display: none;
     }
 
+    &.opened .open,
+    &.closed .close {
+        position: absolute;
+        top: 50%;
+        right: -125%;
+        transform: translate(0, -50%);
+    }
+
     &:focus {
-        outline: 2px solid $btn-focus-outline;
+        border-color: $btn-focus-border;
+        outline: none;
     }
 
     img {
@@ -30,8 +41,10 @@
     span {
         display: inline-block;
         position: relative;
+        right: 0;
         padding-left: $grid-gutter-width / 2;
         padding-right: $grid-gutter-width / 2;
+        transition: right $transition-duration-long $transition-bezier;
     }
 
     .close {
@@ -78,6 +91,7 @@
             right: 0;
             bottom: 0;
             left: 0;
+            z-index: 1023;
             background-color: rgba(0, 0, 0, 0.8);
             pointer-events: none;
         }

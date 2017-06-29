@@ -44,20 +44,18 @@ export default class Header extends React.Component {
                             {currentCategoryLink.data.title}
                         </Link>}
                     {menuVisible && 
-                        <span className="page-brand-category">
+                        <span className="page-brand-category disabled">
                             Menu
                         </span>}
-                    <button className="page-nav-toggle" type="button" onClick={() => handleMenuToggle()}>
-                        {menuVisible &&                        
-                            <span className="close">
-                                Close
-                                <Icon glyph={Glyph.Close} />
-                            </span>}
-                        {!menuVisible &&   
-                            <span className="menu">
-                                Menu
-                                <Icon glyph={Glyph.Menu} />
-                            </span>}
+                    <button className={`page-nav-toggle ${menuVisible ? 'opened' : 'closed'}`} type="button" onClick={() => handleMenuToggle()}>                       
+                        <span className="close">
+                            Close
+                            <Icon glyph={Glyph.Close} />
+                        </span> 
+                        <span className="open">
+                            Menu
+                            <Icon glyph={Glyph.Menu} />
+                        </span>
                     </button>
                 </h1>
                 

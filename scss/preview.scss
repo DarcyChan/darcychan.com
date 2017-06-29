@@ -3,21 +3,59 @@
 
 .preview {
     &-link {
-        vertical-align: top;
         color: inherit;
         text-decoration: none;
         white-space: normal;
 
         &:hover,
         &:focus {
+            outline: none;
+
+            .preview-image-wrapper::before {
+                top: -$grid-gutter-width / 4;
+                right: -$grid-gutter-width / 4;
+                bottom: -$grid-gutter-width / 4;
+                left: -$grid-gutter-width / 4;
+                border-color: $text-color;
+            }
+
             .preview-title::after {
                 transform: scale(1, 1);
             }
         }
     }
 
+    &-image {
+        &-wrapper {
+            display: block;
+            position: relative;
+            border: 1px solid $body-border;
+            line-height: 0;
+            text-align: center;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                border: 2px solid transparent;
+                transition: all $transition-duration-base $transition-bezier;
+            }
+        }
+    }
+
+    &-info {
+        display: inline-block;
+        margin-top: $grid-gutter-width / 2;
+        vertical-align: top;
+    }
+
     &-subtitle {
         display: block;
+        position: relative;
         font-size: 0.88888rem;
         line-height: 1.1;
         letter-spacing: 0.075rem;
@@ -30,21 +68,25 @@
 
     &-title {
         display: inline-flex;
+        align-items: flex-end;
         position: relative;
         max-width: 100%;
         padding-bottom: $grid-gutter-width / 8;
         font-size: 1.25rem;
         font-weight: 700;
+        overflow-wrap: break-word;
+        hyphens: auto;
 
         &-label {
             flex: 1 1 auto;
-            vertical-align: middle;
         }
 
         &-arrow {
             flex: 0 0 auto;
+            width: 1.25em;
+            height: 1.25em;
+            margin-bottom: 0.05em;
             margin-left: $grid-gutter-width / 6;
-            vertical-align: middle;
         }
 
         &::after {
@@ -62,18 +104,34 @@
     }
 }
 
-@include breakpoint-min(width, $md) {
+@include breakpoint-min(width, $sm) {
     .preview {        
+        &-link {
+            &:hover,
+            &:focus {
+                .preview-image-wrapper::before {
+                    top: -$grid-gutter-width / 3;
+                    right: -$grid-gutter-width / 3;
+                    bottom: -$grid-gutter-width / 3;
+                    left: -$grid-gutter-width / 3;
+                }
+            }
+        }
+
         &-image {
-            width: percentage(8/12);
-            max-width: 500px;
-            height: auto;
+            &-wrapper {
+                display: inline-block;
+                width: percentage(8/12);
+                max-width: 500px;
+                height: auto;
+            }
         }
 
         &-info {
             display: inline-block;
             position: relative;
             max-width: calc(#{percentage(4/12)} - #{$grid-gutter-width});
+            margin-top: 0;
             margin-left: $grid-gutter-width;
         }
 

@@ -5,8 +5,28 @@
 // Page Header
 //////////////////////////////////////////////////
 
-@include breakpoint-min(width, $md) {
-    .page-header {
+.page-header {
+    a {
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -$grid-gutter-width / 4;
+            bottom: 0;
+            left: -$grid-gutter-width / 4;
+            border: 2px solid transparent;
+        }
+
+        &:focus {
+            outline: none;
+
+            &::after {
+                border-color: $btn-focus-border;
+            }
+        }
+    }
+
+    @include breakpoint-min(width, $md) {
         position: fixed;
         top: 0;
         left: 0;
@@ -15,6 +35,13 @@
         padding-left: $grid-gutter-width;
         padding-right: $grid-gutter-width;
         border-right: 1px solid $body-border;
+
+        .page-brand {
+            &::after {
+                top: -$grid-gutter-width / 2;
+                bottom: -$grid-gutter-width / 2;
+            }
+        }
     }
 }
 
@@ -47,7 +74,10 @@
 //////////////////////////////////////////////////
 
 .page-brand {
+    display: inline-block;
+    position: relative;
     color: inherit;
+    line-height: inherit;
     text-decoration: none;
 
     &-wrapper {
@@ -95,6 +125,8 @@
 
 @include breakpoint-min(width, $md) {
     .page-brand {
+        display: block;
+
         &-wrapper {
             position: relative;
             width: auto;
@@ -120,5 +152,20 @@
         &-category {
             display: none;
         }
+    }
+}
+
+@include breakpoint-max(width, $md) {
+    .page-brand {
+        animation: brand-enter $transition-duration-long $transition-bezier;
+    }
+}
+
+@keyframes brand-enter {
+    from {
+        transform: translate(0, -100%);
+    }
+    to {
+        transform: translate(0, 0);
     }
 }

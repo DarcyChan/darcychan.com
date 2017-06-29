@@ -10,9 +10,11 @@ $body-border: #ddd;
 
 // Typography
 $text-color: #222;
+$link-color: #e74c3c;
+$link-hover-color: darken($link-color, 20%);
 
 // Buttons
-$btn-focus-outline: tomato;
+$btn-focus-border: $text-color;
 
 
 

@@ -11,8 +11,10 @@ export default class Preview extends React.Component {
         return (
             <div className="preview">
                 <Link className="preview-link" to={prefixLink(page.data.path)} {...props}>
-                    <img className="preview-image" src={ prefixLink(`${page.data.path}preview.png`) } alt="Preview" />
-                    <span className="preview-link preview-info">
+                    <span className="preview-image-wrapper" style={{backgroundColor: page.data.bgColor}}>
+                        <img className="preview-image" src={ prefixLink(`${page.data.path}preview.png`) } alt="Preview" />
+                    </span>
+                    <span className="preview-info">
                         <span className="preview-subtitle">
                             {page.data.category}
                         </span>
