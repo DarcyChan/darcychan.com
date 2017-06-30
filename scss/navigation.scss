@@ -111,12 +111,13 @@
         color: inherit;
         font-weight: 700;
         letter-spacing: 0.05rem;
+        line-height: 1;
         text-transform: uppercase;
         text-decoration: none;
 
         @include breakpoint-min(width, $md) {
-            padding-top: $grid-gutter-width / 6;
-            padding-bottom: $grid-gutter-width / 6;
+            padding-top: $grid-gutter-width / 4;
+            padding-bottom: $grid-gutter-width / 4;
         }
 
         &::before {
@@ -126,7 +127,7 @@
             top: 50%;
             left: -$grid-gutter-width;
             width: $grid-gutter-width * 0.75;
-            margin-top: -1px;
+            margin-top: -2px;
             border: 1px solid;
             transform: translate(-100%, 0);
             transition: transform $transition-duration-base $transition-bezier;

@@ -16,3 +16,16 @@ p {
         }
     }
 }
+
+.font-small {
+    font-size: 0.85em;
+}
+
+.small-label {
+    display: block;
+    margin-bottom: $grid-gutter-width / 8;
+    font-size: 0.85em;
+    font-weight: 700;
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PageTitle, PageContent } from 'components/common';
+import { PageTitle, PageContent, PageLead } from 'components/common';
 
 // Literal strings required for this to work
 exports.data = {
@@ -19,20 +19,11 @@ export default class Projects extends React.Component {
                 <PageTitle>
                     About Me
                 </PageTitle>
-                <div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Proin ut interdum augue. Sed facilisis sapien a eros volutpat porta. 
-                        Integer semper facilisis mattis. Nulla a elementum urna.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Proin ut interdum augue.
-                        {' '}
-                        <a href="#">Sed facilisis</a> sapien a eros volutpat porta. 
-                        Integer semper facilisis mattis. Nulla a elementum urna.
-                    </p>
-                </div>
+                <PageLead>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Proin ut interdum augue. Sed facilisis sapien a eros volutpat porta. 
+                    Integer semper facilisis mattis. Nulla a elementum urna.
+                </PageLead>
             </PageContent>
         );
     }

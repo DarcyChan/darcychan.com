@@ -1,0 +1,58 @@
+@import './mixins';
+@import './variables';
+
+.page-title {
+    margin: -0.25rem 0 0;
+    font-size: 3.25rem;
+    line-height: 1.1;
+    overflow-wrap: break-word;
+}
+
+.page-subtitle {
+    max-width: 20em;
+    margin: ($grid-gutter-width / 3) 0 0;
+    font-size: 1.75rem;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.page-title-label {
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+}
+
+.page-section {
+    &-flex {
+        @include breakpoint-min(width, $md) {
+            display: flex;
+        }
+    }
+}
+
+.page-lead {
+    margin-top: $grid-gutter-width / 2;
+}
+
+.swatch {
+    display: inline-flex;
+    flex-direction: column;
+    width: 5rem;
+    height: 5rem;
+    box-shadow: 0 0 ($grid-gutter-width / 8) 0 rgba(black, 0.25);
+
+    & + & {
+        margin-left: ($grid-gutter-width / 4);
+    }
+
+    &-color {
+        flex: 1 1 auto;
+    }
+
+    &-value {
+        flex: 0 0 auto;
+        background-color: #fff;
+        border-top: 1px solid $body-border;
+        font-size: 0.9em;
+        text-align: center;
+    }
+}

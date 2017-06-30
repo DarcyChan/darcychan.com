@@ -24,11 +24,11 @@ $btn-focus-border: $text-color;
 //////////////////////////////////////////////////
 
 // Breakpoints
-$xs: 30rem; // 480px @ 16px
-$sm: 48rem; // 768px @ 16px
-$md: 62rem; // 992px @ 16px
-$lg: 75rem; // 1200px @ 16px
-$xl: 100rem; // 1600px @ 16px
+$xs: 480px;
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;
+$xl: 1600px;
 
 // Tyopography
 $font-family-base: 'Nunito Sans', Arial, Helvetica, sans-serif;

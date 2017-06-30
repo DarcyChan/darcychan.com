@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import { getArtworksFromRoute } from 'utils/artwork';
+import { getArtworksFromRoute } from 'utils';
 import { config } from 'config';
 import { PageContent } from 'components/common';
 import PreviewList from 'components/previewList';

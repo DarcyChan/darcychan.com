@@ -26,12 +26,15 @@
     }
 
     &-image {
+        display: block;
+        max-width: calc(100% - #{$grid-gutter-width});
+        margin: ($grid-gutter-width / 2) auto;
+
         &-wrapper {
             display: block;
             position: relative;
             border: 1px solid $body-border;
             line-height: 0;
-            text-align: center;
 
             &::before {
                 content: '';
@@ -119,6 +122,8 @@
         }
 
         &-image {
+            max-width: calc(100% - #{$grid-gutter-width * 2});
+
             &-wrapper {
                 display: inline-block;
                 width: percentage(8/12);

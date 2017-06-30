@@ -1,6 +1,6 @@
 import React from 'react';
 
-import 'scss/pageTitle.scss';
+import 'scss/page.scss';
 import { PageTransition } from 'components/common';
 
 export default class PageContent extends React.Component {

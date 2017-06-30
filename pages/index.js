@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { getArtworksFromRoute } from 'utils/artwork';
+import { getArtworksFromRoute } from 'utils';
 import { config } from 'config';
 import { PageTitle, PageSubtitle, PageContent } from 'components/common';
 import PreviewList from 'components/previewList';
