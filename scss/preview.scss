@@ -54,6 +54,7 @@
         display: inline-block;
         margin-top: $grid-gutter-width / 2;
         vertical-align: top;
+        text-align: left;
     }
 
     &-subtitle {
@@ -77,6 +78,7 @@
         padding-bottom: $grid-gutter-width / 8;
         font-size: 1.25rem;
         font-weight: 700;
+        line-height: 1.25;
         overflow-wrap: break-word;
         hyphens: auto;
 
@@ -88,7 +90,7 @@
             flex: 0 0 auto;
             width: 1.25em;
             height: 1.25em;
-            margin-bottom: 0.05em;
+            margin-bottom: 0.1em;
             margin-left: $grid-gutter-width / 6;
         }
 

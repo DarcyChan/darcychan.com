@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 
 import { getArtworksFromRoute } from 'utils';
 import { config } from 'config';
-import { PageContent } from 'components/common';
+import { PageContent, PageTitle, PageLead, SmallLabel } from 'components/common';
 import PreviewList from 'components/previewList';
 
 // Literal strings required for this to work
@@ -21,8 +21,12 @@ export default class Projects extends React.Component {
         const page = route.page.data;
         const artworks = getArtworksFromRoute(route, 'project');
         return (
-            <PageContent>
+            <PageContent className="content-set">
                 <Helmet title={`${page.title} | ${config.siteTitle}`} />
+                <PageTitle>
+                    <SmallLabel className="page-title-label">Client</SmallLabel>
+                    Projects
+                </PageTitle>
                 <PreviewList page={page} artworks={artworks} />
             </PageContent>
         );

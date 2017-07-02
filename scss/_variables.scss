@@ -5,7 +5,7 @@
 // Branding
 
 // Scaffolding
-$body-bg: #fbfcfa;
+$body-bg: #fcfdfb;
 $body-border: #ddd;
 
 // Typography
@@ -38,7 +38,9 @@ $font-family-heading: $font-family-base;
 $font-size-base: 15px;
 
 // Scaffolding
+$grid-columns: 12;
 $grid-gutter-width: 2.5rem;
+$p-max-width: 30em;
 
 // Transitions
 $transition-duration-base: 175ms;

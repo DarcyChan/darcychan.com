@@ -1,2 +1,2 @@
-export { getArtworksFromRoute } from 'utils/artwork';
+export { getArtworksFromRoute, getNextArtwork } from 'utils/artwork';
 export { combineClassNames } from 'utils/classnames';

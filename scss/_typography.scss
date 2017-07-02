@@ -1,9 +1,10 @@
 @import './variables';
 
 p {
-    max-width: 30em;
+    max-width: $p-max-width;
 
     a {
+        display: inline-block;
         color: $link-color;
 
         &:hover,

@@ -31,6 +31,48 @@
 
 .page-lead {
     margin-top: $grid-gutter-width / 2;
+
+    &-extras {
+        margin-top: $grid-gutter-width;
+
+        > * + * {
+            margin-top: $grid-gutter-width / 2;
+        }
+
+        @media screen and (min-width: $sm) {
+            display: flex;
+            margin-top: $grid-gutter-width;
+
+            > * {
+                max-width: percentage(4/12);
+            }
+
+            > * + * {
+                margin-top: 0;
+                margin-left: $grid-gutter-width;
+            }
+        }
+    }
+}
+
+.page-footer {
+    margin-top: $grid-gutter-width * 1.5;
+    padding-top: $grid-gutter-width / 2;
+    border-top: 1px solid $body-border;
+    text-align: right;
+
+    @media screen and (min-width: $sm) {
+        margin-top: $grid-gutter-width * 2;
+        padding-top: $grid-gutter-width;
+    }
+
+    .preview-info {
+        max-width: none;
+    }
+
+    .preview-subtitle::before {
+        display: none;
+    }
 }
 
 .swatch {

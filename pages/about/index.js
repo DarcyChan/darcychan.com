@@ -20,9 +20,11 @@ export default class Projects extends React.Component {
                     About Me
                 </PageTitle>
                 <PageLead>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Proin ut interdum augue. Sed facilisis sapien a eros volutpat porta. 
-                    Integer semper facilisis mattis. Nulla a elementum urna.
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Proin ut interdum augue. Sed facilisis sapien a eros volutpat porta. 
+                        Integer semper facilisis mattis. Nulla a elementum urna.
+                    </p>
                 </PageLead>
             </PageContent>
         );

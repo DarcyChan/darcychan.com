@@ -10,7 +10,13 @@ export default class Index extends React.Component {
         const route = this.props.route;
         const pages = this.props.route.pages.filter(page => page.data.type === 'artwork');
         const page = route.page.data;
-        const artworks = getArtworksFromRoute(route);
+
+        let artworks = [];
+        artworks = artworks.concat(
+            getArtworksFromRoute(route, 'project'),
+            getArtworksFromRoute(route, 'design'),
+            getArtworksFromRoute(route, 'illustration')
+        );
 
         return (
             <PageContent className="content-set">
@@ -20,7 +26,7 @@ export default class Index extends React.Component {
                         I'm Darcy Chan.
                     </PageTitle>
                     <PageSubtitle>
-                        I specialize in front-end development and design, and illustrate on the side.
+                        I specialize in front-end web development and design, with some casual illustrating on the side.
                     </PageSubtitle>
                 </header>
                 <PreviewList page={page} artworks={artworks} />
