@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Artwork, { ArtworkBrand, ArtworkInfoBlock } from 'components/artwork';
-import { PageLead, Swatch, SmallLabel } from 'components/common';
+import { PageContent, PageLead, Swatch, SmallLabel, Image } from 'components/common';
 
 // Literal strings required for this to work
 exports.data = {
@@ -15,6 +15,7 @@ exports.data = {
 export default class SnazzyMaps extends React.Component {
     render() {
         const route = this.props.route;
+        const imgMobleHeight = `${720 / 720 * 100}%`
         return (
             <Artwork route={route}>
                 <PageLead 
@@ -26,20 +27,22 @@ export default class SnazzyMaps extends React.Component {
                         Users can browse through thousands of themes created by other community members, or create their own with custom markers and infowindows.
                     </p>
                 </PageLead>
-                <ArtworkBrand logo="logo.svg" colors={["#00bc66", "#333333"]} />
-                <img src='main.png' className="image-shadow" />
-                <img src='screen-explore.png' className="image-shadow" />
-                <div className="image-row">
-                    <div className="image-col">
-                        <img src='screen-explore-mobile.png' className="image-shadow" />
+                <PageContent data={route.page.data}>
+                    <ArtworkBrand logo="logo.svg" colors={["#00bc66", "#333333"]} />
+                    <Image src='main.png' />
+                    <Image src='screen-explore.png' />
+                    <div className="image-row">
+                        <div className="image-col">
+                            <Image src='screen-explore-mobile.png' height={imgMobleHeight} />
+                        </div>
+                        <div className="image-col">
+                            <Image src='screen-details-mobile.png' height={imgMobleHeight} />
+                        </div>
                     </div>
-                    <div className="image-col">
-                        <img src='screen-details-mobile.png' className="image-shadow" />
-                    </div>
-                </div>
-                <img src='screen-details.png' className="image-shadow" />
-                <img src='screen-download-image.png' className="image-shadow" />
-                <img src='screen-build-a-map.png' className="image-shadow" />
+                    <Image src='screen-details.png' />
+                    <Image src='screen-download-image.png' />
+                    <Image src='screen-build-a-map.png' />
+                </PageContent>
             </Artwork>
         );
     }

@@ -10,7 +10,7 @@
 
 .page-subtitle {
     max-width: 20em;
-    margin: ($grid-gutter-width / 3) 0 0;
+    margin: ($grid-gutter-width / 2) 0 0;
     font-size: 1.75rem;
     line-height: 1.3;
     overflow-wrap: break-word;
@@ -72,6 +72,45 @@
 
     .preview-subtitle::before {
         display: none;
+    }
+}
+
+.page-sticky {
+    display: none;
+
+    @media screen and (min-width: $md) {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: $header-width-md;
+        padding: ($grid-gutter-width / 6) ($grid-gutter-width * 2);
+        z-index: 1022;
+        visibility: hidden;
+        background-color: rgba($body-bg, 0.97);
+        border-bottom: 1px solid $body-border;
+        transform: translate(0, -100%);
+        transition: all $transition-duration-long $transition-bezier;
+        
+        &-on {
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+
+        &-label {
+            display: inline-block;
+            color: $text-reduced-color;
+            font-size: 0.75em;
+            line-height: 1.1;
+            letter-spacing: 0.075em;
+            text-transform: uppercase;
+            
+            & + & {
+                margin-left: $grid-gutter-width / 4;
+                padding-left: $grid-gutter-width / 4;
+                border-left: 1px solid $body-border;
+            }
+        }
     }
 }
 

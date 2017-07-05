@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Artwork from 'components/artwork';
-import { PageLead, Image, Link } from 'components/common';
+import { PageContent, PageLead, Image, Link } from 'components/common';
 
 // Literal strings required for this to work
 exports.data = {
@@ -19,12 +19,14 @@ export default class Minty extends React.Component {
             <Artwork route={route}>
                 <PageLead>
                     <p>
-                        A fanart illustration of a friend's character in the game
+                        A fan art illustration of an ingame character in the game
                         {' '}
                         <Link href="https://www.guildwars2.com" external>Guild Wars 2</Link>.
                     </p>
                 </PageLead>
-                <Image src={'minty.png'} className="image-shadow" />
+                <PageContent data={route.page.data}>
+                    <Image src={'minty.png'} height={`${1417 / 1080 * 100}%`} />
+                </PageContent>
             </Artwork>
         );
     }

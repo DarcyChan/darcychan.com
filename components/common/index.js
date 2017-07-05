@@ -1,4 +1,5 @@
 export { default as PageTransition } from 'components/common/pageTransition';
+export { default as PageWrapper } from 'components/common/pageWrapper';
 export { default as PageTitle } from 'components/common/pageTitle';
 export { default as PageSubtitle } from 'components/common/pageSubtitle';
 export { default as PageLead } from 'components/common/pageLead';

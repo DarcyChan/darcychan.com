@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PageTitle, PageContent, PageLead } from 'components/common';
+import { PageTitle, PageWrapper, PageLead } from 'components/common';
 
 // Literal strings required for this to work
 exports.data = {
@@ -15,7 +15,7 @@ exports.data = {
 export default class Projects extends React.Component {
     render() {
         return (
-            <PageContent className="content-set">
+            <PageWrapper className="content-set">
                 <PageTitle>
                     About Me
                 </PageTitle>
@@ -26,7 +26,7 @@ export default class Projects extends React.Component {
                         Integer semper facilisis mattis. Nulla a elementum urna.
                     </p>
                 </PageLead>
-            </PageContent>
+            </PageWrapper>
         );
     }
 }

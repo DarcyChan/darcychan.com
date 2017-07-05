@@ -1,0 +1,40 @@
+@import './variables';
+
+
+
+//////////////////////////////////////////////////
+// Lazy loading containers
+//////////////////////////////////////////////////
+
+// Main
+
+.lazy-image-wrapper {
+    position: relative;
+    height: 0;
+    padding-bottom: percentage(1642 / 2656);
+    background: #f0f0f0 url('../assets/photo.svg') center no-repeat;
+    background-size: $grid-gutter-width $grid-gutter-width;
+    line-height: 0;
+
+    .lazy-image {
+        position: relative;
+        width: 100%;
+        height: auto;
+        animation: lazy-image-in ($transition-duration-long * 3) $transition-bezier;
+    }
+}
+
+@keyframes lazy-image-in {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+
+
+//////////////////////////////////////////////////
+// Image shadow
+//////////////////////////////////////////////////
+
+.image-shadow {
+    box-shadow: 0 ($grid-gutter-width / 8) ($grid-gutter-width / 2) ($grid-gutter-width / 10) rgba(black, 0.25);
+}

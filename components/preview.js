@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 
 import Icon, { Glyph } from 'components/icon';
+import { Image } from 'components/common';
 import 'scss/preview.scss';
 
 export default class Preview extends React.Component {
@@ -12,7 +13,10 @@ export default class Preview extends React.Component {
             <div className="preview">
                 <Link className="preview-link" to={prefixLink(page.data.path)} {...props}>
                     <span className="preview-image-wrapper" style={{backgroundColor: page.data.bgColor}}>
-                        <img className="preview-image image-shadow" src={ prefixLink(`${page.data.path}preview.png`) } alt="Preview" />
+                        <Image 
+                            className="preview-image" 
+                            src={ prefixLink(`${page.data.path}preview.png`) } 
+                            alt="Preview" />
                     </span>
                     <span className="preview-info">
                         <span className="preview-subtitle">

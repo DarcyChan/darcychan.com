@@ -1,5 +1,5 @@
 # darcychan.com
-Personal portfolio.
+Work in progress of my personal portfolio.
 
 # License
 MIT License

@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 
 import { config } from 'config';
 import { combineClassNames, getNextArtwork } from 'utils';
-import { PageTitle, PageSubtitle, PageContent, PageFooter, SmallLabel, Swatch } from 'components/common';
+import { PageTitle, PageSubtitle, PageWrapper, PageFooter, SmallLabel, Swatch } from 'components/common';
 import Icon, { Glyph } from 'components/icon';
 
 import 'scss/artwork.scss';
@@ -33,7 +33,7 @@ export default class Artwork extends React.Component {
         const data = route.page.data;
         const next = getNextArtwork(route, route.page);
         return (
-            <PageContent className={combineClassNames('content-set', className)} {...props}>
+            <PageWrapper className={combineClassNames('content-set', className)} {...props}>
                 <Helmet title={`${data.title} | ${config.siteTitle}`} />
                 <PageTitle>
                     <SmallLabel className="page-title-label">
@@ -49,7 +49,7 @@ export default class Artwork extends React.Component {
                             category={next.data.category}
                             title={next.data.title} />
                     </PageFooter>}
-            </PageContent>
+            </PageWrapper>
         )
     }
 }

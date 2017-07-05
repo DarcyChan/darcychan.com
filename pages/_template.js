@@ -21,7 +21,7 @@ export default class Template extends React.Component {
         this.handleMenuToggle = this.handleMenuToggle.bind(this);
     }
 
-    handleMenuToggle(toggle) {
+    handleMenuToggle= (toggle) => {
         // Only handle the menu toggle for devices < 62rem
         if (window.outerWidth < (62 * 15)) {
             const scrollEl = document.getElementsByTagName('html')[0];

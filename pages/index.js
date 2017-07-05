@@ -2,7 +2,7 @@ import React from 'react'
 
 import { getArtworksFromRoute } from 'utils';
 import { config } from 'config';
-import { PageTitle, PageSubtitle, PageContent } from 'components/common';
+import { PageTitle, PageSubtitle, PageWrapper } from 'components/common';
 import PreviewList from 'components/previewList';
 
 export default class Index extends React.Component {
@@ -19,7 +19,7 @@ export default class Index extends React.Component {
         );
 
         return (
-            <PageContent className="content-set">
+            <PageWrapper className="content-set">
                 <header>
                     <PageTitle>
                         Hello,<br />
@@ -30,7 +30,7 @@ export default class Index extends React.Component {
                     </PageSubtitle>
                 </header>
                 <PreviewList page={page} artworks={artworks} />
-            </PageContent>
+            </PageWrapper>
         )
     }
 }

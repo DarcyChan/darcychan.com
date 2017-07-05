@@ -4,6 +4,34 @@
     {
       "icon": {
         "paths": [
+          "M362 576l-148 192h596l-192-256-148 192zM896 810c0 46-40 86-86 86h-596c-46 0-86-40-86-86v-596c0-46 40-86 86-86h596c46 0 86 40 86 86v596z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "photo"
+        ],
+        "grid": 24
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 1,
+        "id": 4,
+        "name": "photo",
+        "prevSize": 24
+      },
+      "setIdx": 0,
+      "setId": 0,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
           "M854 470v84h-520l238 240-60 60-342-342 342-342 60 60-238 240h520z"
         ],
         "attrs": [
@@ -27,7 +55,7 @@
       },
       "setIdx": 0,
       "setId": 0,
-      "iconIdx": 0
+      "iconIdx": 1
     },
     {
       "icon": {
@@ -55,7 +83,7 @@
       },
       "setIdx": 0,
       "setId": 0,
-      "iconIdx": 1
+      "iconIdx": 2
     },
     {
       "icon": {
@@ -83,7 +111,7 @@
       },
       "setIdx": 0,
       "setId": 0,
-      "iconIdx": 2
+      "iconIdx": 3
     },
     {
       "icon": {
@@ -111,7 +139,7 @@
       },
       "setIdx": 0,
       "setId": 0,
-      "iconIdx": 3
+      "iconIdx": 4
     }
   ],
   "height": 1024,

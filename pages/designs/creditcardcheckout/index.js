@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Artwork from 'components/artwork';
-import { PageLead, Image } from 'components/common';
+import { PageContent, PageLead, Image } from 'components/common';
 
 // Literal strings required for this to work
 exports.data = {
@@ -22,8 +22,10 @@ export default class CreditCardCheckout extends React.Component {
                         A mockup of a credit card checkout page for a daily UI challenge.
                     </p>
                 </PageLead>
-                <Image src={'screen.png'} className="image-shadow" />
-                <Image src={'screen-selectcard.png'} className="image-shadow" />
+                <PageContent data={route.page.data}>
+                    <Image src={'screen.png'} height={`${1628 / 1024 * 100}%`} />
+                    <Image src={'screen-selectcard.png'} height={`${336 / 1024 * 100}%`} />
+                </PageContent>
             </Artwork>
         );
     }
