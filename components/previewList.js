@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Preview from 'components/Preview';
+import Preview from 'components/preview';
 import 'scss/previewList.scss';
 
 export default class PreviewList extends React.Component {
