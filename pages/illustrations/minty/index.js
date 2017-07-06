@@ -25,7 +25,7 @@ export default class Minty extends React.Component {
                     </p>
                 </PageLead>
                 <PageContent data={route.page.data}>
-                    <Image src={'minty.png'} height={`${1417 / 1080 * 100}%`} />
+                    <Image src={'minty.png'} width={1080} height={1417} />
                 </PageContent>
             </Artwork>
         );

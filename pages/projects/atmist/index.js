@@ -16,7 +16,8 @@ exports.data = {
 export default class Atmist extends React.Component {
     render() {
         const route = this.props.route;
-        const imgHomeHeight = `${779 / 1440 * 100}%`;
+        const imgHomeWidth = 1440;
+        const imgHomeHeight = 779;
         
         return (
             <Artwork route={route}>
@@ -31,13 +32,13 @@ export default class Atmist extends React.Component {
                 <PageContent data={route.page.data}>
                     <ArtworkBrand logo="logo.svg" colors={["#0084c2"]} />
                     <div className="image-set image-shadow">
-                        <Image src='screen-home-01.png' shadow={false} height={imgHomeHeight} />
-                        <Image src='screen-home-02.png' shadow={false} height={imgHomeHeight} />
-                        <Image src='screen-home-03.png' shadow={false} height={imgHomeHeight} />
-                        <Image src='screen-home-04.png' shadow={false} height={imgHomeHeight} />
-                        <Image src='screen-home-05.png' shadow={false} height={imgHomeHeight} />
-                        <Image src='screen-home-06.png' shadow={false} height={imgHomeHeight} />
-                        <Image src='screen-home-07.png' shadow={false} height={imgHomeHeight} />
+                        <Image src='screen-home-01.png' shadow={false} width={imgHomeWidth} height={imgHomeHeight} />
+                        <Image src='screen-home-02.png' shadow={false} width={imgHomeWidth} height={imgHomeHeight} />
+                        <Image src='screen-home-03.png' shadow={false} width={imgHomeWidth} height={imgHomeHeight} />
+                        <Image src='screen-home-04.png' shadow={false} width={imgHomeWidth} height={imgHomeHeight} />
+                        <Image src='screen-home-05.png' shadow={false} width={imgHomeWidth} height={imgHomeHeight} />
+                        <Image src='screen-home-06.png' shadow={false} width={imgHomeWidth} height={imgHomeHeight} />
+                        <Image src='screen-home-07.png' shadow={false} width={imgHomeWidth} height={imgHomeHeight} />
                     </div>
                     <div className="image-set icon-set image-shadow">
                         <Image src="icons-01.svg" shadow={false} lazyLoad={false} />
@@ -52,8 +53,8 @@ export default class Atmist extends React.Component {
                         <Image src="icons-10.svg" shadow={false} lazyLoad={false} />
                         <Image src="icons-11.svg" shadow={false} lazyLoad={false} />
                     </div>
-                    <Image src="screen-service.png" height={`${1062 / 1440 * 100}%`} />
-                    <Image src="screen-portfolio.png" height={`${1140 / 1440 * 100}%`} />
+                    <Image src="screen-service.png" width={1440} height={1062} />
+                    <Image src="screen-portfolio.png" width={1440} height={1140} />
                 </PageContent>
             </Artwork>
         );

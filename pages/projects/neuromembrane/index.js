@@ -15,7 +15,12 @@ exports.data = {
 export default class SnazzyMaps extends React.Component {
     render() {
         const route = this.props.route;
-        const imgMobileHeight = `${1420 / 800 * 100}%`;
+
+        const imgDesktopWidth = 2656;
+        const imgDesktopHeight = 1642;
+        const imgMobileWidth = 800;
+        const imgMobileHeight = 1420;
+
         return (
             <Artwork route={route}>
                 <PageLead 
@@ -23,24 +28,24 @@ export default class SnazzyMaps extends React.Component {
                     tools="jQuery, CSS"
                 >
                     <p>
-                        TODO
+                        A web-based simulator and teaching tool that demonstrates neuroscience concepts.
                     </p>
                 </PageLead>
                 <PageContent data={route.page.data}>
                     <ArtworkBrand colors={["#1f1f1f", "#fd6b3d"]} />
-                    <Image src='screen-login.png' />
-                    <Image src='screen-actionpotential-setup.png' />
-                    <Image src='screen-epsp-sim.png' />
-                    <Image src='screen-integration-setup.png' />
+                    <Image src='screen-login.png' width={imgDesktopWidth} height={imgDesktopHeight} responsive />
+                    <Image src='screen-actionpotential-setup.png' width={imgDesktopWidth} height={imgDesktopHeight} responsive />
+                    <Image src='screen-epsp-sim.png' width={imgDesktopWidth} height={imgDesktopHeight} responsive />
+                    <Image src='screen-integration-setup.png' width={imgDesktopWidth} height={imgDesktopHeight} responsive />
                     <div className="image-row">
                         <div className="image-col">
-                            <Image src='screen-setup-mobile.png' height={imgMobileHeight} />
+                            <Image src='screen-setup-mobile.png' width={imgMobileWidth} height={imgMobileHeight} />
                         </div>
                         <div className="image-col">
-                            <Image src='screen-sim-mobile.png' height={imgMobileHeight} />
+                            <Image src='screen-sim-mobile.png' width={imgMobileWidth} height={imgMobileHeight} />
                         </div>
                         <div className="image-col">
-                            <Image src='screen-graph-mobile.png' height={imgMobileHeight} />
+                            <Image src='screen-graph-mobile.png' width={imgMobileWidth} height={imgMobileHeight} />
                         </div>
                     </div>
                 </PageContent>

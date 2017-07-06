@@ -33,10 +33,10 @@ export default class SnazzyMaps extends React.Component {
                     <Image src='screen-explore.png' />
                     <div className="image-row">
                         <div className="image-col">
-                            <Image src='screen-explore-mobile.png' height={imgMobleHeight} />
+                            <Image src='screen-explore-mobile.png' width={720} height={720} />
                         </div>
                         <div className="image-col">
-                            <Image src='screen-details-mobile.png' height={imgMobleHeight} />
+                            <Image src='screen-details-mobile.png' width={720} height={720} />
                         </div>
                     </div>
                     <Image src='screen-details.png' />

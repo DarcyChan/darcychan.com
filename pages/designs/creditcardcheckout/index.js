@@ -23,8 +23,8 @@ export default class CreditCardCheckout extends React.Component {
                     </p>
                 </PageLead>
                 <PageContent data={route.page.data}>
-                    <Image src={'screen.png'} height={`${1628 / 1024 * 100}%`} />
-                    <Image src={'screen-selectcard.png'} height={`${336 / 1024 * 100}%`} />
+                    <Image src={'screen.png'} width={1024} height={1628} />
+                    <Image src={'screen-selectcard.png'} width={1024} height={336} />
                 </PageContent>
             </Artwork>
         );
