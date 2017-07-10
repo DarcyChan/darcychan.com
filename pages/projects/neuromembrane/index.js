@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Artwork, { ArtworkBrand, ArtworkInfoBlock } from 'components/artwork';
-import { PageContent, PageLead, Swatch, SmallLabel, Image } from 'components/common';
+import { Artwork, ArtworkBrand } from 'components/artwork';
+import { PageContent, PageLead, Image } from 'components/common';
 
-// Literal strings required for this to work
+/* eslint-disable quotes */
 exports.data = {
     id: 2,
     path: `/projects/neuromembrane/`,
@@ -11,6 +11,7 @@ exports.data = {
     type: `artwork`,
     title: `Neuromembrane`
 };
+/* eslint-enable quotes */
 
 export default class SnazzyMaps extends React.Component {
     render() {
@@ -23,29 +24,59 @@ export default class SnazzyMaps extends React.Component {
 
         return (
             <Artwork route={route}>
-                <PageLead 
-                    role="UI Design, UI Develpment"
-                    tools="jQuery, CSS"
-                >
+                <PageLead tasks="UI Design, UI Develpment" tools="jQuery, CSS">
                     <p>
-                        A web-based simulator and teaching tool that demonstrates neuroscience concepts.
+                        A web-based simulator and teaching tool that
+                        demonstrates neuroscience concepts.
                     </p>
                 </PageLead>
                 <PageContent data={route.page.data}>
-                    <ArtworkBrand colors={["#1f1f1f", "#fd6b3d"]} />
-                    <Image src='screen-login.png' width={imgDesktopWidth} height={imgDesktopHeight} responsive />
-                    <Image src='screen-actionpotential-setup.png' width={imgDesktopWidth} height={imgDesktopHeight} responsive />
-                    <Image src='screen-epsp-sim.png' width={imgDesktopWidth} height={imgDesktopHeight} responsive />
-                    <Image src='screen-integration-setup.png' width={imgDesktopWidth} height={imgDesktopHeight} responsive />
+                    <ArtworkBrand colors={['#1f1f1f', '#fd6b3d']} />
+                    <Image
+                        src="screen-login.png"
+                        width={imgDesktopWidth}
+                        height={imgDesktopHeight}
+                        responsive
+                    />
+                    <Image
+                        src="screen-actionpotential-setup.png"
+                        width={imgDesktopWidth}
+                        height={imgDesktopHeight}
+                        responsive
+                    />
+                    <Image
+                        src="screen-epsp-sim.png"
+                        width={imgDesktopWidth}
+                        height={imgDesktopHeight}
+                        responsive
+                    />
+                    <Image
+                        src="screen-integration-setup.png"
+                        width={imgDesktopWidth}
+                        height={imgDesktopHeight}
+                        responsive
+                    />
                     <div className="image-row">
                         <div className="image-col">
-                            <Image src='screen-setup-mobile.png' width={imgMobileWidth} height={imgMobileHeight} />
+                            <Image
+                                src="screen-setup-mobile.png"
+                                width={imgMobileWidth}
+                                height={imgMobileHeight}
+                            />
                         </div>
                         <div className="image-col">
-                            <Image src='screen-sim-mobile.png' width={imgMobileWidth} height={imgMobileHeight} />
+                            <Image
+                                src="screen-sim-mobile.png"
+                                width={imgMobileWidth}
+                                height={imgMobileHeight}
+                            />
                         </div>
                         <div className="image-col">
-                            <Image src='screen-graph-mobile.png' width={imgMobileWidth} height={imgMobileHeight} />
+                            <Image
+                                src="screen-graph-mobile.png"
+                                width={imgMobileWidth}
+                                height={imgMobileHeight}
+                            />
                         </div>
                     </div>
                 </PageContent>

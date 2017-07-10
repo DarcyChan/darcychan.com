@@ -8,4 +8,4 @@ export const constants = {
     },
     gutter: '5rem',
     menuWidth: '18rem'
-}
+};

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Artwork from 'components/artwork';
+import { Artwork } from 'components/artwork';
 import { PageContent, PageLead, Image, Link } from 'components/common';
 
-// Literal strings required for this to work
+/* eslint-disable quotes */
 exports.data = {
     id: 0,
     path: `/illustrations/minty/`,
@@ -11,6 +11,7 @@ exports.data = {
     type: `artwork`,
     title: `Minty`
 };
+/* eslint-enable quotes */
 
 export default class Minty extends React.Component {
     render() {
@@ -19,9 +20,11 @@ export default class Minty extends React.Component {
             <Artwork route={route}>
                 <PageLead>
                     <p>
-                        A fan art illustration of an ingame character in the game
-                        {' '}
-                        <Link href="https://www.guildwars2.com" external>Guild Wars 2</Link>.
+                        A fan art illustration of an ingame character in the
+                        game{' '}
+                        <Link href="https://www.guildwars2.com" external>
+                            Guild Wars 2
+                        </Link>.
                     </p>
                 </PageLead>
                 <PageContent data={route.page.data}>

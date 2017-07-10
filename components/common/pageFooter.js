@@ -6,9 +6,12 @@ export default class PageFooter extends React.Component {
     render() {
         const { className, children, ...props } = this.props;
         return (
-            <div className={combineClassNames('page-footer', className)} {...props}>
+            <div
+                className={combineClassNames('page-footer', className)}
+                {...props}
+            >
                 {children}
             </div>
-        )
+        );
     }
 }

@@ -4,13 +4,14 @@ export default class Link extends React.Component {
     render() {
         const { href, external, children, ...props } = this.props;
         return (
-            <a 
+            <a
                 href={href}
                 target={external && '_blank'}
                 ref={external && 'noopener noreferrer'}
+                {...props}
             >
                 {children}
             </a>
-        )
+        );
     }
 }

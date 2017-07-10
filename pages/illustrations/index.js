@@ -4,9 +4,9 @@ import Helmet from 'react-helmet';
 import { getArtworksFromRoute } from 'utils';
 import { config } from 'config';
 import { PageWrapper, PageTitle, SmallLabel } from 'components/common';
-import PreviewList from 'components/previewList';
+import { PreviewList } from 'components/preview';
 
-// Literal strings required for this to work
+/* eslint-disable quotes */
 exports.data = {
     id: 2,
     path: `/illustrations/`,
@@ -14,6 +14,7 @@ exports.data = {
     showInMenu: true,
     title: `Illustrations`
 };
+/* eslint-enable quotes */
 
 export default class Illustrations extends React.Component {
     render() {

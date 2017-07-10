@@ -1,14 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 import { getArtworksFromRoute } from 'utils';
-import { config } from 'config';
 import { PageTitle, PageSubtitle, PageWrapper } from 'components/common';
-import PreviewList from 'components/previewList';
+import { PreviewList } from 'components/preview';
 
 export default class Index extends React.Component {
     render() {
         const route = this.props.route;
-        const pages = this.props.route.pages.filter(page => page.data.type === 'artwork');
         const page = route.page.data;
 
         let artworks = [];
@@ -23,14 +21,15 @@ export default class Index extends React.Component {
                 <header>
                     <PageTitle>
                         Hello,<br />
-                        I'm Darcy Chan.
+                        I&apos;m Darcy Chan.
                     </PageTitle>
                     <PageSubtitle>
-                        I specialize in front-end web development and design, with some casual illustrating on the side.
+                        I specialize in front-end web development and design,
+                        with some casual illustrating on the side.
                     </PageSubtitle>
                 </header>
                 <PreviewList page={page} artworks={artworks} />
             </PageWrapper>
-        )
+        );
     }
 }

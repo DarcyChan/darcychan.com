@@ -4,14 +4,15 @@ import orderBy from 'lodash/orderBy';
 
 const getPriority = page => {
     const { path, data } = page;
-    return 1;
 
-    // if (path === '/') {
-    //     return 1.0;
-    // } else if (data && data.layout === 'project') {
-    //     return 0.8;
-    // }
-    // return 0.6;
+    if (path === '/') {
+        return 1.0;
+    } else if (data && data.showInMenu) {
+        return 0.8;
+    } else if (data && data.type === 'artwork') {
+        return 0.6;
+    }
+    return 0.4;
 };
 
 const pagesToSitemap = pages => {
@@ -46,10 +47,7 @@ const generateSitemap = pages => {
 
 const copyStaticFiles = () => {
     console.log('Copying static files'); // eslint-disable-line no-console
-    fs.copySync(
-        `${__dirname}/static/`,
-        `${__dirname}/public/`
-    );
+    fs.copySync(`${__dirname}/static/`, `${__dirname}/public/`);
 };
 
 export const postBuild = (pages, callback) => {

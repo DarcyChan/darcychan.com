@@ -4,7 +4,7 @@ export const CategoryTypes = {
     Project: 'project',
     Design: 'design',
     Illustration: 'illustration'
-}
+};
 
 export const categoryOrder = [
     CategoryTypes.Project,
@@ -14,13 +14,16 @@ export const categoryOrder = [
 
 export const getArtworksFromRoute = (route, category) => {
     if (category) {
-        return sortBy(route.pages.filter(
-            page => page.data.category === category && page.data.type === 'artwork'
-        ), page => page.data.id);
+        return sortBy(
+            route.pages.filter(
+                page =>
+                    page.data.category === category &&
+                    page.data.type === 'artwork'
+            ),
+            page => page.data.id
+        );
     }
-    return route.pages.filter(
-        page => page.data.type === 'artwork'
-    );
+    return route.pages.filter(page => page.data.type === 'artwork');
 };
 
 export const getNextArtwork = (route, page) => {
@@ -29,7 +32,7 @@ export const getNextArtwork = (route, page) => {
     const artworks = getArtworksFromRoute(route, category);
     const artIndex = artworks.indexOf(page);
 
-    if (artIndex >= 0 && artIndex < artworks.length - 1 ) {
+    if (artIndex >= 0 && artIndex < artworks.length - 1) {
         // Get next artwork in same category
         return artworks[artIndex + 1];
     } else if (catIndex >= 0 && catIndex < categoryOrder.length - 1) {
@@ -37,5 +40,5 @@ export const getNextArtwork = (route, page) => {
         return getArtworksFromRoute(route, categoryOrder[catIndex + 1])[0];
     }
 
-    return;
-}
+    return false;
+};

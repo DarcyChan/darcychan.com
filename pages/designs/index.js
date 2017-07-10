@@ -4,9 +4,9 @@ import Helmet from 'react-helmet';
 import { getArtworksFromRoute } from 'utils';
 import { config } from 'config';
 import { PageWrapper, PageTitle, SmallLabel } from 'components/common';
-import PreviewList from 'components/previewList';
+import { PreviewList } from 'components/preview';
 
-// Literal strings required for this to work
+/* eslint-disable quotes */
 exports.data = {
     id: 2,
     path: `/designs/`,
@@ -14,6 +14,7 @@ exports.data = {
     showInMenu: true,
     title: `Designs`
 };
+/* eslint-enable quotes */
 
 export default class Designs extends React.Component {
     render() {
@@ -24,7 +25,9 @@ export default class Designs extends React.Component {
             <PageWrapper className="content-set">
                 <Helmet title={`${page.title} | ${config.siteTitle}`} />
                 <PageTitle>
-                    <SmallLabel className="page-title-label">Miscillaneous & Explorational</SmallLabel>
+                    <SmallLabel className="page-title-label">
+                        Miscillaneous & Explorational
+                    </SmallLabel>
                     Designs
                 </PageTitle>
                 <PreviewList page={page} artworks={artworks} />
