@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { config } from 'config'
 
+import { constants } from 'utils'
 import Header from 'components/header'
 
 import 'scss/site.scss';
@@ -22,8 +23,7 @@ export default class Template extends React.Component {
     }
 
     handleMenuToggle= (toggle) => {
-        // Only handle the menu toggle for devices < 62rem
-        if (window.outerWidth < (62 * 15)) {
+        if (window.innerWidth < constants.breakpoint.md) {
             const scrollEl = document.getElementsByTagName('html')[0];
             if (toggle) {
                 if (toggle === 'open') {
