@@ -72,7 +72,10 @@
         bottom: 0;
         right: 0;
         left: 0;
-        padding: ($grid-gutter-width * 1.5 + $navbar-height) ($grid-gutter-width * 0.5) ($grid-gutter-width * 1.5);
+        padding: ($grid-gutter-width * 1.5 + $navbar-height)
+            (
+                $grid-gutter-width * 0.5
+            ) ($grid-gutter-width * 1.5);
         z-index: 1024;
         background-color: $body-bg;
         font-size: 1.2rem;
@@ -129,7 +132,7 @@
             width: $grid-gutter-width * 0.75;
             margin-top: -2px;
             border: 1px solid;
-            transform: translate(-100%, 0);
+            transform: translate(-105%, 0);
             transition: transform $transition-duration-base $transition-bezier;
         }
 

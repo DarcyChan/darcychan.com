@@ -4,12 +4,11 @@ p {
     max-width: $p-max-width;
 
     a {
-        display: inline-block;
-        color: $link-color;
+        @include link-underline($body-bg, $link-color, $selection-bg);
 
         &:hover,
         &:focus {
-            color: $link-hover-color;
+            @include link-underline($body-bg, $link-hover-color, $selection-bg);
         }
 
         &:focus {

@@ -24,7 +24,7 @@ export default class Index extends React.Component {
                         I&apos;m Darcy Chan.
                     </PageTitle>
                     <PageSubtitle>
-                        I specialize in front-end web development and design,
+                        I specialize in front end web development and design,
                         with some casual illustrating on the side.
                     </PageSubtitle>
                 </header>
