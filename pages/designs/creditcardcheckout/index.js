@@ -13,6 +13,18 @@ exports.data = {
 };
 /* eslint-enable quotes */
 
+// Image dimensions for lazy loading
+const dimens = {
+    screen: {
+        width: 1328,
+        height: 1709
+    },
+    selectCard: {
+        width: 1328,
+        height: 336
+    }
+};
+
 export default class CreditCardCheckout extends React.Component {
     render() {
         const route = this.props.route;
@@ -25,11 +37,17 @@ export default class CreditCardCheckout extends React.Component {
                     </p>
                 </PageLead>
                 <PageContent data={route.page.data}>
-                    <Image src={'screen.png'} width={1024} height={1628} />
                     <Image
-                        src={'screen-selectcard.png'}
-                        width={1024}
-                        height={336}
+                        src={'images/screen.png'}
+                        alt="Credit Card Form"
+                        width={dimens.screen.width}
+                        height={dimens.screen.height}
+                    />
+                    <Image
+                        src={'images/screen-selectcard.png'}
+                        alt="Selecting an Existing Credit Card"
+                        width={dimens.selectCard.width}
+                        height={dimens.selectCard.height}
                     />
                 </PageContent>
             </Artwork>

@@ -9,7 +9,8 @@ exports.data = {
     path: `/illustrations/minty/`,
     category: `illustration`,
     type: `artwork`,
-    title: `Minty`
+    title: `Minty`,
+    preview: `preview.jpg`
 };
 /* eslint-enable quotes */
 
@@ -28,7 +29,12 @@ export default class Minty extends React.Component {
                     </p>
                 </PageLead>
                 <PageContent data={route.page.data}>
-                    <Image src={'minty.png'} width={1080} height={1417} />
+                    <Image
+                        src={'images/minty.jpg'}
+                        alt="Minty"
+                        width={900}
+                        height={1182}
+                    />
                 </PageContent>
             </Artwork>
         );

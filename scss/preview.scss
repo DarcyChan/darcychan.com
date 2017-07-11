@@ -27,16 +27,13 @@
 
     &-image {
         display: block;
-        max-width: calc(100% - #{$grid-gutter-width});
-        margin: ($grid-gutter-width / 2) auto;
-
-        &.lazy-image-wrapper {
-            padding-bottom: calc(100% - 2.5rem);
-        }
+        max-width: 100%;
+        margin: auto;
 
         &-wrapper {
             display: block;
             position: relative;
+            padding: $grid-gutter-width / 2;
             border: 1px solid $body-border;
             line-height: 0;
 
@@ -114,7 +111,7 @@
 }
 
 @include breakpoint-min(width, $sm) {
-    .preview {        
+    .preview {
         &-link {
             &:hover,
             &:focus {
@@ -128,17 +125,12 @@
         }
 
         &-image {
-            max-width: calc(100% - #{$grid-gutter-width * 2});
-
-            &.lazy-image-wrapper {
-                padding-bottom: calc(100% - 5rem);
-            }
-
             &-wrapper {
                 display: inline-block;
                 width: percentage(8/12);
                 max-width: 500px;
                 height: auto;
+                padding: $grid-gutter-width;
             }
         }
 

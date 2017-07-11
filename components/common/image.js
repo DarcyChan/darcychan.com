@@ -6,21 +6,30 @@ import { combineClassNames, constants } from 'utils';
 import 'scss/images.scss';
 
 // Responsive image with srcset
-const ResponsiveImage = ({ src, width, height, sizes, alt, ...props }) => {
+const ResponsiveImage = ({
+    src,
+    srcSet,
+    width,
+    height,
+    sizes,
+    alt,
+    ...props
+}) => {
     const extIndex = src.lastIndexOf('.');
     const name = src.substr(0, extIndex);
     const ext = src.substr(extIndex, src.length - 1);
 
     return (
         <img
-            srcSet={`${name}${ext}?v=${config.version} ${width / 2}w, 
-                    ${name}@2x${ext}?v=${config.version} ${width}w`}
+            srcSet={
+                srcSet ||
+                `${name}${ext}?v=${config.version} ${width}w, ${name}@2x${ext}?v=${config.version} ${width *
+                    2}w`
+            }
             src={`${src}?v=${config.version}`}
             sizes={
                 sizes ||
-                `(min-width: ${constants.breakpoint.md}px)
-                        calc(100vw - ${parseInt(constants.menuWidth, 10) +
-                            parseInt(constants.gutter, 10) * 2}rem), 100vw`
+                `(min-width: ${constants.breakpoint.md}px) ${width}px, 100vw`
             }
             alt={alt}
             {...props}
@@ -34,13 +43,27 @@ const SingleImage = ({ src, alt, ...props }) => {
 };
 
 // Determine whether to use responsive images based on props
-const BaseImage = ({ className, shadow, responsive, ...props }) => {
+const BaseImage = ({
+    className,
+    shadow,
+    responsive,
+    sizes,
+    srcSet,
+    ...props
+}) => {
     const classNames = combineClassNames(
         shadow ? 'image-shadow' : '',
         className
     );
     if (responsive) {
-        return <ResponsiveImage className={classNames} {...props} />;
+        return (
+            <ResponsiveImage
+                className={classNames}
+                sizes={sizes}
+                srcSet={srcSet}
+                {...props}
+            />
+        );
     }
     return <SingleImage className={classNames} {...props} />;
 };
@@ -48,12 +71,14 @@ const BaseImage = ({ className, shadow, responsive, ...props }) => {
 // Lazy loading image
 const LazyImage = ({
     src,
+    srcSet,
     alt,
     shadow,
     className,
     width,
     height,
     responsive,
+    sizes,
     ...props
 }) => {
     return (
@@ -68,10 +93,12 @@ const LazyImage = ({
                         shadow ? 'lazy-image image-shadow' : 'lazy-image'
                     }
                     src={src}
+                    srcSet={srcSet}
                     alt={alt}
                     width={width}
                     height={height}
                     responsive={responsive}
+                    sizes={sizes}
                 />
             </LazyLoad>
         </div>
@@ -90,7 +117,10 @@ class Image extends React.Component {
 
 Image.defaultProps = {
     lazyLoad: true,
-    shadow: true
+    responsive: true,
+    shadow: true,
+    width: 1328,
+    height: 821
 };
 
 export default Image;

@@ -13,11 +13,24 @@ exports.data = {
 };
 /* eslint-enable quotes */
 
+const dimens = {
+    home: {
+        width: 1328,
+        height: 1364
+    },
+    service: {
+        width: 1328,
+        height: 1066
+    },
+    portfolio: {
+        width: 1328,
+        height: 1170
+    }
+};
+
 export default class Atmist extends React.Component {
     render() {
         const route = this.props.route;
-        const imgHomeWidth = 1440;
-        const imgHomeHeight = 779;
 
         return (
             <Artwork route={route}>
@@ -28,121 +41,123 @@ export default class Atmist extends React.Component {
                     <p>
                         The website for the web development company I
                         co-founded, where many of our services, projects, and
-                        processes are displayed.
+                        processes are displayed. It was an interesting challenge
+                        to create a structure for the site that was flexible for
+                        our content creator while being manageable through the
+                        WordPress admin panel.
                     </p>
                 </PageLead>
                 <PageContent data={route.page.data}>
-                    <ArtworkBrand logo="logo.svg" colors={['#0084c2']} />
+                    <ArtworkBrand logo="images/logo.svg" colors={['#0084c2']} />
                     <div className="image-set image-shadow">
                         <Image
-                            src="screen-home-01.png"
+                            src="images/screen-home-01.png"
+                            alt="Atmist - Home Page"
+                            width={dimens.home.width}
+                            height={dimens.home.height}
                             shadow={false}
-                            width={imgHomeWidth}
-                            height={imgHomeHeight}
                         />
                         <Image
-                            src="screen-home-02.png"
+                            src="images/screen-home-02.png"
+                            alt="Atmist - Home Page"
+                            width={dimens.home.width}
+                            height={dimens.home.height}
                             shadow={false}
-                            width={imgHomeWidth}
-                            height={imgHomeHeight}
                         />
                         <Image
-                            src="screen-home-03.png"
+                            src="images/screen-home-03.png"
+                            alt="Atmist - Home Page"
+                            width={dimens.home.width}
+                            height={dimens.home.height}
                             shadow={false}
-                            width={imgHomeWidth}
-                            height={imgHomeHeight}
                         />
                         <Image
-                            src="screen-home-04.png"
+                            src="images/screen-home-04.png"
+                            alt="Atmist - Home Page"
+                            width={dimens.home.width}
+                            height={dimens.home.height}
                             shadow={false}
-                            width={imgHomeWidth}
-                            height={imgHomeHeight}
-                        />
-                        <Image
-                            src="screen-home-05.png"
-                            shadow={false}
-                            width={imgHomeWidth}
-                            height={imgHomeHeight}
-                        />
-                        <Image
-                            src="screen-home-06.png"
-                            shadow={false}
-                            width={imgHomeWidth}
-                            height={imgHomeHeight}
-                        />
-                        <Image
-                            src="screen-home-07.png"
-                            shadow={false}
-                            width={imgHomeWidth}
-                            height={imgHomeHeight}
                         />
                     </div>
                     <div className="image-set icon-set image-shadow">
                         <Image
-                            src="icons-01.svg"
+                            src="images/icons-01.svg"
+                            alt="Atmist Icon Set"
                             shadow={false}
                             lazyLoad={false}
                         />
                         <Image
-                            src="icons-02.svg"
+                            src="images/icons-02.svg"
+                            alt="Atmist Icon Set"
                             shadow={false}
                             lazyLoad={false}
                         />
                         <Image
-                            src="icons-03.svg"
+                            src="images/icons-03.svg"
+                            alt="Atmist Icon Set"
                             shadow={false}
                             lazyLoad={false}
                         />
                         <Image
-                            src="icons-04.svg"
+                            src="images/icons-04.svg"
+                            alt="Atmist Icon Set"
                             shadow={false}
                             lazyLoad={false}
                         />
                         <Image
-                            src="icons-05.svg"
+                            src="images/icons-05.svg"
+                            alt="Atmist Icon Set"
                             shadow={false}
                             lazyLoad={false}
                         />
                         <Image
-                            src="icons-06.svg"
+                            src="images/icons-06.svg"
+                            alt="Atmist Icon Set"
                             shadow={false}
                             lazyLoad={false}
                         />
                         <Image
-                            src="icons-07.svg"
+                            src="images/icons-07.svg"
+                            alt="Atmist Icon Set"
                             shadow={false}
                             lazyLoad={false}
                         />
                         <Image
-                            src="icons-08.svg"
+                            src="images/icons-08.svg"
+                            alt="Atmist Icon Set"
                             shadow={false}
                             lazyLoad={false}
                         />
                         <Image
-                            src="icons-09.svg"
+                            src="images/icons-09.svg"
+                            alt="Atmist Icon Set"
                             shadow={false}
                             lazyLoad={false}
                         />
                         <Image
-                            src="icons-10.svg"
+                            src="images/icons-10.svg"
+                            alt="Atmist Icon Set"
                             shadow={false}
                             lazyLoad={false}
                         />
                         <Image
-                            src="icons-11.svg"
+                            src="images/icons-11.svg"
+                            alt="Atmist Icon Set"
                             shadow={false}
                             lazyLoad={false}
                         />
                     </div>
                     <Image
-                        src="screen-service.png"
-                        width={1440}
-                        height={1062}
+                        src="images/screen-service.png"
+                        alt="Atmist - Service Section"
+                        width={dimens.service.width}
+                        height={dimens.service.height}
                     />
                     <Image
-                        src="screen-portfolio.png"
-                        width={1440}
-                        height={1140}
+                        src="images/screen-portfolio.png"
+                        alt="Atmist - Portfolio Section"
+                        width={dimens.portfolio.width}
+                        height={dimens.portfolio.height}
                     />
                 </PageContent>
             </Artwork>

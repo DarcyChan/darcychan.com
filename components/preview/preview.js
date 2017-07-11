@@ -22,8 +22,19 @@ export default class Preview extends React.Component {
                     >
                         <Image
                             className="preview-image"
-                            src={prefixLink(`${page.data.path}preview.png`)}
-                            alt="Preview"
+                            src={
+                                page.data.preview
+                                    ? prefixLink(
+                                          `${page.data.path}images/${page.data
+                                              .preview}`
+                                      )
+                                    : prefixLink(
+                                          `${page.data.path}images/preview.png`
+                                      )
+                            }
+                            alt={page.data.title}
+                            width={500}
+                            height={500}
                         />
                     </span>
                     <span className="preview-info">

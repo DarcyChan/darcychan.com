@@ -8,11 +8,15 @@ html {
     font-size: $font-size-base;
 
     @include breakpoint-min(width, $xs) {
-        font-size: calc(#{$font-size-base} + 4 * ((100vw - #{$xs}) / #{($md - $xs) / 1px}));
+        font-size: calc(
+            #{$font-size-base} + 4 * ((100vw - #{$xs}) / #{($md - $xs) / 1px})
+        );
     }
 
     @include breakpoint-min(width, $md) {
-        font-size: calc(#{$font-size-base} + 3 * ((100vw - #{$md}) / #{($xl - $md) / 1px}));
+        font-size: calc(
+            #{$font-size-base} + 3 * ((100vw - #{$md}) / #{($xl - $md) / 1px})
+        );
     }
 
     @include breakpoint-min(width, $xl) {
@@ -34,7 +38,11 @@ body {
 }
 
 .page-wrapper {
-    padding: ($grid-gutter-width * 1.5 + $navbar-height) ($grid-gutter-width * 0.5) ($grid-gutter-width * 1.5);
+    max-width: 83rem - $header-width-md + $grid-gutter-width * 2;
+    padding: ($grid-gutter-width * 1.5 + $navbar-height)
+        (
+            $grid-gutter-width * 0.5
+        ) ($grid-gutter-width * 1.5);
     line-height: 1.55;
 
     @include breakpoint-min(width, $md) {
@@ -84,7 +92,10 @@ img {
         justify-content: center;
         padding: $grid-gutter-width * 2;
         background-color: #fff;
-        box-shadow: 0 ($grid-gutter-width / 8) ($grid-gutter-width / 2) ($grid-gutter-width / 10) rgba(black, 0.25);
+        box-shadow: 0 ($grid-gutter-width / 8) ($grid-gutter-width / 2)
+            (
+                $grid-gutter-width / 10
+            ) rgba(black, 0.25);
     }
 
     .image-col {
@@ -94,14 +105,6 @@ img {
         & + & {
             margin-top: 0;
             margin-left: $grid-gutter-width;
-        }
-    }
-}
-
-@media screen and (min-width: $lg) {
-    .image-col {
-        & + & {
-            margin-left: $grid-gutter-width * 2;
         }
     }
 }
@@ -141,7 +144,7 @@ svg {
     fill: currentColor;
     width: 1rem;
     height: 1rem;
-    
+
     * {
         pointer-events: none;
     }
