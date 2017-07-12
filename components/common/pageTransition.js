@@ -24,9 +24,9 @@ export default class PageTransition extends React.Component {
                 }}
             >
                 {({ x }) =>
-                    <div style={{ opacity: x }}>
+                    <section className="page-wrapper" style={{ opacity: x }}>
                         {this.props.children}
-                    </div>}
+                    </section>}
             </Motion>
         );
     }

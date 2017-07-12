@@ -1,11 +1,18 @@
 import React from 'react';
 
 import { combineClassNames } from 'utils';
-import { SmallLabel } from 'components/common';
+import { SmallLabel, Link } from 'components/common';
 
 export default class PageLead extends React.Component {
     render() {
-        const { className, tasks, tools, children, ...props } = this.props;
+        const {
+            className,
+            tasks,
+            tools,
+            site,
+            children,
+            ...props
+        } = this.props;
         return (
             <div
                 className={combineClassNames('page-lead', className)}
@@ -29,6 +36,15 @@ export default class PageLead extends React.Component {
                                     UI Built With
                                 </SmallLabel>
                                 {tools}
+                            </div>}
+                        {site &&
+                            <div className="page-lead-site">
+                                <SmallLabel className="disabled">
+                                    Site
+                                </SmallLabel>
+                                <Link href={site} external>
+                                    View Site
+                                </Link>
                             </div>}
                     </div>}
             </div>

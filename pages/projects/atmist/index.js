@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Artwork, ArtworkBrand } from 'components/artwork';
-import { PageContent, PageLead, Image } from 'components/common';
+import { PageContent, PageLead, Image, ImageSet } from 'components/common';
 
 /* eslint-disable quotes */
 exports.data = {
@@ -36,7 +36,8 @@ export default class Atmist extends React.Component {
             <Artwork route={route}>
                 <PageLead
                     tasks="Branding, UI Design, UI Development"
-                    tools="WordPress, SASS, jQuery"
+                    tools="WordPress, SCSS, jQuery"
+                    site="http://atmist.com/"
                 >
                     <p>
                         The website for the web development company I
@@ -49,37 +50,18 @@ export default class Atmist extends React.Component {
                 </PageLead>
                 <PageContent data={route.page.data}>
                     <ArtworkBrand logo="images/logo.svg" colors={['#0084c2']} />
-                    <div className="image-set image-shadow">
-                        <Image
-                            src="images/screen-home-01.png"
-                            alt="Atmist - Home Page"
-                            width={dimens.home.width}
-                            height={dimens.home.height}
-                            shadow={false}
-                        />
-                        <Image
-                            src="images/screen-home-02.png"
-                            alt="Atmist - Home Page"
-                            width={dimens.home.width}
-                            height={dimens.home.height}
-                            shadow={false}
-                        />
-                        <Image
-                            src="images/screen-home-03.png"
-                            alt="Atmist - Home Page"
-                            width={dimens.home.width}
-                            height={dimens.home.height}
-                            shadow={false}
-                        />
-                        <Image
-                            src="images/screen-home-04.png"
-                            alt="Atmist - Home Page"
-                            width={dimens.home.width}
-                            height={dimens.home.height}
-                            shadow={false}
-                        />
-                    </div>
-                    <div className="image-set icon-set image-shadow">
+                    <ImageSet
+                        images={[
+                            'images/screen-home-01.png',
+                            'images/screen-home-02.png',
+                            'images/screen-home-03.png',
+                            'images/screen-home-04.png'
+                        ]}
+                        alt="Atmist - Home Page"
+                        width={dimens.home.width}
+                        height={dimens.home.height}
+                    />
+                    <div className="icon-set image-shadow">
                         <Image
                             src="images/icons-01.svg"
                             alt="Atmist Icon Set"

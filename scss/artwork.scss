@@ -1,6 +1,7 @@
 @import './variables';
 
 .artwork-info {
+    max-width: $img-max-width;
     border: 1px solid $body-border;
     padding: $grid-gutter-width / 2;
 
@@ -19,13 +20,12 @@
     }
 
     @media screen and (min-width: $sm) and (max-width: $md - 1),
-           screen and (min-width: $lg) {
-        
+        screen and (min-width: $lg) {
         &-flex {
             display: flex;
 
             > * + * {
-                margin-top: 0
+                margin-top: 0;
             }
 
             &-logo {
@@ -45,7 +45,7 @@
             }
         }
     }
-    
+
     @media screen and (min-width: $lg) {
         &-flex {
             > * + * {

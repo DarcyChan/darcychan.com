@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Artwork, ArtworkBrand } from 'components/artwork';
-import { PageContent, PageLead, Image } from 'components/common';
+import { PageContent, PageLead, Image, ImageSet } from 'components/common';
 
 /* eslint-disable quotes */
 exports.data = {
@@ -36,7 +36,8 @@ export default class SnazzyMaps extends React.Component {
             <Artwork route={route}>
                 <PageLead
                     tasks="Branding, UI Design, UI Develpment"
-                    tools="ASP.NET MVC, jQuery, SASS, React"
+                    tools="ASP.NET MVC, jQuery, SCSS, React"
+                    site="https://snazzymaps.com/"
                 >
                     <p>
                         Snazzy Maps is a community-driven site dedicated to
@@ -53,29 +54,16 @@ export default class SnazzyMaps extends React.Component {
                         logo="images/logo.svg"
                         colors={['#00bc66', '#333333']}
                     />
-                    <div className="image-set image-shadow">
-                        <Image
-                            src="images/screen-home-01.png"
-                            alt="Snazzy Maps - Home Page"
-                            width={dimens.home.width}
-                            height={dimens.home.height}
-                            shadow={false}
-                        />
-                        <Image
-                            src="images/screen-home-02.png"
-                            alt="Snazzy Maps - Home Page"
-                            width={dimens.home.width}
-                            height={dimens.home.height}
-                            shadow={false}
-                        />
-                        <Image
-                            src="images/screen-home-03.png"
-                            alt="Snazzy Maps - Home Page"
-                            width={dimens.home.width}
-                            height={dimens.home.height}
-                            shadow={false}
-                        />
-                    </div>
+                    <ImageSet
+                        images={[
+                            'images/screen-home-01.png',
+                            'images/screen-home-02.png',
+                            'images/screen-home-03.png'
+                        ]}
+                        alt="Snazzy Maps - Home Page"
+                        width={dimens.home.width}
+                        height={dimens.home.height}
+                    />
                     <Image
                         src="images/screen-details.png"
                         alt="Snazzy Maps - Details Page"
@@ -122,50 +110,19 @@ export default class SnazzyMaps extends React.Component {
                         src="images/screen-map-marker.png"
                         alt="Snazzy Maps - Build a Map - Add a Marker"
                     />
-                    <div className="image-set image-shadow">
-                        <Image
-                            src="images/screen-press-01.png"
-                            alt="Snazzy Maps - Press Page"
-                            width={dimens.press.width}
-                            height={dimens.press.height}
-                            shadow={false}
-                        />
-                        <Image
-                            src="images/screen-press-02.png"
-                            alt="Snazzy Maps - Press Page"
-                            width={dimens.press.width}
-                            height={dimens.press.height}
-                            shadow={false}
-                        />
-                        <Image
-                            src="images/screen-press-03.png"
-                            alt="Snazzy Maps - Press Page"
-                            width={dimens.press.width}
-                            height={dimens.press.height}
-                            shadow={false}
-                        />
-                        <Image
-                            src="images/screen-press-04.png"
-                            alt="Snazzy Maps - Press Page"
-                            width={dimens.press.width}
-                            height={dimens.press.height}
-                            shadow={false}
-                        />
-                        <Image
-                            src="images/screen-press-05.png"
-                            alt="Snazzy Maps - Press Page"
-                            width={dimens.press.width}
-                            height={dimens.press.height}
-                            shadow={false}
-                        />
-                        <Image
-                            src="images/screen-press-06.png"
-                            alt="Snazzy Maps - Press Page"
-                            width={dimens.press.width}
-                            height={dimens.press.height}
-                            shadow={false}
-                        />
-                    </div>
+                    <ImageSet
+                        images={[
+                            'images/screen-press-01.png',
+                            'images/screen-press-02.png',
+                            'images/screen-press-03.png',
+                            'images/screen-press-04.png',
+                            'images/screen-press-05.png',
+                            'images/screen-press-06.png'
+                        ]}
+                        alt="Snazzy Maps - Home Page"
+                        width={dimens.press.width}
+                        height={dimens.press.height}
+                    />
                 </PageContent>
             </Artwork>
         );

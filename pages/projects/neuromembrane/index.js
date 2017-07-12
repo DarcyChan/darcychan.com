@@ -25,7 +25,11 @@ export default class SnazzyMaps extends React.Component {
         const route = this.props.route;
         return (
             <Artwork route={route}>
-                <PageLead tasks="UI Design, UI Develpment" tools="jQuery, CSS">
+                <PageLead
+                    tasks="UI Design, UI Develpment"
+                    tools="jQuery, CSS"
+                    site="https://neuromembrane.ualberta.ca/account/login"
+                >
                     <p>
                         A web-based simulator and teaching tool that
                         demonstrates neuroscience concepts. Users can choose a

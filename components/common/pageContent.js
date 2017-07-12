@@ -31,7 +31,10 @@ export default class PageContent extends React.Component {
                 onLeave={this.handleLeave}
                 bottomOffset="85%"
             >
-                <div>
+                <div
+                    className={combineClassNames('content-set', className)}
+                    {...props}
+                >
                     <div
                         className={`page-sticky ${this.state.stickyShown
                             ? 'page-sticky-on'
@@ -44,15 +47,7 @@ export default class PageContent extends React.Component {
                             {data.title}
                         </span>
                     </div>
-                    <div
-                        className={combineClassNames(
-                            'page-content content-set',
-                            className
-                        )}
-                        {...props}
-                    >
-                        {children}
-                    </div>
+                    {children}
                 </div>
             </Waypoint>
         );

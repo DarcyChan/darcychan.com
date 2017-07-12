@@ -22,7 +22,7 @@ exports.data = {
 export default class Projects extends React.Component {
     render() {
         return (
-            <PageWrapper className="content-set">
+            <PageWrapper className="page-content content-set">
                 <PageTitle>About Me</PageTitle>
                 <PageLead>
                     <p>
@@ -31,7 +31,7 @@ export default class Projects extends React.Component {
                         <Link href="https://www.ualberta.ca/" external>
                             University of Alberta
                         </Link>{' '}
-                        with a Bachelors of Arts in which I majored in Art and
+                        with a Bachelors of Arts, in which I majored in Art and
                         Design and minored in Mathematical Sciences.
                     </p>
                     <p>
@@ -46,10 +46,16 @@ export default class Projects extends React.Component {
                 </PageLead>
                 <div className="content-set-sm">
                     <p>
+                        <SmallLabel className="disabled">Contact</SmallLabel>
+                        <Link href="mailto:hello@darcychan.com">
+                            hello@darcychan.com
+                        </Link>
+                    </p>
+                    <p>
                         <SmallLabel className="disabled">
                             Front End Tech Experience
                         </SmallLabel>
-                        HTML, CSS, SASS, JavaScript, jQuery, React
+                        HTML, CSS, SCSS, JavaScript, jQuery, React
                     </p>
                     <p>
                         <SmallLabel className="disabled">

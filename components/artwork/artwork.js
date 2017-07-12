@@ -47,10 +47,7 @@ export default class Artwork extends React.Component {
         const data = route.page.data;
         const next = getNextArtwork(route, route.page);
         return (
-            <PageWrapper
-                className={combineClassNames('content-set', className)}
-                {...props}
-            >
+            <PageWrapper className={className} {...props}>
                 <Helmet title={`${data.title} | ${config.siteTitle}`} />
                 <PageTitle>
                     <SmallLabel className="page-title-label">
@@ -58,7 +55,9 @@ export default class Artwork extends React.Component {
                     </SmallLabel>
                     {title || data.title}
                 </PageTitle>
-                {children}
+                <div className="page-content content-set">
+                    {children}
+                </div>
                 {next &&
                     <PageFooter>
                         <NextArtworkLink

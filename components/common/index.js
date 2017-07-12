@@ -7,5 +7,6 @@ export { default as PageContent } from 'components/common/pageContent';
 export { default as PageFooter } from 'components/common/pageFooter';
 export { default as SmallLabel } from 'components/common/smallLabel';
 export { default as Image } from 'components/common/image';
+export { default as ImageSet } from 'components/common/imageSet';
 export { default as Link } from 'components/common/link';
 export { default as Swatch } from 'components/common/swatch';

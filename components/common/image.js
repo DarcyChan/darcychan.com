@@ -47,18 +47,21 @@ const BaseImage = ({
     className,
     shadow,
     responsive,
+    width,
+    height,
     sizes,
     srcSet,
     ...props
 }) => {
-    const classNames = combineClassNames(
-        shadow ? 'image-shadow' : '',
-        className
-    );
+    const classNames = shadow
+        ? combineClassNames('image-shadow', className)
+        : className;
     if (responsive) {
         return (
             <ResponsiveImage
                 className={classNames}
+                width={width}
+                height={height}
                 sizes={sizes}
                 srcSet={srcSet}
                 {...props}
@@ -87,7 +90,7 @@ const LazyImage = ({
             style={{ paddingBottom: `${height / width * 100}%` }}
             {...props}
         >
-            <LazyLoad height="100%" offset={height || 1000} once>
+            <LazyLoad height="100%" offset={height * 2 || 2000} once>
                 <BaseImage
                     className={
                         shadow ? 'lazy-image image-shadow' : 'lazy-image'

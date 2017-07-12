@@ -10,12 +10,12 @@ export default class PageContent extends React.Component {
         const { className, children, ...props } = this.props;
         return (
             <PageTransition>
-                <section
-                    className={combineClassNames('page-wrapper', className)}
+                <div
+                    className={combineClassNames('page', className)}
                     {...props}
                 >
                     {children}
-                </section>
+                </div>
             </PageTransition>
         );
     }

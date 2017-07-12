@@ -110,7 +110,7 @@
     }
 }
 
-@include breakpoint-min(width, $sm) {
+@include breakpoint-min(width, $preview-max-width) {
     .preview {
         &-link {
             &:hover,
@@ -128,9 +128,10 @@
             &-wrapper {
                 display: inline-block;
                 width: percentage(8/12);
-                max-width: 500px;
+                max-width: calc(
+                    #{$preview-max-width + 2} + #{$grid-gutter-width}
+                );
                 height: auto;
-                padding: $grid-gutter-width;
             }
         }
 
@@ -153,6 +154,19 @@
                 margin-left: -$grid-gutter-width * 1.25;
                 border-top: 1px solid;
                 vertical-align: middle;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .preview {
+        &-image {
+            &-wrapper {
+                max-width: calc(
+                    #{$preview-max-width + 2} + #{$grid-gutter-width * 2}
+                );
+                padding: $grid-gutter-width;
             }
         }
     }

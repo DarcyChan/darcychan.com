@@ -38,7 +38,6 @@ body {
 }
 
 .page-wrapper {
-    max-width: 83rem - $header-width-md + $grid-gutter-width * 2;
     padding: ($grid-gutter-width * 1.5 + $navbar-height)
         (
             $grid-gutter-width * 0.5
@@ -48,6 +47,10 @@ body {
     @include breakpoint-min(width, $md) {
         padding: $grid-gutter-width * 2;
     }
+}
+
+.page {
+    max-width: $img-max-width;
 }
 
 .content-set {

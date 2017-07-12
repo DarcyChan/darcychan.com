@@ -2,7 +2,9 @@
 
 p {
     max-width: $p-max-width;
+}
 
+.page-content {
     a {
         @include link-underline($body-bg, $link-color, $selection-bg);
 

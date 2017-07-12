@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Artwork, ArtworkBrand } from 'components/artwork';
-import { PageContent, PageLead, Image } from 'components/common';
+import { PageContent, PageLead, Image, ImageSet } from 'components/common';
 
 /* eslint-disable quotes */
 exports.data = {
@@ -31,7 +31,8 @@ export default class SnazzyMaps extends React.Component {
             <Artwork route={route}>
                 <PageLead
                     tasks="Branding, UI Design, UI Develpment"
-                    tools="jQuery, SASS"
+                    tools="jQuery, SCSS"
+                    site="https://tripitty.com/"
                 >
                     <p>
                         Tripitty is a site to create a travel profile and share
@@ -100,36 +101,17 @@ export default class SnazzyMaps extends React.Component {
                         src="images/screen-trip-stop.png"
                         alt="Tripitty - Trip Page"
                     />
-                    <div className="image-set image-shadow">
-                        <Image
-                            src="images/screen-stats-01.png"
-                            alt="Tripitty - Stats Page"
-                            width={dimens.stats.width}
-                            height={dimens.stats.height}
-                            shadow={false}
-                        />
-                        <Image
-                            src="images/screen-stats-02.png"
-                            alt="Tripitty - Stats Page"
-                            width={dimens.stats.width}
-                            height={dimens.stats.height}
-                            shadow={false}
-                        />
-                        <Image
-                            src="images/screen-stats-03.png"
-                            alt="Tripitty - Stats Page"
-                            width={dimens.stats.width}
-                            height={dimens.stats.height}
-                            shadow={false}
-                        />
-                        <Image
-                            src="images/screen-stats-04.png"
-                            alt="Tripitty - Stats Page"
-                            width={dimens.stats.width}
-                            height={dimens.stats.height}
-                            shadow={false}
-                        />
-                    </div>
+                    <ImageSet
+                        images={[
+                            'images/screen-stats-01.png',
+                            'images/screen-stats-02.png',
+                            'images/screen-stats-03.png',
+                            'images/screen-stats-04.png'
+                        ]}
+                        alt="Tripitty - Stats Page"
+                        width={dimens.stats.width}
+                        height={dimens.stats.height}
+                    />
                 </PageContent>
             </Artwork>
         );
