@@ -1,5 +1,6 @@
-@import './mixins';
-@import './variables';
+//////////////////////////////////////////////////
+// Mobile Navigation Toggle
+//////////////////////////////////////////////////
 
 .page-nav-toggle {
     position: relative;
@@ -13,7 +14,7 @@
     letter-spacing: 0.05rem;
     text-transform: uppercase;
 
-    @include breakpoint-min(width, $md) {
+    @media (min-width: $md) {
         display: none;
     }
 
@@ -52,7 +53,11 @@
     }
 }
 
-@include breakpoint-min(width, $md) {
+//////////////////////////////////////////////////
+// Main Navigation Container
+//////////////////////////////////////////////////
+
+@media (min-width: $md) {
     .page-nav {
         display: block !important;
         transform: none !important;
@@ -64,7 +69,7 @@
     }
 }
 
-@include breakpoint-max(width, $md - 1) {
+@media (max-width: $md - 1) {
     .page-nav {
         display: none;
         position: fixed;
@@ -99,7 +104,19 @@
             pointer-events: none;
         }
     }
+
+    // Prevent body scrolling when the menu is opened
+    html.menu-open {
+        &,
+        body {
+            overflow: hidden;
+        }
+    }
 }
+
+//////////////////////////////////////////////////
+// Main Navigation Menu
+//////////////////////////////////////////////////
 
 .menu {
     margin: 0;
@@ -118,7 +135,7 @@
         text-transform: uppercase;
         text-decoration: none;
 
-        @include breakpoint-min(width, $md) {
+        @media (min-width: $md) {
             padding-top: $grid-gutter-width / 4;
             padding-bottom: $grid-gutter-width / 4;
         }
@@ -147,15 +164,6 @@
             &::before {
                 transform: translate(0, 0);
             }
-        }
-    }
-}
-
-@include breakpoint-max(width, $md - 1) {
-    html.menu-open {
-        &,
-        body {
-            overflow: hidden;
         }
     }
 }

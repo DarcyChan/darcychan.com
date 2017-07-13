@@ -2,9 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 
-import Icon, { Glyph } from 'components/icon';
-import { Image } from 'components/common';
-import 'scss/preview.scss';
+import { Image, Icon, Glyph } from 'components/common';
 
 export default class Preview extends React.Component {
     render() {

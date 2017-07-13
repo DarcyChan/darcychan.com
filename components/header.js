@@ -7,9 +7,7 @@ import { Motion, spring } from 'react-motion';
 
 import { constants } from 'utils';
 import Nav from 'components/nav';
-import Icon, { Glyph } from 'components/icon';
-
-import 'scss/header.scss';
+import { Icon, Glyph } from 'components/common';
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -68,10 +66,10 @@ export default class Header extends React.Component {
                         to={prefixLink('/')}
                         onClick={() => this.handleMenuToggle('collapse')}
                     >
-                        <span className="brand-title page-brand-title">
+                        <span className="page-brand-title">
                             {config.siteTitle}
                         </span>
-                        <span className="brand-subtitle page-brand-subtitle">
+                        <span className="page-brand-subtitle">
                             {config.siteSubTitle}
                         </span>
                         <span className="page-brand-abbr">

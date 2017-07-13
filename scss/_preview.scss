@@ -1,5 +1,6 @@
-@import './mixins';
-@import './variables';
+//////////////////////////////////////////////////
+// Preview Block
+//////////////////////////////////////////////////
 
 .preview {
     &-link {
@@ -66,7 +67,7 @@
         letter-spacing: 0.075rem;
         text-transform: uppercase;
 
-        @include breakpoint-min(width, $md) {
+        @media (min-width: $md) {
             font-size: 0.75rem;
         }
     }
@@ -109,7 +110,7 @@
     }
 }
 
-@include breakpoint-min(width, $preview-max-width) {
+@media (min-width: $preview-max-width) {
     .preview {
         &-link {
             &:hover,
@@ -158,7 +159,7 @@
     }
 }
 
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
     .preview {
         &-image {
             &-wrapper {

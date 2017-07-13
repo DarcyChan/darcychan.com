@@ -1,0 +1,85 @@
+//////////////////////////////////////////////////
+// Artwork Info Block
+//////////////////////////////////////////////////
+
+.artwork-info {
+    max-width: $img-max-width;
+    border: 1px solid $body-border;
+    padding: $grid-gutter-width / 2;
+
+    @media (min-width: $md) {
+        padding: $grid-gutter-width;
+    }
+
+    &-flex {
+        > * + * {
+            margin-top: $grid-gutter-width / 2;
+        }
+    }
+
+    &-logo {
+        width: 12rem;
+    }
+
+    @media (min-width: $sm) and (max-width: $md - 1), (min-width: $lg) {
+        &-flex {
+            display: flex;
+
+            > * + * {
+                margin-top: 0;
+            }
+
+            &-logo {
+                flex: 0 1 auto;
+            }
+
+            &-colors {
+                flex: 0 1 auto;
+            }
+        }
+    }
+
+    @media (min-width: $sm) and (max-width: $md - 1) {
+        &-flex {
+            > * + * {
+                margin-left: $grid-gutter-width;
+            }
+        }
+    }
+
+    @media (min-width: $lg) {
+        &-flex {
+            > * + * {
+                margin-left: $grid-gutter-width * 2;
+            }
+        }
+    }
+}
+
+//////////////////////////////////////////////////
+// Color Swatch
+//////////////////////////////////////////////////
+
+.swatch {
+    display: inline-flex;
+    flex-direction: column;
+    width: 5rem;
+    height: 5rem;
+    box-shadow: 0 0 ($grid-gutter-width / 8) 0 rgba(black, 0.25);
+
+    & + & {
+        margin-left: ($grid-gutter-width / 4);
+    }
+
+    &-color {
+        flex: 1 1 auto;
+    }
+
+    &-value {
+        flex: 0 0 auto;
+        background-color: #fff;
+        border-top: 1px solid $body-border;
+        font-size: 0.9em;
+        text-align: center;
+    }
+}

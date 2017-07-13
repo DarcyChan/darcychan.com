@@ -3,7 +3,6 @@ import LazyLoad from 'react-lazyload';
 
 import { config } from 'config';
 import { combineClassNames, constants } from 'utils';
-import 'scss/images.scss';
 
 // Responsive image with srcset
 const ResponsiveImage = ({
@@ -90,7 +89,7 @@ const LazyImage = ({
             style={{ paddingBottom: `${height / width * 100}%` }}
             {...props}
         >
-            <LazyLoad height="100%" offset={height * 2 || 2000} once>
+            <LazyLoad height="100%" offset={height || 1440} once>
                 <BaseImage
                     className={
                         shadow ? 'lazy-image image-shadow' : 'lazy-image'

@@ -5,15 +5,8 @@ import { Link } from 'react-router';
 
 import { config } from 'config';
 import { combineClassNames, getNextArtwork } from 'utils';
-import {
-    PageTitle,
-    PageWrapper,
-    PageFooter,
-    SmallLabel
-} from 'components/common';
-import Icon, { Glyph } from 'components/icon';
-
-import 'scss/artwork.scss';
+import { PageTitle, PageWrapper, PageFooter } from 'components/page';
+import { SmallLabel, Icon, Glyph } from 'components/common';
 
 const NextArtworkLink = ({ url, className, category, title, ...props }) => {
     return (

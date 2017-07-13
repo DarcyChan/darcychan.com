@@ -1,0 +1,146 @@
+//////////////////////////////////////////////////
+// Base Images
+//////////////////////////////////////////////////
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+svg {
+    color: inherit;
+    fill: currentColor;
+    width: 1rem;
+    height: 1rem;
+
+    * {
+        pointer-events: none;
+    }
+}
+
+//////////////////////////////////////////////////
+// Lazy loading containers
+//////////////////////////////////////////////////
+
+.lazy-image-wrapper {
+    position: relative;
+    height: 0;
+    padding-bottom: percentage(1642 / 2656);
+    background: #f0f0f0 url('../assets/photo.svg') center no-repeat;
+    background-size: $grid-gutter-width $grid-gutter-width;
+    line-height: 0;
+
+    .lazy-image {
+        position: relative;
+        width: 100%;
+        height: auto;
+        animation: lazy-image-in ($transition-duration-long * 3) $transition-bezier;
+    }
+}
+
+@keyframes lazy-image-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+//////////////////////////////////////////////////
+// Image shadow
+//////////////////////////////////////////////////
+
+.image-shadow {
+    box-shadow: 0 ($grid-gutter-width / 8) ($grid-gutter-width / 2)
+        (
+            $grid-gutter-width / 10
+        ) rgba(black, 0.25);
+}
+
+//////////////////////////////////////////////////
+// Image Sets
+// For a group of images combining into one
+// larger image.
+//////////////////////////////////////////////////
+
+.image-set {
+    img {
+        display: block;
+    }
+}
+
+//////////////////////////////////////////////////
+// Image Rows
+// For a row of images in one grouping.
+//////////////////////////////////////////////////
+
+.image-row {
+    line-height: 0;
+    text-align: center;
+}
+
+.image-col {
+    width: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    & + & {
+        margin-top: $grid-gutter-width * 1.5;
+    }
+}
+
+@media screen and (min-width: $sm) {
+    .image-row {
+        display: flex;
+        justify-content: center;
+        padding: $grid-gutter-width * 2;
+        background-color: #fff;
+        box-shadow: 0 ($grid-gutter-width / 8) ($grid-gutter-width / 2)
+            (
+                $grid-gutter-width / 10
+            ) rgba(black, 0.25);
+    }
+
+    .image-col {
+        flex: 0 1 auto;
+        margin: 0;
+
+        & + & {
+            margin-top: 0;
+            margin-left: $grid-gutter-width;
+        }
+    }
+}
+
+//////////////////////////////////////////////////
+// Icon Set
+// For a set of icons grouped into a grid.
+//////////////////////////////////////////////////
+
+.icon-set {
+    padding: $grid-gutter-width;
+    background-color: #fff;
+    line-height: 0;
+
+    img {
+        display: inline-block;
+        width: percentage(6/12);
+
+        @media screen and (min-width: 600px) {
+            width: percentage(4/12);
+        }
+
+        @media screen and (min-width: $sm) {
+            width: percentage(3/12);
+        }
+
+        @media screen and (min-width: $md) {
+            width: percentage(4/12);
+        }
+
+        @media screen and (min-width: $lg) {
+            width: percentage(3/12);
+        }
+    }
+}

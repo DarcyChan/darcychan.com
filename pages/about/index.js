@@ -1,12 +1,7 @@
 import React from 'react';
 
-import {
-    PageTitle,
-    PageWrapper,
-    PageLead,
-    Link,
-    SmallLabel
-} from 'components/common';
+import { PageTitle, PageWrapper, PageLead } from 'components/page';
+import { Link, SmallLabel } from 'components/common';
 
 /* eslint-disable quotes */
 exports.data = {
@@ -26,22 +21,22 @@ export default class Projects extends React.Component {
                 <PageTitle>About Me</PageTitle>
                 <PageLead>
                     <p>
-                        I have been a professional front end developer and
+                        I have been a professional front end web developer and
                         designer since 2011, shortly after graduating from{' '}
                         <Link href="https://www.ualberta.ca/" external>
                             University of Alberta
                         </Link>{' '}
-                        with a Bachelors of Arts, in which I majored in Art and
-                        Design and minored in Mathematical Sciences.
+                        with a Bachelors of Arts&mdash;in which I majored in Art
+                        and Design and minored in Mathematical Sciences.
                     </p>
                     <p>
                         I am currently a co-founder of{' '}
                         <Link href="http://atmist.com/" external>
                             Atmist
                         </Link>{' '}
-                        and have worked on many projects that utilize much of
-                        the current technologies and practices. On my days off,
-                        I enjoy casual illustrating and gaming.
+                        and have worked on many projects that utilize many
+                        current technologies and practices. On my days off, I
+                        enjoy casual illustrating and gaming.
                     </p>
                 </PageLead>
                 <div className="content-set-sm">

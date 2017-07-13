@@ -3,7 +3,8 @@ import Helmet from 'react-helmet';
 
 import { getArtworksFromRoute } from 'utils';
 import { config } from 'config';
-import { PageWrapper, PageTitle, SmallLabel } from 'components/common';
+import { PageWrapper, PageTitle } from 'components/page';
+import { SmallLabel } from 'components/common';
 import { PreviewList } from 'components/preview';
 
 /* eslint-disable quotes */

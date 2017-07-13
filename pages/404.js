@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PageTitle, PageLead, PageWrapper } from 'components/common';
+import { PageTitle, PageLead, PageWrapper } from 'components/page';
 
 /* eslint-disable quotes */
 exports.data = {

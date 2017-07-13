@@ -2,8 +2,6 @@ import React from 'react';
 
 import { combineClassNames } from 'utils';
 
-import 'scss/artwork.scss';
-
 export default class ArtworkInfoBlock extends React.Component {
     render() {
         const { className, children, ...props } = this.props;

@@ -2,8 +2,6 @@ import React from 'react';
 import { Link, IndexLink } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 
-import 'scss/navigation.scss';
-
 // GatsbyJS does not add the activeClassName to child routes, so we do it manually.
 // See: https://github.com/gatsbyjs/gatsby/issues/677
 const setClassNames = (link, location) => {

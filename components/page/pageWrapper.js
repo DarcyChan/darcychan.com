@@ -1,9 +1,7 @@
 import React from 'react';
 
-import { PageTransition } from 'components/common';
+import { PageTransition } from 'components/page';
 import { combineClassNames } from 'utils';
-
-import 'scss/page.scss';
 
 export default class PageContent extends React.Component {
     render() {

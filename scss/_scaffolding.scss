@@ -1,28 +1,16 @@
+//////////////////////////////////////////////////
+// Box Sizing Reset
+//////////////////////////////////////////////////
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-html {
-    font-size: $font-size-base;
-
-    @include breakpoint-min(width, $xs) {
-        font-size: calc(
-            #{$font-size-base} + 4 * ((100vw - #{$xs}) / #{($md - $xs) / 1px})
-        );
-    }
-
-    @include breakpoint-min(width, $md) {
-        font-size: calc(
-            #{$font-size-base} + 3 * ((100vw - #{$md}) / #{($xl - $md) / 1px})
-        );
-    }
-
-    @include breakpoint-min(width, $xl) {
-        font-size: $font-size-base + 3;
-    }
-}
+//////////////////////////////////////////////////
+// Body
+//////////////////////////////////////////////////
 
 body {
     background-color: $body-bg;
@@ -31,33 +19,21 @@ body {
     font-size: 1rem;
 }
 
-.body-content {
-    @include breakpoint-min(width, $md) {
+@media (min-width: $md) {
+    .body-content {
         margin-left: $header-width-md;
     }
 }
 
-.page-wrapper {
-    padding: ($grid-gutter-width * 1.5 + $navbar-height)
-        (
-            $grid-gutter-width * 0.5
-        ) ($grid-gutter-width * 1.5);
-    line-height: 1.55;
-
-    @include breakpoint-min(width, $md) {
-        padding: $grid-gutter-width * 2;
-    }
-}
-
-.page {
-    max-width: $img-max-width;
-}
+//////////////////////////////////////////////////
+// Spacing Helpers
+//////////////////////////////////////////////////
 
 .content-set {
     > * + * {
         margin-top: $grid-gutter-width * 1.5;
 
-        @include breakpoint-min(width, $md) {
+        @media (min-width: $md) {
             margin-top: $grid-gutter-width * 2;
         }
     }
@@ -67,99 +43,18 @@ body {
     }
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.image-set {
-    img {
-        display: block;
-    }
-}
-
-.image-row {
-    line-height: 0;
-    text-align: center;
-}
-
-.image-col {
-    width: 15rem;
-    margin-left: auto;
-    margin-right: auto;
-
-    & + & {
-        margin-top: $grid-gutter-width * 1.5;
-    }
-}
-
-@media screen and (min-width: $sm) {
-    .image-row {
-        display: flex;
-        justify-content: center;
-        padding: $grid-gutter-width * 2;
-        background-color: #fff;
-        box-shadow: 0 ($grid-gutter-width / 8) ($grid-gutter-width / 2)
-            (
-                $grid-gutter-width / 10
-            ) rgba(black, 0.25);
-    }
-
-    .image-col {
-        flex: 0 1 auto;
-        margin: 0;
-
-        & + & {
-            margin-top: 0;
-            margin-left: $grid-gutter-width;
-        }
-    }
-}
-
-.icon-set {
-    padding: $grid-gutter-width;
-    background-color: #fff;
-    line-height: 0;
-
-    @media screen and (min-width: $sm) {
-    }
-
-    img {
-        display: inline-block;
-        width: percentage(6/12);
-
-        @media screen and (min-width: 600px) {
-            width: percentage(4/12);
-        }
-
-        @media screen and (min-width: $sm) {
-            width: percentage(3/12);
-        }
-
-        @media screen and (min-width: $md) {
-            width: percentage(4/12);
-        }
-
-        @media screen and (min-width: $lg) {
-            width: percentage(3/12);
-        }
-    }
-}
-
-svg {
-    color: inherit;
-    fill: currentColor;
-    width: 1rem;
-    height: 1rem;
-
-    * {
-        pointer-events: none;
-    }
-}
+//////////////////////////////////////////////////
+// Styling Helpers
+//////////////////////////////////////////////////
 
 .disabled {
     opacity: 0.4;
 }
+
+//////////////////////////////////////////////////
+// Selection Styles
+// Needed for the custom text underlining.
+//////////////////////////////////////////////////
 
 ::selection {
     background-color: $selection-bg;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { getArtworksFromRoute } from 'utils';
-import { PageTitle, PageSubtitle, PageWrapper } from 'components/common';
+import { PageTitle, PageSubtitle, PageWrapper } from 'components/page';
 import { PreviewList } from 'components/preview';
 
 export default class Index extends React.Component {

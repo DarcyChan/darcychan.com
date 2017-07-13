@@ -1,6 +1,3 @@
-@import './mixins';
-@import './variables';
-
 //////////////////////////////////////////////////
 // Page Header
 //////////////////////////////////////////////////
@@ -26,7 +23,7 @@
         }
     }
 
-    @include breakpoint-min(width, $md) {
+    @media (min-width: $md) {
         position: fixed;
         top: 0;
         left: 0;
@@ -44,30 +41,6 @@
         }
     }
 }
-
-
-
-//////////////////////////////////////////////////
-// Brand
-//////////////////////////////////////////////////
-
-.brand {
-    &-title {
-        display: block;
-        font-weight: 700;
-        line-height: 1.1;
-        letter-spacing: 0.05em;
-    }
-
-    &-subtitle {
-        display: block;
-        opacity: 0.75;
-        font-size: 0.6em;
-        font-weight: 400;
-    }
-}
-
-
 
 //////////////////////////////////////////////////
 // Page Brand
@@ -123,7 +96,7 @@
     }
 }
 
-@include breakpoint-min(width, $md) {
+@media (min-width: $md) {
     .page-brand {
         display: block;
 
@@ -139,12 +112,18 @@
             letter-spacing: 0;
         }
 
-        &-title,
-        &-subtitle {
+        &-title {
             display: block;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: 0.05em;
         }
 
         &-subtitle {
+            display: block;
+            opacity: 0.75;
+            font-size: 0.6em;
+            font-weight: 400;
             text-transform: none;
         }
 
@@ -155,7 +134,7 @@
     }
 }
 
-@include breakpoint-max(width, $md) {
+@media (max-width: $md - 1) {
     .page-brand {
         animation: brand-enter $transition-duration-long $transition-bezier;
     }

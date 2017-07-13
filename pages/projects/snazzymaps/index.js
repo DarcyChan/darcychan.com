@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { Artwork, ArtworkBrand } from 'components/artwork';
-import { PageContent, PageLead, Image, ImageSet } from 'components/common';
+import { PageContent, PageLead } from 'components/page';
+import { Image, ImageSet } from 'components/common';
 
 /* eslint-disable quotes */
 exports.data = {

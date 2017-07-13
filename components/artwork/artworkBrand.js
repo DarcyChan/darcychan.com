@@ -5,8 +5,6 @@ import { combineClassNames } from 'utils';
 import { SmallLabel, Swatch } from 'components/common';
 import { ArtworkInfoBlock } from 'components/artwork';
 
-import 'scss/artwork.scss';
-
 export default class ArtworkBrand extends React.Component {
     render() {
         const { logo, colors, className, children, ...props } = this.props;
