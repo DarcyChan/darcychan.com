@@ -31,6 +31,24 @@ export default class HTML extends React.Component {
             );
         }
 
+        let serviceWorker;
+        if (process.env.NODE_ENV === 'production') {
+            serviceWorker = (
+                <script
+                    type="text/javascript"
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            if ('serviceWorker' in navigator) {
+                                navigator.serviceWorker.register(
+                                    '/service-worker.js'
+                                );
+                            }
+                        `
+                    }}
+                />
+            );
+        }
+
         return (
             <html lang="en">
                 <head>
@@ -77,7 +95,7 @@ export default class HTML extends React.Component {
                     <meta name="application-name" content="Darcy Chan" />
                     <meta name="theme-color" content="#fefffd" />
                     <link
-                        href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i,900"
+                        href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700"
                         rel="stylesheet"
                     />
                     {css}
@@ -88,6 +106,7 @@ export default class HTML extends React.Component {
                         dangerouslySetInnerHTML={{ __html: this.props.body }}
                     />
                     <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
+                    {serviceWorker}
                 </body>
             </html>
         );

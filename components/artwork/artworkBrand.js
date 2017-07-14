@@ -1,4 +1,5 @@
 import React from 'react';
+import { prefixLink } from 'gatsby-helpers';
 
 import { config } from 'config';
 import { combineClassNames } from 'utils';
@@ -19,7 +20,7 @@ export default class ArtworkBrand extends React.Component {
                     <div className="artwork-info-logo">
                         <SmallLabel className="disabled">Logo</SmallLabel>
                         <img
-                            src={`${logo}?v=${config.version}`}
+                            src={prefixLink(`${logo}?v=${config.version}`)}
                             alt="Project Logo"
                         />
                     </div>}

@@ -1,5 +1,6 @@
 {
     "name": "Darcy Chan",
+    "short_name": "DC",
     "icons": [
         {
             "src": "/android-chrome-192x192.png?v=Om5Ee4QbLd",
@@ -13,5 +14,7 @@
         }
     ],
     "theme_color": "#fefffd",
-    "background_color": "#fefffd"
+    "background_color": "#fefffd",
+    "display": "standalone",
+    "start_url": "/"
 }

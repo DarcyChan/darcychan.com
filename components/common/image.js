@@ -1,4 +1,5 @@
 import React from 'react';
+import { prefixLink } from 'gatsby-helpers';
 import LazyLoad from 'react-lazyload';
 
 import { config } from 'config';
@@ -25,7 +26,7 @@ const ResponsiveImage = ({
                 `${name}${ext}?v=${config.version} ${width}w, ${name}@2x${ext}?v=${config.version} ${width *
                     2}w`
             }
-            src={`${src}?v=${config.version}`}
+            src={prefixLink(`${src}?v=${config.version}`)}
             sizes={
                 sizes ||
                 `(min-width: ${constants.breakpoint.md}px) ${width}px, 100vw`
@@ -38,7 +39,13 @@ const ResponsiveImage = ({
 
 // Regular image
 const SingleImage = ({ src, alt, ...props }) => {
-    return <img src={`${src}?v=${config.version}`} alt={alt} {...props} />;
+    return (
+        <img
+            src={prefixLink(`${src}?v=${config.version}`)}
+            alt={alt}
+            {...props}
+        />
+    );
 };
 
 // Determine whether to use responsive images based on props
