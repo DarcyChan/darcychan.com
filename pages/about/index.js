@@ -56,8 +56,7 @@ export default class Projects extends React.Component {
                         <SmallLabel className="disabled">
                             Design Software Experience
                         </SmallLabel>
-                        Photoshop, Illustrator, InDesign, After Effects,
-                        Affinity Designer
+                        Photoshop, Illustrator, InDesign, Affinity Designer
                     </p>
                 </div>
                 <p className="font-small">
