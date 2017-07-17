@@ -21,7 +21,7 @@ export default class Projects extends React.Component {
                 <PageTitle>About Me</PageTitle>
                 <PageLead>
                     <p>
-                        I have been a professional front end web developer and
+                        I have been a professional UI/UX web developer and
                         designer since 2011, shortly after graduating from{' '}
                         <Link href="https://www.ualberta.ca/" external>
                             University of Alberta
@@ -48,7 +48,7 @@ export default class Projects extends React.Component {
                     </p>
                     <p>
                         <SmallLabel className="disabled">
-                            Front End Tech Experience
+                            UI Tech Experience
                         </SmallLabel>
                         HTML, CSS, SCSS, JavaScript, jQuery, React
                     </p>

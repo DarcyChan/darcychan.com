@@ -1,5 +1,5 @@
 # darcychan.com
-Work in progress of my personal portfolio.
+My personal portfolio, [darcychan.com](https://darcychan.com).
 
 # License
 MIT License
