@@ -7,6 +7,15 @@ import { prefixLink } from 'gatsby-helpers';
 const setClassNames = (link, location) => {
     const base = 'menu-item';
 
+    // startsWith polyfill for IE
+    if (!String.prototype.startsWith) {
+        // eslint-disable-next-line
+        String.prototype.startsWith = function(searchString, position) {
+            position = position || 0;
+            return this.indexOf(searchString, position) === position;
+        };
+    }
+
     if (location.startsWith(link)) {
         return `${base} active`;
     }

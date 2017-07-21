@@ -30,6 +30,11 @@ html {
 // Uses custom text underlining.
 //////////////////////////////////////////////////
 
+a,
+button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
 .page-content {
     a {
         @include link-underline($body-bg, $link-color, $selection-bg);

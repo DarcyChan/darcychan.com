@@ -66,14 +66,14 @@ export default class Header extends React.Component {
                         to={prefixLink('/')}
                         onClick={() => this.handleMenuToggle('collapse')}
                     >
-                        <span className="page-brand-title">
-                            {config.siteTitle}
-                        </span>
-                        <span className="page-brand-subtitle">
-                            {config.siteSubTitle}
-                        </span>
-                        <span className="page-brand-abbr">
-                            {config.siteAbbr}
+                        <Icon glyph={Glyph.Logo} className="page-brand-logo" />
+                        <span>
+                            <span className="page-brand-title">
+                                {config.siteTitle}
+                            </span>
+                            <span className="page-brand-subtitle">
+                                {config.siteSubTitle}
+                            </span>
                         </span>
                     </Link>
                     {currentCategory &&
@@ -83,11 +83,13 @@ export default class Header extends React.Component {
                             to={prefixLink(currentCategoryLink.path)}
                             onClick={() => this.handleMenuToggle('collapse')}
                         >
-                            {currentCategoryLink.data.title}
+                            <span className="page-brand-label">
+                                {currentCategoryLink.data.title}
+                            </span>
                         </Link>}
                     {this.state.menuVisible &&
-                        <span className="page-brand-category disabled">
-                            Menu
+                        <span className="page-brand page-brand-category disabled">
+                            <span className="page-brand-label">Menu</span>
                         </span>}
                     <button
                         className={`page-nav-toggle ${this.state.menuVisible

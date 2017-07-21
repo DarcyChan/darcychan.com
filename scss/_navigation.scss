@@ -10,7 +10,7 @@
     background-color: transparent;
     border: 2px solid transparent;
     font-weight: 700;
-    line-height: initial;
+    line-height: calc(#{$navbar-height} - 4px);
     letter-spacing: 0.05rem;
     text-transform: uppercase;
 
@@ -122,6 +122,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    line-height: 0.9;
 
     &-item {
         display: block;
@@ -131,7 +132,6 @@
         color: inherit;
         font-weight: 700;
         letter-spacing: 0.05rem;
-        line-height: 1;
         text-transform: uppercase;
         text-decoration: none;
 
@@ -158,6 +158,10 @@
             &::before {
                 transform: translate(-50%, 0);
             }
+        }
+
+        &:active {
+            background-color: transparent;
         }
 
         &.active {
