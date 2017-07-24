@@ -1,7 +1,14 @@
+/*
+    Preview Component.
+    The preview link component with a preview image, name, and category of the project.
+*/
+
+// External components
 import React from 'react';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 
+// Internal components
 import { Image, Icon, Glyph } from 'components/common';
 
 export default class Preview extends React.Component {

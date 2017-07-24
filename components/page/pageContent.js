@@ -1,6 +1,13 @@
+/*
+    Page Content Component.
+    The component that displays the page content of a page, with a sticky waypoint.
+*/
+
+// External components
 import React from 'react';
 import Waypoint from 'react-waypoint';
 
+// Internal components
 import { combineClassNames } from 'utils';
 
 export default class PageContent extends React.Component {

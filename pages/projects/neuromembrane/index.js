@@ -60,7 +60,7 @@ export default class SnazzyMaps extends React.Component {
                         src="images/screen-integration-setup.png"
                         alt="Neuromembrane - Integration Simulation"
                     />
-                    <div className="image-row">
+                    <div className="image-row image-shadow">
                         <div className="image-col">
                             <Image
                                 src="images/screen-setup-mobile.png"

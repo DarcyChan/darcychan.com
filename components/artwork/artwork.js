@@ -1,13 +1,21 @@
+/*
+    Artwork Component.
+    The component to display the details of the artwork.
+*/
+
+// External components
 import React from 'react';
 import Helmet from 'react-helmet';
 import { prefixLink } from 'gatsby-helpers';
 import { Link } from 'react-router';
 
+// Internal components
 import { config } from 'config';
 import { combineClassNames, getNextArtwork } from 'utils';
 import { PageTitle, PageWrapper, PageFooter } from 'components/page';
 import { SmallLabel, Icon, Glyph } from 'components/common';
 
+// Link in the footer for the next artwork
 const NextArtworkLink = ({ url, className, category, title, ...props }) => {
     return (
         <Link

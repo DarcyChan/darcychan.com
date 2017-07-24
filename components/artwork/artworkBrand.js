@@ -1,6 +1,13 @@
+/*
+    Artwork Brand Component.
+    The component that displays the artwork's logo and colour swatches.
+*/
+
+// External components
 import React from 'react';
 import { prefixLink } from 'gatsby-helpers';
 
+// Internal components
 import { config } from 'config';
 import { combineClassNames } from 'utils';
 import { SmallLabel, Swatch } from 'components/common';

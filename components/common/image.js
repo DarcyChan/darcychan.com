@@ -1,3 +1,11 @@
+/*
+    Image Component.
+    The component that renders one a combination of the following:
+    - A responsive image using srcSet and sizes.
+    - An image with a lazyloading wrapper and set height.
+    - A basic image.
+*/
+
 import React from 'react';
 import { prefixLink } from 'gatsby-helpers';
 import LazyLoad from 'react-lazyload';
@@ -5,7 +13,7 @@ import LazyLoad from 'react-lazyload';
 import { config } from 'config';
 import { combineClassNames, constants } from 'utils';
 
-// Responsive image with srcset
+// Responsive image with srcset and size
 const ResponsiveImage = ({
     src,
     srcSet,
@@ -37,7 +45,7 @@ const ResponsiveImage = ({
     );
 };
 
-// Regular image
+// Regular image with no special properties
 const SingleImage = ({ src, alt, ...props }) => {
     return (
         <img

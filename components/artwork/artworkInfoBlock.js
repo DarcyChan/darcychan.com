@@ -1,5 +1,12 @@
+/*
+    Artwork Info Block Component.
+    The component that displays a styled section for general information.
+*/
+
+// External components
 import React from 'react';
 
+// Internal components
 import { combineClassNames } from 'utils';
 
 export default class ArtworkInfoBlock extends React.Component {

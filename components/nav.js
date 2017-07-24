@@ -1,3 +1,8 @@
+/*
+    Navigation Component.
+    The main navigation menu displayed on all pages.
+*/
+
 import React from 'react';
 import { Link, IndexLink } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';

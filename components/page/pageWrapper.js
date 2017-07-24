@@ -1,9 +1,16 @@
+/*
+    Page Wrapper Component.
+    The wrapper of the page.
+*/
+
+// External components
 import React from 'react';
 
+// Internal components
 import { PageTransition } from 'components/page';
 import { combineClassNames } from 'utils';
 
-export default class PageContent extends React.Component {
+export default class PageWrapper extends React.Component {
     render() {
         const { className, children, ...props } = this.props;
         return (

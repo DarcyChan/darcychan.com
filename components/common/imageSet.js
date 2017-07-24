@@ -1,5 +1,12 @@
+/*
+    Image Set Component.
+    A component to render a set of Image components.
+*/
+
+// External components
 import React from 'react';
 
+// Internal components
 import { Image } from 'components/common';
 
 export default class ImageSet extends React.Component {

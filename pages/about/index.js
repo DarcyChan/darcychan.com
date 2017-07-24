@@ -50,7 +50,7 @@ export default class Projects extends React.Component {
                         <SmallLabel className="disabled">
                             UI Tech Experience
                         </SmallLabel>
-                        HTML, CSS, SCSS, JavaScript, jQuery, React
+                        HTML, CSS, SCSS, PHP, JavaScript, jQuery, React
                     </p>
                     <p>
                         <SmallLabel className="disabled">

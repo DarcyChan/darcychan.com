@@ -1,5 +1,12 @@
+/*
+    Page Lead Component.
+    The lead section of the page, with a description, role, and link of the project if it exists.
+*/
+
+// External components
 import React from 'react';
 
+// Internal components
 import { combineClassNames } from 'utils';
 import { SmallLabel, Link } from 'components/common';
 

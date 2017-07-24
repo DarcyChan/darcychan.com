@@ -1,3 +1,8 @@
+/*
+    Swatch Component.
+    A general component to render a swatch and colour value from a hex code.
+*/
+
 import React from 'react';
 
 import { combineClassNames } from 'utils';

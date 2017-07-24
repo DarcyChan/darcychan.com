@@ -1,3 +1,9 @@
+/*
+    Page Transition Component.
+    The wrapper component of the page that adds a transition to the page on enter.
+*/
+
+// External components
 import React from 'react';
 import { Motion, spring } from 'react-motion';
 

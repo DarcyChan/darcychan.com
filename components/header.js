@@ -1,3 +1,9 @@
+/*
+    Header Component.
+    The header displayed on all pages.
+*/
+
+// External components
 import React from 'react';
 import sortBy from 'lodash/sortBy';
 import { config } from 'config';
@@ -5,6 +11,7 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import { Motion, spring } from 'react-motion';
 
+// Internal components
 import { constants } from 'utils';
 import Nav from 'components/nav';
 import { Icon, Glyph } from 'components/common';

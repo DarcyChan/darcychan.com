@@ -81,7 +81,7 @@ svg {
 }
 
 .image-col {
-    width: 15rem;
+    width: 14.706rem;
     margin-left: auto;
     margin-right: auto;
 
@@ -96,10 +96,6 @@ svg {
         justify-content: center;
         padding: $grid-gutter-width * 2;
         background-color: #fff;
-        box-shadow: 0 ($grid-gutter-width / 8) ($grid-gutter-width / 2)
-            (
-                $grid-gutter-width / 10
-            ) rgba(black, 0.25);
     }
 
     .image-col {
