@@ -4,7 +4,7 @@ import React from 'react';
 // Internal components
 import { Artwork } from 'components/artwork';
 import { PageContent, PageLead } from 'components/page';
-import { ImageSet, Image } from 'components/common';
+import { ImageSet, Image, SmallLabel } from 'components/common';
 
 /* eslint-disable quotes */
 exports.data = {
@@ -23,8 +23,8 @@ const dimens = {
         height: 1124
     },
     mainBrand: {
-        width: 1328,
-        height: 496
+        width: 500,
+        height: 500
     },
     sampleBrand: {
         width: 250,
@@ -58,14 +58,36 @@ export default class CreditCardCheckout extends React.Component {
                         height={dimens.home.height}
                     />
                     <div className="image-shadow">
-                        <Image
-                            src="images/logo-main.png"
-                            alt="CampusBridge - Logo"
-                            width={dimens.mainBrand.width}
-                            height={dimens.mainBrand.height}
-                            shadow={false}
-                        />
-                        <div className="image-row">
+                        <div className="image-header">
+                            <SmallLabel className="text-center disabled">
+                                Final Logo
+                            </SmallLabel>
+                        </div>
+                        <div className="image-row image-row-set">
+                            <div
+                                className="image-col"
+                                style={{
+                                    maxWidth: dimens.mainBrand.width
+                                }}
+                            >
+                                <Image
+                                    src="images/logo-main.png"
+                                    alt="CampusBridge - Logo"
+                                    width={dimens.mainBrand.width}
+                                    height={dimens.mainBrand.height}
+                                    shadow={false}
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="image-shadow">
+                        <div className="image-header">
+                            <SmallLabel className="text-center disabled">
+                                Other Logos
+                            </SmallLabel>
+                        </div>
+                        <div className="image-row image-row-set">
                             <div className="image-col">
                                 <Image
                                     src="images/logo-sample-01.png"
@@ -94,7 +116,7 @@ export default class CreditCardCheckout extends React.Component {
                                 />
                             </div>
                         </div>
-                        <div className="image-row">
+                        <div className="image-row image-row-set">
                             <div className="image-col">
                                 <Image
                                     src="images/logo-sample-04.png"

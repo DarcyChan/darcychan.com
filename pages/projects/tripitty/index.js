@@ -62,7 +62,7 @@ export default class SnazzyMaps extends React.Component {
                         src="images/screen-trip.png"
                         alt="Tripitty - Trip Page"
                     />
-                    <div className="image-row image-shadow">
+                    <div className="image-row image-shadow-md">
                         <div className="image-col">
                             <Image
                                 src="images/screen-trip-mobile-01.png"
@@ -80,7 +80,7 @@ export default class SnazzyMaps extends React.Component {
                             />
                         </div>
                     </div>
-                    <div className="image-row image-shadow">
+                    <div className="image-row image-shadow-md">
                         <div className="image-col">
                             <Image
                                 src="images/screen-trip-mobile-03.png"

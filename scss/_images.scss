@@ -51,11 +51,34 @@ svg {
 // Image shadow
 //////////////////////////////////////////////////
 
+$image-shadow: 0 ($grid-gutter-width / 8) ($grid-gutter-width / 2)
+    (
+        $grid-gutter-width / 10
+    ) rgba(black, 0.25);
+
 .image-shadow {
-    box-shadow: 0 ($grid-gutter-width / 8) ($grid-gutter-width / 2)
-        (
-            $grid-gutter-width / 10
-        ) rgba(black, 0.25);
+    box-shadow: $image-shadow;
+    background-color: #fff;
+}
+
+@media (min-width: $md) {
+    .image-shadow-md {
+        box-shadow: $image-shadow;
+        background-color: #fff;
+    }
+}
+
+//////////////////////////////////////////////////
+// Image Header
+// Content displayed before the image
+//////////////////////////////////////////////////
+
+.image-header {
+    padding-top: $grid-gutter-width;
+
+    @media (min-width: $md) {
+        padding-top: $grid-gutter-width;
+    }
 }
 
 //////////////////////////////////////////////////
@@ -78,10 +101,15 @@ svg {
 .image-row {
     line-height: 0;
     text-align: center;
+
+    &-set {
+        padding-top: $grid-gutter-width;
+        padding-bottom: $grid-gutter-width;
+    }
 }
 
 .image-col {
-    width: 14.706rem;
+    max-width: 14.706rem;
     margin-left: auto;
     margin-right: auto;
 
