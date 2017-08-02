@@ -1,0 +1,88 @@
+@import 'variables';
+
+//////////////////////////////////////////////////
+// Variables
+//////////////////////////////////////////////////
+
+$anim-duration: 2s;
+
+//////////////////////////////////////////////////
+// Containers
+//////////////////////////////////////////////////
+
+.switch {
+    position: relative;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    &-wrapper {
+        padding: ($grid-gutter-width * 2) $grid-gutter-width;
+
+        @media (min-width: $sm) {
+            padding: ($grid-gutter-width * 4) ($grid-gutter-width * 2);
+        }
+    }
+
+    &-console {
+        display: block;
+        position: relative;
+        z-index: 2;
+        animation: console $anim-duration ease-in-out infinite;
+    }
+
+    &-joycons {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        animation: joycon $anim-duration ease-in-out infinite;
+    }
+}
+
+//////////////////////////////////////////////////
+// Keyframes
+//////////////////////////////////////////////////
+
+@keyframes joycon {
+    0%,
+    62%,
+    100% {
+        transform: scale(1, 1) translate(0, 0);
+    }
+    66% {
+        transform: scale(1, 1.01) translate(0, 1%);
+    }
+    77% {
+        transform: scale(1, 1.01) translate(0, -32%);
+    }
+    80% {
+        transform: scale(1, 1) translate(0, -33%);
+    }
+    83% {
+        transform: scale(1, 1) translate(0, -32%);
+    }
+    94% {
+        transform: scale(1, 1.03) translate(0, 3%);
+    }
+    96% {
+        transform: scale(1, 0.95) translate(0, 3%);
+    }
+}
+
+@keyframes console {
+    0%,
+    92%,
+    100% {
+        transform: scale(1, 1) translate(0, 0);
+    }
+    94% {
+        transform: scale(1, 1.02) translate(0, 2%);
+    }
+    96% {
+        transform: scale(1, 0.98) translate(0, 2%);
+    }
+}
