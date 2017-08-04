@@ -1,0 +1,148 @@
+//////////////////////////////////////////////////
+// Variables
+//////////////////////////////////////////////////
+
+$anim-duration: 4s;
+$arm-lift-scale: 1.03;
+
+//////////////////////////////////////////////////
+// Containers
+//////////////////////////////////////////////////
+
+.record-player {
+    position: relative;
+    max-width: 24rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+        display: block;
+    }
+
+    &-record {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: percentage(250/340);
+        height: 100%;
+        transform-origin: 50% 50%;
+    }
+
+    &-armpivot,
+    &-recordshadow,
+    &-recordhighlight {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    &-armpivot {
+        transform: scale($arm-lift-scale);
+        transform-origin: percentage(282/340) percentage(58/250);
+    }
+
+    &-arm,
+    &-armshadow {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: percentage(116/340);
+        height: 100%;
+        transform: scale($arm-lift-scale) rotate(15deg);
+    }
+
+    &-arm {
+        transform-origin: percentage(58/116) percentage(58/250);
+    }
+
+    &-armshadow {
+        transform-origin: percentage(66/116) percentage(66/250);
+    }
+}
+
+.animate-on {
+    transform: translateZ(0);
+
+    .record-player-record {
+        animation: record-rotate $anim-duration ease-in-out infinite;
+        animation-delay: 100ms;
+    }
+
+    .record-player-armpivot {
+        animation: armpivot $anim-duration ease-in-out infinite;
+        animation-delay: 100ms;
+    }
+
+    .record-player-arm,
+    .record-player-armshadow {
+        animation: arm-rotate $anim-duration ease-in-out infinite;
+        animation-delay: 100ms;
+    }
+}
+
+//////////////////////////////////////////////////
+// Keyframes
+//////////////////////////////////////////////////
+
+@keyframes record-rotate {
+    25% {
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(#{360 * 5}deg);
+    }
+    60.00001% {
+        transform: none;
+    }
+}
+
+@keyframes arm-rotate {
+    0%,
+    90%,
+    100% {
+        transform: scale($arm-lift-scale) rotate(15deg);
+    }
+    7% {
+        transform: scale($arm-lift-scale) rotate(31deg);
+    }
+    9% {
+        transform: scale($arm-lift-scale) rotate(29deg);
+    }
+    12% {
+        transform: scale($arm-lift-scale) rotate(30deg);
+    }
+    20% {
+        transform: scale(1) rotate(30deg);
+    }
+    60%,
+    65% {
+        transform: scale(1) rotate(45deg);
+    }
+    70% {
+        transform: scale($arm-lift-scale + 0.02) rotate(44deg);
+    }
+    72% {
+        transform: scale($arm-lift-scale) rotate(44deg);
+    }
+    88% {
+        transform: scale($arm-lift-scale) rotate(14deg);
+    }
+}
+
+@keyframes armpivot {
+    0%,
+    12%,
+    72%,
+    100% {
+        transform: scale($arm-lift-scale);
+    }
+    20%,
+    65% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale($arm-lift-scale + 0.02);
+    }
+}

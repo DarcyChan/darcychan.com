@@ -43,6 +43,14 @@ body {
     }
 }
 
+.content-padded {
+    padding: ($grid-gutter-width * 2) $grid-gutter-width;
+
+    @media (min-width: $sm) {
+        padding: ($grid-gutter-width * 4) ($grid-gutter-width * 2);
+    }
+}
+
 //////////////////////////////////////////////////
 // Styling Helpers
 //////////////////////////////////////////////////

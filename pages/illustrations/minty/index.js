@@ -6,7 +6,7 @@ import { Image, Link } from 'components/common';
 
 /* eslint-disable quotes */
 exports.data = {
-    id: 0,
+    id: 1,
     path: `/illustrations/minty/`,
     category: `illustration`,
     type: `artwork`,

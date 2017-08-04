@@ -1,5 +1,3 @@
-@import 'variables';
-
 //////////////////////////////////////////////////
 // Variables
 //////////////////////////////////////////////////
@@ -16,19 +14,15 @@ $anim-duration: 2s;
     margin-left: auto;
     margin-right: auto;
 
-    &-wrapper {
-        padding: ($grid-gutter-width * 2) $grid-gutter-width;
-
-        @media (min-width: $sm) {
-            padding: ($grid-gutter-width * 4) ($grid-gutter-width * 2);
-        }
+    img {
+        display: block;
     }
 
     &-console {
         display: block;
         position: relative;
         z-index: 2;
-        animation: console $anim-duration ease-in-out infinite;
+        transform-origin: 0 100%;
     }
 
     &-joycons {
@@ -39,7 +33,21 @@ $anim-duration: 2s;
         bottom: 0;
         left: 0;
         z-index: 1;
+        transform-origin: 0 100%;
+    }
+}
+
+.animate-on {
+    transform: translateZ(0);
+
+    .switch-console {
+        animation: console $anim-duration ease-in-out infinite;
+        animation-delay: 100ms;
+    }
+
+    .switch-joycons {
         animation: joycon $anim-duration ease-in-out infinite;
+        animation-delay: 100ms;
     }
 }
 
