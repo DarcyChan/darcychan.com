@@ -1,7 +1,7 @@
 {
     "name": "darcychan.com",
     "description": "Personal Portfolio.",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "author": "Darcy Chan",
     "homepage": "http://darcychan.com",
     "dependencies": {

@@ -45,49 +45,49 @@ export default class RecordPlayer extends React.Component {
                         >
                             <Image
                                 src="images/record-player-recordshadow.svg"
-                                alt="Nintendo Switch Joycons"
+                                alt="Record Shadow"
                                 className="record-player-recordshadow"
                                 shadow={false}
                                 lazyLoad={false}
                             />
                             <Image
                                 src="images/record-player-record.svg"
-                                alt="Nintendo Switch Joycons"
+                                alt="Record"
                                 className="record-player-record"
                                 shadow={false}
                                 lazyLoad={false}
                             />
                             <Image
                                 src="images/record-player-recordhighlight.svg"
-                                alt="Nintendo Switch Joycons"
+                                alt="Record Highlight"
                                 className="record-player-recordhighlight"
                                 shadow={false}
                                 lazyLoad={false}
                             />
                             <Image
                                 src="images/record-player-armshadow.svg"
-                                alt="Nintendo Switch Joycons"
+                                alt="Arm Shadow"
                                 className="record-player-armshadow"
                                 shadow={false}
                                 lazyLoad={false}
                             />
                             <Image
                                 src="images/record-player-arm.svg"
-                                alt="Nintendo Switch Joycons"
+                                alt="Arm"
                                 className="record-player-arm"
                                 shadow={false}
                                 lazyLoad={false}
                             />
                             <Image
                                 src="images/record-player-armpivot.svg"
-                                alt="Nintendo Switch Joycons"
+                                alt="Arm Pivot"
                                 className="record-player-armpivot"
                                 shadow={false}
                                 lazyLoad={false}
                             />
                             <Image
                                 src="images/record-player-base.svg"
-                                alt="Nintendo Switch Joycons"
+                                alt="Record Player"
                                 className="record-player-base"
                                 shadow={false}
                                 lazyLoad={false}
