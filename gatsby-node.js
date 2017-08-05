@@ -2,6 +2,25 @@ import fs from 'fs-extra-promise';
 import sm from 'sitemap';
 import orderBy from 'lodash/orderBy';
 
+// Customize the Webpack config
+exports.modifyWebpackConfig = config => {
+    // Override Gatsby's image loader to ignore SVGs so we can inline them
+    config.loader('images', {
+        test: /\.(jpe?g|png|gif)(\?.*)(\?v=[0-9]\.[0-9]\.[0-9])?$/i,
+        loaders: [
+            'url-loader?limit=10000',
+            'image-webpack-loader?{progressive:true, optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}}' // eslint-disable-line
+        ]
+    });
+
+    config.loader('svg', {
+        test: /\.(svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'svg-sprite-loader'
+    });
+
+    return config;
+};
+
 const getPriority = page => {
     const { path, data } = page;
 

@@ -26,7 +26,7 @@ svg {
     position: relative;
     height: 0;
     padding-bottom: percentage(1642 / 2656);
-    background: #f0f0f0 url('../assets/photo.svg') center no-repeat;
+    background-color: #f0f0f0;
     background-size: $grid-gutter-width $grid-gutter-width;
     line-height: 0;
 
@@ -36,6 +36,15 @@ svg {
         height: auto;
         animation: lazy-image-in ($transition-duration-long * 3) $transition-bezier;
     }
+}
+
+.lazy-image-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3rem;
+    height: 3rem;
+    transform: translate(-50%, -50%);
 }
 
 @keyframes lazy-image-in {

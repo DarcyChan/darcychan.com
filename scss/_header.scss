@@ -64,7 +64,7 @@
         z-index: 1025;
         background-color: rgba($body-bg, 0.95);
         border-bottom: 1px solid $body-border;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         font-weight: 400;
         line-height: $navbar-height;
         letter-spacing: 0.05rem;
@@ -90,7 +90,6 @@
 
     &-label {
         vertical-align: middle;
-        line-height: 1;
     }
 }
 

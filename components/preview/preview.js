@@ -9,7 +9,7 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 
 // Internal components
-import { Image, Icon, Glyph } from 'components/common';
+import { Icon, Glyph, Image } from 'components/common';
 
 export default class Preview extends React.Component {
     render() {
@@ -51,8 +51,8 @@ export default class Preview extends React.Component {
                                 {page.data.title}
                             </span>
                             <Icon
-                                className="preview-title-arrow"
                                 glyph={Glyph.ArrowRight}
+                                className="preview-title-arrow"
                             />
                         </span>
                     </span>

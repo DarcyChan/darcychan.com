@@ -13,7 +13,7 @@ import { Link } from 'react-router';
 import { config } from 'config';
 import { combineClassNames, getNextArtwork } from 'utils';
 import { PageTitle, PageWrapper, PageFooter } from 'components/page';
-import { SmallLabel, Icon, Glyph } from 'components/common';
+import { Icon, Glyph, SmallLabel } from 'components/common';
 
 // Link in the footer for the next artwork
 const NextArtworkLink = ({ url, className, category, title, ...props }) => {
@@ -34,8 +34,8 @@ const NextArtworkLink = ({ url, className, category, title, ...props }) => {
                     {title}
                 </span>
                 <Icon
-                    className="preview-title-arrow"
                     glyph={Glyph.ArrowRight}
+                    className="preview-title-arrow"
                 />
             </span>
         </Link>

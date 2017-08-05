@@ -1,7 +1,3 @@
-// TODO: Figure out a way to bypass the way the current webpack is
-//       importing SVGs so we can have inline SVG code that can
-//       be animated.
-
 import React from 'react';
 import Waypoint from 'react-waypoint';
 

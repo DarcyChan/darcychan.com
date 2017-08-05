@@ -12,6 +12,7 @@ import LazyLoad from 'react-lazyload';
 
 import { config } from 'config';
 import { combineClassNames, constants } from 'utils';
+import { Icon, Glyph } from 'components/common';
 
 // Responsive image with srcset and size
 const ResponsiveImage = ({
@@ -104,6 +105,7 @@ const LazyImage = ({
             style={{ paddingBottom: `${height / width * 100}%` }}
             {...props}
         >
+            <Icon glyph={Glyph.Photo} className="lazy-image-placeholder" />
             <LazyLoad height="100%" offset={height || 1440} once>
                 <BaseImage
                     className={
