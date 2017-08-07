@@ -49,7 +49,18 @@ export default class Artwork extends React.Component {
             <PageWrapper className={className} {...props}>
                 <PageTitle>
                     <SmallLabel className="page-title-label">
-                        {data.category}
+                        <Link
+                            className="page-title-link"
+                            to={prefixLink(
+                                route.pages.filter(
+                                    page =>
+                                        page.data.category === data.category &&
+                                        page.data.showInMenu
+                                )[0].data.path
+                            )}
+                        >
+                            {data.category}
+                        </Link>
                     </SmallLabel>
                     {title || data.title}
                 </PageTitle>
