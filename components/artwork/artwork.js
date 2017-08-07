@@ -5,12 +5,10 @@
 
 // External components
 import React from 'react';
-import Helmet from 'react-helmet';
 import { prefixLink } from 'gatsby-helpers';
 import { Link } from 'react-router';
 
 // Internal components
-import { config } from 'config';
 import { combineClassNames, getNextArtwork } from 'utils';
 import { PageTitle, PageWrapper, PageFooter } from 'components/page';
 import { Icon, Glyph, SmallLabel } from 'components/common';
@@ -49,7 +47,6 @@ export default class Artwork extends React.Component {
         const next = getNextArtwork(route, route.page);
         return (
             <PageWrapper className={className} {...props}>
-                <Helmet title={`${data.title} | ${config.siteTitle}`} />
                 <PageTitle>
                     <SmallLabel className="page-title-label">
                         {data.category}

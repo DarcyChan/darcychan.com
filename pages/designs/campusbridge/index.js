@@ -12,7 +12,8 @@ exports.data = {
     path: `/designs/campusbridge/`,
     category: `design`,
     type: `artwork`,
-    title: `CampusBridge`
+    title: `CampusBridge`,
+    description: `A mockup created for a client of a WordPress site that highlights features of a job posting site as well as the branding of the product.`
 };
 /* eslint-enable quotes */
 
@@ -39,9 +40,9 @@ export default class CreditCardCheckout extends React.Component {
             <Artwork route={route}>
                 <PageLead>
                     <p>
-                        A mockup of a WordPress site that highlights features of
-                        a job posting site as well as the branding of the
-                        product.
+                        A mockup created for a client of a WordPress site that
+                        highlights features of a job posting site as well as the
+                        branding of the product.
                     </p>
                 </PageLead>
                 <PageContent data={route.page.data}>

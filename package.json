@@ -1,7 +1,7 @@
 {
     "name": "darcychan.com",
     "description": "Personal Portfolio.",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "author": "Darcy Chan",
     "homepage": "http://darcychan.com",
     "dependencies": {
@@ -31,10 +31,7 @@
         "sitemap": "^1.13.0",
         "svg-sprite-loader": "^3.1.1"
     },
-    "keywords": [
-        "gatsby",
-        "react"
-    ],
+    "keywords": ["gatsby", "react"],
     "license": "MIT",
     "main": "n/a",
     "scripts": {

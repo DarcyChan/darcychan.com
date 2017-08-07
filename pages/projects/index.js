@@ -1,8 +1,6 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 
 import { getArtworksFromRoute } from 'utils';
-import { config } from 'config';
 import { PageWrapper, PageTitle } from 'components/page';
 import { SmallLabel } from 'components/common';
 import { PreviewList } from 'components/preview';
@@ -13,7 +11,9 @@ exports.data = {
     path: `/projects/`,
     category: `project`,
     showInMenu: true,
-    title: `Projects`
+    title: `Projects`,
+    description: `A list of some recent websites and applications on which I have worked.`,
+    keywords: `Projects`
 };
 /* eslint-enable quotes */
 
@@ -24,7 +24,6 @@ export default class Projects extends React.Component {
         const artworks = getArtworksFromRoute(route, 'project');
         return (
             <PageWrapper className="content-set">
-                <Helmet title={`${page.title} | ${config.siteTitle}`} />
                 <PageTitle>
                     <SmallLabel className="page-title-label">
                         Web Development

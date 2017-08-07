@@ -10,7 +10,8 @@ exports.data = {
     path: `/designs/creditcardcheckout/`,
     category: `design`,
     type: `artwork`,
-    title: `Credit Card Checkout`
+    title: `Credit Card Checkout`,
+    description: `A mockup of a credit card checkout page for a daily UI challenge.`
 };
 /* eslint-enable quotes */
 

@@ -10,7 +10,8 @@ exports.data = {
     template: `basic`,
     category: `about`,
     showInMenu: true,
-    title: `About me`
+    title: `About me`,
+    description: `I have been a professional UI/UX web developer and designer since 2011. I am currently a co-founder of Atmist and have worked on many projects that utilize many current technologies and practices.`
 };
 /* eslint-enable quotes */
 

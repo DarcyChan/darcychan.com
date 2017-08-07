@@ -10,7 +10,9 @@ exports.data = {
     path: `/projects/tripitty/`,
     category: `project`,
     type: `artwork`,
-    title: `Tripitty`
+    title: `Tripitty`,
+    description: `Branded, designed, and developed the UI for Tripitty, a site to create a travel profile and share travel stats.`,
+    keywords: `Tripitty, Tripitty dranding, Tripitty design, Tripitty UI, Tripitty development, ASP.NET MVC, jQuery, SCSS`
 };
 /* eslint-enable quotes */
 
@@ -32,7 +34,7 @@ export default class SnazzyMaps extends React.Component {
             <Artwork route={route}>
                 <PageLead
                     tasks="Branding, UI Design, UI Develpment"
-                    tools="jQuery, SCSS"
+                    tools="ASP.NET MVC, jQuery, SCSS"
                     site="https://tripitty.com/"
                 >
                     <p>

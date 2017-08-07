@@ -10,8 +10,10 @@ exports.data = {
     path: `/illustrations/jewel/`,
     category: `illustration`,
     type: `artwork`,
+    preview: `preview.jpg`,
     title: `Jewel`,
-    preview: `preview.jpg`
+    description: `An illustration.`,
+    keywords: `illustration`
 };
 /* eslint-enable quotes */
 

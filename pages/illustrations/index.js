@@ -1,8 +1,6 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 
 import { getArtworksFromRoute } from 'utils';
-import { config } from 'config';
 import { PageWrapper, PageTitle } from 'components/page';
 import { SmallLabel } from 'components/common';
 import { PreviewList } from 'components/preview';
@@ -13,7 +11,9 @@ exports.data = {
     path: `/illustrations/`,
     category: `illustration`,
     showInMenu: true,
-    title: `Illustrations`
+    title: `Illustrations`,
+    description: `A collection of illustrations I have created in my spare time.`,
+    keywords: `Illustrations`
 };
 /* eslint-enable quotes */
 
@@ -24,7 +24,6 @@ export default class Illustrations extends React.Component {
         const artworks = getArtworksFromRoute(route, 'illustration');
         return (
             <PageWrapper className="content-set">
-                <Helmet title={`${page.title} | ${config.siteTitle}`} />
                 <PageTitle>
                     <SmallLabel className="page-title-label">Casual</SmallLabel>
                     Illustrations

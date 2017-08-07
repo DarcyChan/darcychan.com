@@ -10,7 +10,9 @@ exports.data = {
     path: `/projects/atmist/`,
     category: `project`,
     type: `artwork`,
-    title: `Atmist`
+    title: `Atmist`,
+    description: `Branded, designed, and developed the Atmist website, where the company's services, projects, and processes are displayed.`,
+    keywords: `Atmist, Atmist website, Atmist design, Atmist UI, Atmist development, WordPress, PHP, SCSS`
 };
 /* eslint-enable quotes */
 
@@ -32,7 +34,6 @@ const dimens = {
 export default class Atmist extends React.Component {
     render() {
         const route = this.props.route;
-
         return (
             <Artwork route={route}>
                 <PageLead

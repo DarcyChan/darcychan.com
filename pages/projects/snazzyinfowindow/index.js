@@ -10,7 +10,9 @@ exports.data = {
     path: `/projects/snazzyinfowindow/`,
     category: `project`,
     type: `artwork`,
-    title: `Snazzy Info Window`
+    title: `Snazzy Info Window`,
+    description: `Developed the Snazzy Info Window plugin, an open-source plugin to create and style info windows alongside the Google Maps JavaScript API.`,
+    keywords: `Snazzy Info Window, Snazzy Info Window development, JavaScript, CSS, SCSS`
 };
 /* eslint-enable quotes */
 

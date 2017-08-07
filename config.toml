@@ -1,5 +1,7 @@
 siteTitle="Darcy Chan"
 siteSubTitle="UI Developer & Designer"
 siteAbbr="DC"
+description="Hello, I'm Darcy Chan. I specialize in UI web development and design, with some casual illustrating on the side."
+keywords="Darcy Chan, UI developer, UI designer, web developer, web designer, developer, designer"
 linkPrefix = "/"
-version="0.0.8"
+version="0.0.9"

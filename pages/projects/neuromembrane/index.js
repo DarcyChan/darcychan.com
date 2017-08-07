@@ -10,7 +10,9 @@ exports.data = {
     path: `/projects/neuromembrane/`,
     category: `project`,
     type: `artwork`,
-    title: `Neuromembrane`
+    title: `Neuromembrane`,
+    description: `Designed and developed the UI for Neuromembrane, a web-based simulator and teaching tool that demonstrates neuroscience concepts.`,
+    keywords: `Neuromenbrane, Neuromembrane design, Neuromembrane UI, CSS`
 };
 /* eslint-enable quotes */
 

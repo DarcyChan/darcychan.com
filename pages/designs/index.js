@@ -1,8 +1,6 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 
 import { getArtworksFromRoute } from 'utils';
-import { config } from 'config';
 import { PageWrapper, PageTitle } from 'components/page';
 import { SmallLabel } from 'components/common';
 import { PreviewList } from 'components/preview';
@@ -13,7 +11,9 @@ exports.data = {
     path: `/designs/`,
     category: `design`,
     showInMenu: true,
-    title: `Designs`
+    title: `Designs`,
+    description: `A set of miscillaneous and explorational designs on which I have worked, whether for clients or personal exercise.`,
+    keywords: `Designs`
 };
 /* eslint-enable quotes */
 
@@ -24,7 +24,6 @@ export default class Designs extends React.Component {
         const artworks = getArtworksFromRoute(route, 'design');
         return (
             <PageWrapper className="content-set">
-                <Helmet title={`${page.title} | ${config.siteTitle}`} />
                 <PageTitle>
                     <SmallLabel className="page-title-label">
                         Miscillaneous & Explorational

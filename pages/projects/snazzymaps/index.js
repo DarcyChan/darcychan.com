@@ -10,7 +10,9 @@ exports.data = {
     path: `/projects/snazzymaps/`,
     category: `project`,
     type: `artwork`,
-    title: `Snazzy Maps`
+    title: `Snazzy Maps`,
+    description: `Branded, designed, and developed the UI for Snazzy Maps, a community-driven site dedicated to customizing Google Maps.`,
+    keywords: `Snazzy Maps, Snazzy Maps design, Snazzy Maps UI, ASP.NET MVC, jQuery, SCSS, React`
 };
 /* eslint-enable quotes */
 

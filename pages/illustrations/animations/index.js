@@ -12,7 +12,8 @@ exports.data = {
     category: `illustration`,
     type: `artwork`,
     title: `CSS Animations`,
-    preview: `preview.png`
+    description: `A collection of animating illustrations. Made for fun.`,
+    keywords: `Illustration, Animation, CSS animation`
 };
 /* eslint-enable quotes */
 

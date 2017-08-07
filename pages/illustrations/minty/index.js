@@ -10,8 +10,10 @@ exports.data = {
     path: `/illustrations/minty/`,
     category: `illustration`,
     type: `artwork`,
+    preview: `preview.jpg`,
     title: `Minty`,
-    preview: `preview.jpg`
+    description: `A fan art illustration of an ingame character in the game Guild Wars 2.`,
+    keywords: `Guild Wars 2, Guild Wars 2 fan art, fan art, illustration`
 };
 /* eslint-enable quotes */
 
