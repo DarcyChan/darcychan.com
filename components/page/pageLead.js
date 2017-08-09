@@ -8,7 +8,6 @@ import React from 'react';
 
 // Internal components
 import { combineClassNames } from 'utils';
-import { SmallLabel, Link } from 'components/common';
 
 export default class PageLead extends React.Component {
     render() {
@@ -22,38 +21,13 @@ export default class PageLead extends React.Component {
         } = this.props;
         return (
             <div
-                className={combineClassNames('page-lead', className)}
+                className={combineClassNames(
+                    'page-lead page-content',
+                    className
+                )}
                 {...props}
             >
-                <div className="page-lead-desc">
-                    {children}
-                </div>
-                {(tasks || tools) &&
-                    <div className="page-lead-extras font-small">
-                        {tasks &&
-                            <div className="page-lead-role">
-                                <SmallLabel className="disabled">
-                                    Role
-                                </SmallLabel>
-                                {tasks}
-                            </div>}
-                        {tools &&
-                            <div className="page-lead-tools">
-                                <SmallLabel className="disabled">
-                                    UI Built With
-                                </SmallLabel>
-                                {tools}
-                            </div>}
-                        {site &&
-                            <div className="page-lead-site">
-                                <SmallLabel className="disabled">
-                                    Site
-                                </SmallLabel>
-                                <Link href={site} external>
-                                    View Site
-                                </Link>
-                            </div>}
-                    </div>}
+                {children}
             </div>
         );
     }

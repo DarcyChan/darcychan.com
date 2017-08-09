@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Artwork, ArtworkBrand } from 'components/artwork';
-import { PageContent, PageLead } from 'components/page';
+import { PageContent } from 'components/page';
 import { Image, ImageSet } from 'components/common';
 
 /* eslint-disable quotes */
@@ -31,22 +31,21 @@ export default class SnazzyMaps extends React.Component {
     render() {
         const route = this.props.route;
         return (
-            <Artwork route={route}>
-                <PageLead
-                    tasks="Branding, UI Design, UI Develpment"
-                    tools="ASP.NET MVC, jQuery, SCSS"
-                    site="https://tripitty.com/"
-                >
-                    <p>
-                        Tripitty is a site to create a travel profile and share
-                        travel stats. Users can enter the stops on their trips
-                        and see visuals of interesting travel stats, such as
-                        distance travelled, countries visited, and longest
-                        trips. Designing and implementing the UI became an
-                        experiment with fixed overlapping panels, where many of
-                        them interacted with each other.
-                    </p>
-                </PageLead>
+            <Artwork
+                route={route}
+                description={
+                    'Tripitty is a site to create a travel profile and share ' +
+                    'travel stats. Users can enter the stops on their trips ' +
+                    'and see visuals of interesting travel stats, such as ' +
+                    'distance travelled, countries visited, and longest ' +
+                    'trips. Designing and implementing the UI became an ' +
+                    'experiment with fixed overlapping panels, where many of ' +
+                    'them interacted with each other.'
+                }
+                tasks="Branding, UI Design, UI Develpment"
+                tools="ASP.NET MVC, jQuery, SCSS"
+                site="https://tripitty.com/"
+            >
                 <PageContent data={route.page.data}>
                     <ArtworkBrand
                         logo="images/logo.svg"

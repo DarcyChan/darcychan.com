@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Artwork } from 'components/artwork';
-import { PageContent, PageLead } from 'components/page';
-import { Image, Link } from 'components/common';
+import { PageContent } from 'components/page';
+import { Image, ExternalLink } from 'components/common';
 
 /* eslint-disable quotes */
 exports.data = {
@@ -17,26 +17,26 @@ exports.data = {
 };
 /* eslint-enable quotes */
 
+const Description = (
+    <p>
+        A fan art illustration of an ingame character in the game{' '}
+        <ExternalLink href="https://www.guildwars2.com" external>
+            Guild Wars 2
+        </ExternalLink>.
+    </p>
+);
+
 export default class Minty extends React.Component {
     render() {
         const route = this.props.route;
         return (
-            <Artwork route={route}>
-                <PageLead>
-                    <p>
-                        A fan art illustration of an ingame character in the
-                        game{' '}
-                        <Link href="https://www.guildwars2.com" external>
-                            Guild Wars 2
-                        </Link>.
-                    </p>
-                </PageLead>
+            <Artwork route={route} description={Description}>
                 <PageContent data={route.page.data}>
                     <Image
                         src={'images/minty.jpg'}
                         alt="Minty"
-                        width={900}
-                        height={1182}
+                        width={1328}
+                        height={1743}
                     />
                 </PageContent>
             </Artwork>

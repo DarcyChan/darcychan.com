@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Artwork } from 'components/artwork';
-import { PageContent, PageLead } from 'components/page';
+import { PageContent } from 'components/page';
 import { Image } from 'components/common';
 
 /* eslint-disable quotes */
@@ -20,22 +20,21 @@ export default class SnazzyMaps extends React.Component {
     render() {
         const route = this.props.route;
         return (
-            <Artwork route={route}>
-                <PageLead
-                    tasks="UI Develpment"
-                    tools="JavaScript, SCSS"
-                    site="https://github.com/atmist/snazzy-info-window"
-                >
-                    <p>
-                        Snazzy Info Window is an open-source plugin to create
-                        and style info windows alongside the Google Maps
-                        JavaScript API. The plugin supports responsive sizing,
-                        custom styling via JavaScript, CSS, and/or Sass, and
-                        dynamic HTML content. It was a rewarding challenge to
-                        create and share a plugin that offers flexibility and
-                        customizability for other developers and designers.
-                    </p>
-                </PageLead>
+            <Artwork
+                route={route}
+                description={
+                    'Snazzy Info Window is an open-source plugin to create ' +
+                    'and style info windows alongside the Google Maps ' +
+                    'JavaScript API. The plugin supports responsive sizing, ' +
+                    'custom styling via JavaScript, CSS, and/or Sass, and ' +
+                    'dynamic HTML content. It was a rewarding challenge to ' +
+                    'create and share a plugin that offers flexibility and ' +
+                    'customizability for other developers and designers.'
+                }
+                tasks="UI Develpment"
+                tools="JavaScript, SCSS"
+                site="https://github.com/atmist/snazzy-info-window"
+            >
                 <PageContent data={route.page.data}>
                     <Image
                         src="images/screen-scss.png"

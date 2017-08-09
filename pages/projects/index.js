@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { getArtworksFromRoute } from 'utils';
-import { PageWrapper, PageTitle } from 'components/page';
-import { SmallLabel } from 'components/common';
+import { PageWrapper, PageJumbotron } from 'components/page';
 import { PreviewList } from 'components/preview';
 
 /* eslint-disable quotes */
@@ -12,7 +11,7 @@ exports.data = {
     category: `project`,
     showInMenu: true,
     title: `Projects`,
-    description: `A list of some recent websites and applications on which I have worked.`,
+    description: `A list of some recent websites and applications I have worked on.`,
     keywords: `Projects`
 };
 /* eslint-enable quotes */
@@ -24,12 +23,11 @@ export default class Projects extends React.Component {
         const artworks = getArtworksFromRoute(route, 'project');
         return (
             <PageWrapper className="content-set">
-                <PageTitle>
-                    <SmallLabel className="page-title-label">
-                        Web Development
-                    </SmallLabel>
-                    Projects
-                </PageTitle>
+                <PageJumbotron
+                    title="Projects"
+                    label="Web Development"
+                    description="A list of some recent websites, applications, and plugins I have worked on."
+                />
                 <PreviewList page={page} artworks={artworks} />
             </PageWrapper>
         );

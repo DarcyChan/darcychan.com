@@ -33,7 +33,7 @@ export default class Switch extends React.Component {
                             Nintendo Switch
                         </SmallLabel>
                     </div>
-                    <div className="content-padded">
+                    <div className="content-padded-lg">
                         <div
                             className={`switch ${this.state.animate
                                 ? 'animate-on'

@@ -33,7 +33,7 @@ export default class RecordPlayer extends React.Component {
                             Record Player
                         </SmallLabel>
                     </div>
-                    <div className="content-padded">
+                    <div className="content-padded-lg">
                         <div
                             className={`record-player ${this.state.animate
                                 ? 'animate-on'

@@ -3,7 +3,7 @@ import React from 'react';
 
 // Internal components
 import { Artwork } from 'components/artwork';
-import { PageContent, PageLead } from 'components/page';
+import { PageContent } from 'components/page';
 import { ImageSet, Image, SmallLabel } from 'components/common';
 
 /* eslint-disable quotes */
@@ -37,14 +37,14 @@ export default class CreditCardCheckout extends React.Component {
     render() {
         const route = this.props.route;
         return (
-            <Artwork route={route}>
-                <PageLead>
-                    <p>
-                        A mockup created for a client of a WordPress site that
-                        highlights features of a job posting site as well as the
-                        branding of the product.
-                    </p>
-                </PageLead>
+            <Artwork
+                route={route}
+                description={
+                    'A mockup created for a client of a WordPress site that ' +
+                    'highlights features of a job posting site as well as the ' +
+                    'branding of the product.'
+                }
+            >
                 <PageContent data={route.page.data}>
                     <ImageSet
                         images={[

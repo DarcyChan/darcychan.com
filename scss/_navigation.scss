@@ -126,6 +126,14 @@
     list-style: none;
     line-height: 1;
 
+    @media (min-width: $md) {
+        margin-top: ($grid-gutter-width * 2) - ($grid-gutter-width / 4);
+    }
+
+    @media (min-width: $xl) {
+        margin-top: ($grid-gutter-width * 3) - ($grid-gutter-width / 4);
+    }
+
     &-item {
         display: block;
         position: relative;

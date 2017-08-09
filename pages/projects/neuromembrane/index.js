@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Artwork, ArtworkBrand } from 'components/artwork';
-import { PageContent, PageLead } from 'components/page';
+import { PageContent } from 'components/page';
 import { Image } from 'components/common';
 
 /* eslint-disable quotes */
@@ -27,23 +27,19 @@ export default class SnazzyMaps extends React.Component {
     render() {
         const route = this.props.route;
         return (
-            <Artwork route={route}>
-                <PageLead
-                    tasks="UI Design, UI Develpment"
-                    tools="jQuery, CSS"
-                    site="https://neuromembrane.ualberta.ca/account/login"
-                >
-                    <p>
-                        A web-based simulator and teaching tool that
-                        demonstrates neuroscience concepts. Users can choose a
-                        simulation type, adjust values and settings of the
-                        simulation, and play the resulting animation. Designing
-                        a responsive UI, creating the assets required for the
-                        animations, and optimizing performance to support a wide
-                        variety of devices while under limited time and budget
-                        was a fascinating challenge.
-                    </p>
-                </PageLead>
+            <Artwork
+                route={route}
+                description={
+                    'A web-based simulator and teaching tool that demonstrates neuroscience concepts. ' +
+                    'Users can choose a simulation type, adjust values and settings of the simulation, ' +
+                    'and play the resulting animation. Designing a responsive UI, creating the assets ' +
+                    'required for the animations, and optimizing performance to support a wide variety of ' +
+                    'devices while under limited time and budget was a fascinating challenge.'
+                }
+                tasks="UI Design, UI Develpment"
+                tools="jQuery, CSS"
+                site="https://neuromembrane.ualberta.ca/account/login"
+            >
                 <PageContent data={route.page.data}>
                     <ArtworkBrand colors={['#1f1f1f', '#fd6b3d']} />
                     <Image

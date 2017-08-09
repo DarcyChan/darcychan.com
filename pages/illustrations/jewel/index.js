@@ -26,8 +26,8 @@ export default class Jewel extends React.Component {
                     <Image
                         src={'images/jewel.jpg'}
                         alt="Jewel"
-                        width={900}
-                        height={1182}
+                        width={1328}
+                        height={1743}
                     />
                 </PageContent>
             </Artwork>

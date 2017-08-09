@@ -18,7 +18,10 @@
     }
 
     &-logo {
-        width: 12rem;
+        width: 100%;
+        max-width: 15rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     @media (min-width: $sm) and (max-width: $md - 1), (min-width: $lg) {
@@ -65,11 +68,8 @@
     flex-direction: column;
     width: 5rem;
     height: 5rem;
+    margin: ($grid-gutter-width / 8);
     box-shadow: 0 0 ($grid-gutter-width / 8) 0 rgba(black, 0.25);
-
-    & + & {
-        margin-left: ($grid-gutter-width / 4);
-    }
 
     &-color {
         flex: 1 1 auto;

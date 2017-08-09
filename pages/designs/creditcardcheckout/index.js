@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Artwork } from 'components/artwork';
-import { PageContent, PageLead } from 'components/page';
+import { PageContent } from 'components/page';
 import { Image } from 'components/common';
 
 /* eslint-disable quotes */
@@ -31,13 +31,10 @@ export default class CreditCardCheckout extends React.Component {
     render() {
         const route = this.props.route;
         return (
-            <Artwork route={route}>
-                <PageLead>
-                    <p>
-                        A mockup of a credit card checkout page for a daily UI
-                        challenge.
-                    </p>
-                </PageLead>
+            <Artwork
+                route={route}
+                description="A mockup of a credit card checkout page for a daily UI challenge."
+            >
                 <PageContent data={route.page.data}>
                     <Image
                         src={'images/screen.png'}

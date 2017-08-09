@@ -82,10 +82,12 @@
         font-weight: 700;
         line-height: 1.25;
         overflow-wrap: break-word;
+        word-wrap: break-word;
         hyphens: auto;
 
         &-label {
             flex: 1 1 auto;
+            min-width: calc(100% - 1.25em);
         }
 
         &-arrow {

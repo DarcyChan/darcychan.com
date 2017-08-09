@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { getArtworksFromRoute } from 'utils';
-import { PageWrapper, PageTitle } from 'components/page';
-import { SmallLabel } from 'components/common';
+import { PageWrapper, PageJumbotron } from 'components/page';
 import { PreviewList } from 'components/preview';
 
 /* eslint-disable quotes */
@@ -12,7 +11,7 @@ exports.data = {
     category: `design`,
     showInMenu: true,
     title: `Designs`,
-    description: `A set of miscillaneous and explorational designs on which I have worked, whether for clients or personal exercise.`,
+    description: `Some miscillaneous and explorational designs I created, whether for clients or personal exercise.`,
     keywords: `Designs`
 };
 /* eslint-enable quotes */
@@ -24,12 +23,11 @@ export default class Designs extends React.Component {
         const artworks = getArtworksFromRoute(route, 'design');
         return (
             <PageWrapper className="content-set">
-                <PageTitle>
-                    <SmallLabel className="page-title-label">
-                        Miscillaneous & Explorational
-                    </SmallLabel>
-                    Designs
-                </PageTitle>
+                <PageJumbotron
+                    label="Miscillaneous & Explorational"
+                    title="Designs"
+                    description="Some miscillaneous and explorational designs I created, whether for clients or personal exercise."
+                />
                 <PreviewList page={page} artworks={artworks} />
             </PageWrapper>
         );

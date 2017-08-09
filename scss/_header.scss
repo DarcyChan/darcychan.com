@@ -35,8 +35,8 @@
 
         .page-brand {
             &::after {
-                top: -$grid-gutter-width / 2;
-                bottom: -$grid-gutter-width / 2;
+                top: -$grid-gutter-width / 4;
+                bottom: -$grid-gutter-width / 4;
             }
         }
     }
@@ -102,7 +102,7 @@
             position: relative;
             width: auto;
             height: auto;
-            margin: ($grid-gutter-width * 2) 0 $grid-gutter-width;
+            margin: $grid-gutter-width 0;
             padding: 0;
             border-bottom: 0;
             font-size: 1.25rem;
@@ -112,9 +112,22 @@
 
         &-logo {
             flex: 0 0 auto;
-            width: 3.5rem;
-            height: 3.5rem;
-            margin: 0 $grid-gutter-width / 4 0 0;
+            width: $logo-height-md;
+            height: $logo-height-md;
+            margin: 0;
+        }
+
+        &-text {
+            display: block;
+            padding-left: $grid-gutter-width / 4;
+            overflow: hidden;
+        }
+
+        &-title,
+        &-subtitle {
+            visibility: hidden;
+            transform: translate(-105%, 0);
+            transition: all $transition-duration-base $transition-bezier;
         }
 
         &-title {
@@ -136,6 +149,15 @@
 
         &-category {
             display: none;
+        }
+
+        &:hover,
+        &:focus {
+            .page-brand-title,
+            .page-brand-subtitle {
+                visibility: visible;
+                transform: translate(0, 0);
+            }
         }
     }
 }

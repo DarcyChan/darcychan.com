@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { getArtworksFromRoute } from 'utils';
-import { PageWrapper, PageTitle } from 'components/page';
-import { SmallLabel } from 'components/common';
+import { PageWrapper, PageJumbotron } from 'components/page';
 import { PreviewList } from 'components/preview';
 
 /* eslint-disable quotes */
@@ -24,10 +23,11 @@ export default class Illustrations extends React.Component {
         const artworks = getArtworksFromRoute(route, 'illustration');
         return (
             <PageWrapper className="content-set">
-                <PageTitle>
-                    <SmallLabel className="page-title-label">Casual</SmallLabel>
-                    Illustrations
-                </PageTitle>
+                <PageJumbotron
+                    label="Casual"
+                    title="Illustrations"
+                    description="A collection of illustrations I have created in my spare time."
+                />
                 <PreviewList page={page} artworks={artworks} />
             </PageWrapper>
         );

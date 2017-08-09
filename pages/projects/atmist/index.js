@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Artwork, ArtworkBrand } from 'components/artwork';
-import { PageContent, PageLead } from 'components/page';
+import { PageContent } from 'components/page';
 import { Image, ImageSet } from 'components/common';
 
 /* eslint-disable quotes */
@@ -35,21 +35,19 @@ export default class Atmist extends React.Component {
     render() {
         const route = this.props.route;
         return (
-            <Artwork route={route}>
-                <PageLead
-                    tasks="Branding, UI Design, UI Development"
-                    tools="WordPress, SCSS, jQuery"
-                    site="http://atmist.com/"
-                >
-                    <p>
-                        The website for the web development company I
-                        co-founded, where many of our services, projects, and
-                        processes are displayed. It was an interesting challenge
-                        to create a structure for the site that was flexible for
-                        our content creator while being manageable through the
-                        WordPress admin panel.
-                    </p>
-                </PageLead>
+            <Artwork
+                route={route}
+                description={
+                    'The website for the web development company I co-founded, ' +
+                    'where many of our services, projects, and processes are displayed. ' +
+                    'It was an interesting challenge to create a structure for the ' +
+                    'site that was flexible for our content creator while being manageable ' +
+                    'through the WordPress admin panel.'
+                }
+                tasks="Branding, UI Design, UI Development"
+                tools="WordPress, SCSS, jQuery"
+                site="http://atmist.com/"
+            >
                 <PageContent data={route.page.data}>
                     <ArtworkBrand logo="images/logo.svg" colors={['#0084c2']} />
                     <ImageSet

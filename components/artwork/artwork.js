@@ -10,7 +10,14 @@ import { Link } from 'react-router';
 
 // Internal components
 import { combineClassNames, getNextArtwork } from 'utils';
-import { PageTitle, PageWrapper, PageFooter } from 'components/page';
+import {
+    PageJumbotron,
+    PageTitle,
+    PageLead,
+    PageWrapper,
+    PageFooter
+} from 'components/page';
+import { ArtworkLead } from 'components/artwork';
 import { Icon, Glyph, SmallLabel } from 'components/common';
 
 // Link in the footer for the next artwork
@@ -42,12 +49,24 @@ const NextArtworkLink = ({ url, className, category, title, ...props }) => {
 
 export default class Artwork extends React.Component {
     render() {
-        const { className, title, route, children, ...props } = this.props;
+        const {
+            className,
+            title,
+            description,
+            logo,
+            colors,
+            tasks,
+            tools,
+            site,
+            route,
+            children,
+            ...props
+        } = this.props;
         const data = route.page.data;
         const next = getNextArtwork(route, route.page);
         return (
             <PageWrapper className={className} {...props}>
-                <PageTitle>
+                <PageJumbotron>
                     <SmallLabel className="page-title-label">
                         <Link
                             className="page-title-link"
@@ -62,8 +81,15 @@ export default class Artwork extends React.Component {
                             {data.category}
                         </Link>
                     </SmallLabel>
-                    {title || data.title}
-                </PageTitle>
+                    <PageTitle>
+                        {title || data.title}
+                    </PageTitle>
+                    <PageLead>
+                        {description}
+                    </PageLead>
+                    {(tasks || tools || site) &&
+                        <ArtworkLead tasks={tasks} tools={tools} site={site} />}
+                </PageJumbotron>
                 <div className="page-content content-set">
                     {children}
                 </div>

@@ -74,7 +74,7 @@ export default class Header extends React.Component {
                         onClick={() => this.handleMenuToggle('collapse')}
                     >
                         <Icon glyph={Glyph.Logo} className="page-brand-logo" />
-                        <span>
+                        <span className="page-brand-text">
                             <span className="page-brand-title">
                                 {config.siteTitle}
                             </span>

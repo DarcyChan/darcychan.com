@@ -1,7 +1,12 @@
 import React from 'react';
 
 import { getArtworksFromRoute } from 'utils';
-import { PageTitle, PageSubtitle, PageWrapper } from 'components/page';
+import {
+    PageJumbotron,
+    PageTitle,
+    PageLead,
+    PageWrapper
+} from 'components/page';
 import { PreviewList } from 'components/preview';
 
 export default class Index extends React.Component {
@@ -17,17 +22,17 @@ export default class Index extends React.Component {
         );
 
         return (
-            <PageWrapper className="content-set">
-                <header>
+            <PageWrapper>
+                <PageJumbotron>
                     <PageTitle>
                         Hello,<br />
                         I&apos;m Darcy Chan.
                     </PageTitle>
-                    <PageSubtitle>
+                    <PageLead>
                         I specialize in UI web development and design, with some
                         casual illustrating on the side.
-                    </PageSubtitle>
-                </header>
+                    </PageLead>
+                </PageJumbotron>
                 <PreviewList page={page} artworks={artworks} />
             </PageWrapper>
         );

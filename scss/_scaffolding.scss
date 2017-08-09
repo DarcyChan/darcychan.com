@@ -19,12 +19,6 @@ body {
     font-size: 1rem;
 }
 
-@media (min-width: $md) {
-    .body-content {
-        margin-left: $header-width-md;
-    }
-}
-
 //////////////////////////////////////////////////
 // Spacing Helpers
 //////////////////////////////////////////////////
@@ -44,10 +38,18 @@ body {
 }
 
 .content-padded {
-    padding: ($grid-gutter-width * 2) $grid-gutter-width;
+    padding: $grid-gutter-width;
 
     @media (min-width: $sm) {
-        padding: ($grid-gutter-width * 4) ($grid-gutter-width * 2);
+        padding: ($grid-gutter-width * 2);
+    }
+
+    &-lg {
+        padding: ($grid-gutter-width * 2) $grid-gutter-width;
+
+        @media (min-width: $sm) {
+            padding: ($grid-gutter-width * 4) ($grid-gutter-width * 2);
+        }
     }
 }
 

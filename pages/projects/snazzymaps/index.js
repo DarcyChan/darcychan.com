@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Artwork, ArtworkBrand } from 'components/artwork';
-import { PageContent, PageLead } from 'components/page';
+import { PageContent } from 'components/page';
 import { Image, ImageSet } from 'components/common';
 
 /* eslint-disable quotes */
@@ -36,22 +36,19 @@ export default class SnazzyMaps extends React.Component {
     render() {
         const route = this.props.route;
         return (
-            <Artwork route={route}>
-                <PageLead
-                    tasks="Branding, UI Design, UI Develpment"
-                    tools="ASP.NET MVC, jQuery, SCSS, React"
-                    site="https://snazzymaps.com/"
-                >
-                    <p>
-                        Snazzy Maps is a community-driven site dedicated to
-                        customizing Google Maps. Users can browse through
-                        thousands of themes created by other community members,
-                        or create their own with custom markers and infowindows.
-                        Creating and evolving a UI that is used by thousands of
-                        people daily has been an exciting learning process and
-                        adding new features will be just as rewarding.
-                    </p>
-                </PageLead>
+            <Artwork
+                route={route}
+                description={
+                    'Snazzy Maps is a community-driven site dedicated to customizing Google Maps. ' +
+                    'Users can browse through thousands of themes created by other community members,' +
+                    'or create their own with custom markers and infowindows. ' +
+                    'Creating and evolving a UI that is used by thousands of people daily has been an ' +
+                    'exciting learning process and adding new features will be just as rewarding.'
+                }
+                tasks="Branding, UI Design, UI Develpment"
+                tools="ASP.NET MVC, jQuery, SCSS, React"
+                site="https://snazzymaps.com/"
+            >
                 <PageContent data={route.page.data}>
                     <ArtworkBrand
                         logo="images/logo.svg"

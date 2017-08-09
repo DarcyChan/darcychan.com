@@ -33,9 +33,7 @@ export default class Template extends React.Component {
                     ]}
                 />
                 <Header location={location} pages={pages} />
-                <article className="body-content">
-                    {this.props.children}
-                </article>
+                {this.props.children}
             </main>
         );
     }

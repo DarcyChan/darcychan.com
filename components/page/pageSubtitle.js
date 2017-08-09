@@ -9,16 +9,13 @@ import React from 'react';
 // Internal components
 import { combineClassNames } from 'utils';
 
-export default class PageTitle extends React.Component {
+export default class PageLead extends React.Component {
     render() {
         const { children, className, props } = this.props;
         return (
-            <h2
-                className={combineClassNames('page-subtitle', className)}
-                {...props}
-            >
+            <p className={combineClassNames('page-lead', className)} {...props}>
                 {children}
-            </h2>
+            </p>
         );
     }
 }

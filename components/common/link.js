@@ -6,7 +6,7 @@
 // External components
 import React from 'react';
 
-export default class Link extends React.Component {
+export default class ExternalLink extends React.Component {
     render() {
         const { href, external, children, ...props } = this.props;
         return (

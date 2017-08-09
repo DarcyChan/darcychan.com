@@ -10,12 +10,23 @@
     line-height: 1.6;
 
     @media (min-width: $md) {
-        padding: $grid-gutter-width * 2;
+        margin-left: $header-width-md;
+        padding: ($grid-gutter-width * 3 + $logo-height-md)
+            (
+                $grid-gutter-width * 2
+            ) ($grid-gutter-width * 2);
+    }
+
+    @media (min-width: $xl) {
+        max-width: calc(#{$img-max-width} + #{$grid-gutter-width * 6});
+        padding: ($grid-gutter-width * 4 + $logo-height-md)
+            (
+                $grid-gutter-width * 3
+            ) ($grid-gutter-width * 3);
     }
 }
 
 .page {
-    max-width: $img-max-width;
 }
 
 @media (min-width: $md) {
@@ -27,15 +38,39 @@
 }
 
 //////////////////////////////////////////////////
+// Page Jumbotron
+//////////////////////////////////////////////////
+
+.page-jumbotron {
+    margin-bottom: $grid-gutter-width * 1.5;
+
+    @media (min-width: $md) {
+        margin-bottom: ($grid-gutter-width * 3) + $logo-height-md;
+    }
+
+    @media (min-width: $xl) {
+        margin-bottom: ($grid-gutter-width * 4) + $logo-height-md;
+    }
+}
+
+//////////////////////////////////////////////////
 // Page Title
 //////////////////////////////////////////////////
 
 .page-title {
-    margin: -0.25rem 0 0;
+    margin: -0.17em 0 0;
     font-size: 3.25rem;
     line-height: 1.1;
     overflow-wrap: break-word;
     word-wrap: break-word;
+
+    @media (min-width: $md) {
+        font-size: 5rem;
+    }
+
+    .page-title-label + & {
+        margin-top: 0;
+    }
 }
 
 //////////////////////////////////////////////////
@@ -56,8 +91,11 @@
 //////////////////////////////////////////////////
 
 .page-title-label {
-    margin-top: 0.25rem;
+    position: relative;
+    z-index: 1;
+    margin-top: -0.1em;
     font-size: 0.85rem;
+    line-height: 1;
 }
 
 //////////////////////////////////////////////////
@@ -67,6 +105,11 @@
 .page-title-link {
     color: inherit;
     text-decoration: none;
+
+    &:focus,
+    &:active {
+        outline: 2px solid;
+    }
 }
 
 //////////////////////////////////////////////////
@@ -74,11 +117,10 @@
 //////////////////////////////////////////////////
 
 .page-lead {
-    margin-top: $grid-gutter-width / 2;
+    max-width: $p-max-width;
+    margin-top: $grid-gutter-width;
 
     &-extras {
-        margin-top: $grid-gutter-width;
-
         > * + * {
             margin-top: $grid-gutter-width / 2;
         }
@@ -127,6 +169,25 @@
 
     .preview-subtitle::before {
         display: none;
+    }
+
+    a {
+        &::after {
+            content: '';
+            position: absolute;
+            top: -$grid-gutter-width / 4;
+            right: -$grid-gutter-width / 4;
+            bottom: 0;
+            left: -$grid-gutter-width / 4;
+            border: 2px solid transparent;
+        }
+
+        &:focus,
+        &:active {
+            &::after {
+                border-color: inherit;
+            }
+        }
     }
 }
 
