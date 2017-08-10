@@ -1,6 +1,8 @@
 import React from 'react';
+import Helmet from 'react-helmet';
+import { config } from 'config';
 
-import { PageTitle, PageLead, PageWrapper } from 'components/page';
+import { PageWrapper, PageJumbotron } from 'components/page';
 
 /* eslint-disable quotes */
 exports.data = {
@@ -12,10 +14,18 @@ export default class ErrorPage extends React.Component {
     render() {
         return (
             <PageWrapper>
-                <PageTitle>Page Not Found</PageTitle>
-                <PageLead>
-                    Sorry, the page you are looking for does not exist.
-                </PageLead>
+                <Helmet>
+                    <title>{`Page Not Found | ${config.siteTitle}`}</title>
+                    <meta
+                        name="description"
+                        content="Sorry, the page you are looking for does not exist."
+                    />
+                    <meta name="robots" content="noindex" />
+                </Helmet>
+                <PageJumbotron
+                    title="Page Not Found"
+                    description="Sorry, the page you are looking for does not exist."
+                />
             </PageWrapper>
         );
     }
