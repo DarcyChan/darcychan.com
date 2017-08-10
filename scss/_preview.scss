@@ -53,6 +53,7 @@
     }
 
     &-info {
+        position: relative;
         display: inline-block;
         margin-top: $grid-gutter-width / 2;
         vertical-align: top;
@@ -139,7 +140,6 @@
 
         &-info {
             display: inline-block;
-            position: relative;
             max-width: calc(#{percentage(4/12)} - #{$grid-gutter-width});
             margin-top: 0;
             margin-left: $grid-gutter-width;
