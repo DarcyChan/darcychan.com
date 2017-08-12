@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Artwork, ArtworkBrand } from 'components/artwork';
 import { PageContent } from 'components/page';
-import { Image, ImageSet } from 'components/common';
+import { Image } from 'components/common';
 
 /* eslint-disable quotes */
 exports.data = {
@@ -20,11 +20,11 @@ exports.data = {
 const dimens = {
     home: {
         width: 1328,
-        height: 890
+        height: 2670
     },
     press: {
         width: 1328,
-        height: 773
+        height: 4638
     },
     mobile: {
         width: 400,
@@ -54,12 +54,8 @@ export default class SnazzyMaps extends React.Component {
                         logo="images/logo.svg"
                         colors={['#00bc66', '#333333']}
                     />
-                    <ImageSet
-                        images={[
-                            'images/screen-home-01.png',
-                            'images/screen-home-02.png',
-                            'images/screen-home-03.png'
-                        ]}
+                    <Image
+                        src="images/screen-home.png"
                         alt="Snazzy Maps - Home Page"
                         width={dimens.home.width}
                         height={dimens.home.height}
@@ -110,15 +106,8 @@ export default class SnazzyMaps extends React.Component {
                         src="images/screen-map-marker.png"
                         alt="Snazzy Maps - Build a Map - Add a Marker"
                     />
-                    <ImageSet
-                        images={[
-                            'images/screen-press-01.png',
-                            'images/screen-press-02.png',
-                            'images/screen-press-03.png',
-                            'images/screen-press-04.png',
-                            'images/screen-press-05.png',
-                            'images/screen-press-06.png'
-                        ]}
+                    <Image
+                        src="images/screen-press.png"
                         alt="Snazzy Maps - Home Page"
                         width={dimens.press.width}
                         height={dimens.press.height}

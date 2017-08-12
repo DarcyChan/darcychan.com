@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Artwork, ArtworkBrand } from 'components/artwork';
 import { PageContent } from 'components/page';
-import { Image, ImageSet } from 'components/common';
+import { Image } from 'components/common';
 
 /* eslint-disable quotes */
 exports.data = {
@@ -19,7 +19,7 @@ exports.data = {
 const dimens = {
     home: {
         width: 1328,
-        height: 1364
+        height: 5456
     },
     service: {
         width: 1328,
@@ -50,13 +50,8 @@ export default class Atmist extends React.Component {
             >
                 <PageContent data={route.page.data}>
                     <ArtworkBrand logo="images/logo.svg" colors={['#0084c2']} />
-                    <ImageSet
-                        images={[
-                            'images/screen-home-01.png',
-                            'images/screen-home-02.png',
-                            'images/screen-home-03.png',
-                            'images/screen-home-04.png'
-                        ]}
+                    <Image
+                        src="images/screen-home.png"
                         alt="Atmist - Home Page"
                         width={dimens.home.width}
                         height={dimens.home.height}

@@ -4,7 +4,7 @@ import React from 'react';
 // Internal components
 import { Artwork } from 'components/artwork';
 import { PageContent } from 'components/page';
-import { ImageSet, Image, SmallLabel } from 'components/common';
+import { Image, SmallLabel } from 'components/common';
 
 /* eslint-disable quotes */
 exports.data = {
@@ -21,7 +21,7 @@ exports.data = {
 const dimens = {
     home: {
         width: 1328,
-        height: 1124
+        height: 5620
     },
     mainBrand: {
         width: 500,
@@ -46,14 +46,8 @@ export default class CreditCardCheckout extends React.Component {
                 }
             >
                 <PageContent data={route.page.data}>
-                    <ImageSet
-                        images={[
-                            'images/screen-home-01.png',
-                            'images/screen-home-02.png',
-                            'images/screen-home-03.png',
-                            'images/screen-home-04.png',
-                            'images/screen-home-05.png'
-                        ]}
+                    <Image
+                        src="images/screen-home.png"
                         alt="CampusBridge - Home Page"
                         width={dimens.home.width}
                         height={dimens.home.height}

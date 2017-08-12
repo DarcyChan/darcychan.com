@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Artwork, ArtworkBrand } from 'components/artwork';
 import { PageContent } from 'components/page';
-import { Image, ImageSet } from 'components/common';
+import { Image } from 'components/common';
 
 /* eslint-disable quotes */
 exports.data = {
@@ -19,7 +19,7 @@ exports.data = {
 const dimens = {
     stats: {
         width: 1328,
-        height: 1184
+        height: 4738
     },
     mobile: {
         width: 400,
@@ -103,13 +103,8 @@ export default class SnazzyMaps extends React.Component {
                         src="images/screen-trip-stop.png"
                         alt="Tripitty - Trip Page"
                     />
-                    <ImageSet
-                        images={[
-                            'images/screen-stats-01.png',
-                            'images/screen-stats-02.png',
-                            'images/screen-stats-03.png',
-                            'images/screen-stats-04.png'
-                        ]}
+                    <Image
+                        src="images/screen-stats.png"
                         alt="Tripitty - Stats Page"
                         width={dimens.stats.width}
                         height={dimens.stats.height}
