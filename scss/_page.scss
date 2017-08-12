@@ -18,7 +18,6 @@
     }
 
     @media (min-width: $xl) {
-        max-width: calc(#{$img-max-width} + #{$grid-gutter-width * 6});
         padding: ($grid-gutter-width * 4 + $logo-height-md)
             (
                 $grid-gutter-width * 3
@@ -27,6 +26,9 @@
 }
 
 .page {
+    max-width: $img-max-width;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (min-width: $md) {
@@ -231,5 +233,16 @@
                 border-left: 1px solid $body-border;
             }
         }
+    }
+
+    @media screen and (min-width: $xl) {
+        padding-left: $grid-gutter-width * 3;
+        padding-right: $grid-gutter-width * 3;
+    }
+
+    &-content {
+        max-width: $img-max-width;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

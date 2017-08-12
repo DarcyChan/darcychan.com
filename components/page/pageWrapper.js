@@ -34,13 +34,15 @@ export default class PageWrapper extends React.Component {
                 }}
             >
                 {({ x }) =>
-                    <article
+                    <div
                         className={combineClassNames('page-wrapper', className)}
                         style={{ opacity: x }}
                         {...props}
                     >
-                        {children}
-                    </article>}
+                        <article className="page">
+                            {children}
+                        </article>
+                    </div>}
             </Motion>
         );
     }

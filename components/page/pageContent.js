@@ -47,12 +47,14 @@ export default class PageContent extends React.Component {
                             ? 'page-sticky-on'
                             : 'page-sticky-off'}`}
                     >
-                        <span className="page-sticky-label">
-                            {data.category}
-                        </span>
-                        <span className="page-sticky-label">
-                            {data.title}
-                        </span>
+                        <div className="page-sticky-content">
+                            <span className="page-sticky-label">
+                                {data.category}
+                            </span>
+                            <span className="page-sticky-label">
+                                {data.title}
+                            </span>
+                        </div>
                     </div>
                     {children}
                 </div>
