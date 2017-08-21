@@ -186,3 +186,26 @@
         }
     }
 }
+
+@media (min-width: $xl) {
+    .preview-list {
+        margin: -$grid-gutter-width * 1.5;
+    }
+
+    .preview {
+        width: calc(#{percentage(4/12)} - #{($grid-gutter-width * 3)});
+        margin: $grid-gutter-width * 1.5;
+
+        &-link {
+            &:hover,
+            &:focus {
+                .preview-image-wrapper::before {
+                    top: -$grid-gutter-width;
+                    right: -$grid-gutter-width;
+                    bottom: -$grid-gutter-width;
+                    left: -$grid-gutter-width;
+                }
+            }
+        }
+    }
+}
