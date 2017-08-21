@@ -22,9 +22,8 @@ export default class Designs extends React.Component {
         const page = route.page.data;
         const artworks = getArtworksFromRoute(route, 'design');
         return (
-            <PageWrapper className="content-set">
+            <PageWrapper>
                 <PageJumbotron
-                    label="Miscillaneous & Explorational"
                     title="Designs"
                     description="Some miscillaneous and explorational designs I created, whether for clients or personal exercise."
                 />

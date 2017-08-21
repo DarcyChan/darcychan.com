@@ -22,10 +22,9 @@ export default class Projects extends React.Component {
         const page = route.page.data;
         const artworks = getArtworksFromRoute(route, 'project');
         return (
-            <PageWrapper className="content-set">
+            <PageWrapper>
                 <PageJumbotron
                     title="Projects"
-                    label="Web Development"
                     description="A list of some recent websites, applications, and plugins I have worked on."
                 />
                 <PreviewList page={page} artworks={artworks} />

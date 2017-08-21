@@ -3,32 +3,42 @@
 //////////////////////////////////////////////////
 
 .page-wrapper {
+    position: relative;
     padding: ($grid-gutter-width * 1.5 + $navbar-height)
         (
             $grid-gutter-width * 0.5
         ) ($grid-gutter-width * 1.5);
     line-height: 1.6;
+    overflow: hidden;
+
+    @media (min-width: $sm) {
+        padding-left: $grid-gutter-width;
+        padding-right: $grid-gutter-width;
+    }
 
     @media (min-width: $md) {
         margin-left: $header-width-md;
-        padding: ($grid-gutter-width * 3 + $logo-height-md)
+        padding: ($grid-gutter-width * 4 + $logo-height-md)
             (
                 $grid-gutter-width * 2
             ) ($grid-gutter-width * 2);
     }
 
     @media (min-width: $xl) {
-        padding: ($grid-gutter-width * 4 + $logo-height-md)
+        padding: ($grid-gutter-width * 5 + $logo-height-md)
             (
                 $grid-gutter-width * 3
             ) ($grid-gutter-width * 3);
+
+        &::before {
+            left: $grid-gutter-width * 3;
+            right: $grid-gutter-width * 3;
+        }
     }
 }
 
 .page {
     max-width: $img-max-width;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 @media (min-width: $md) {
@@ -44,6 +54,7 @@
 //////////////////////////////////////////////////
 
 .page-jumbotron {
+    position: relative;
     margin-bottom: $grid-gutter-width * 1.5;
 
     @media (min-width: $md) {
@@ -60,14 +71,18 @@
 //////////////////////////////////////////////////
 
 .page-title {
-    margin: -0.17em 0 0;
-    font-size: 3.25rem;
-    line-height: 1.1;
+    margin: -0.05em 0 0;
+    font-size: 4rem;
+    line-height: 0.9;
     overflow-wrap: break-word;
     word-wrap: break-word;
 
     @media (min-width: $md) {
         font-size: 5rem;
+    }
+
+    @media (min-width: $xl) {
+        font-size: 7rem;
     }
 
     .page-title-label + & {
@@ -121,6 +136,7 @@
 .page-lead {
     max-width: $p-max-width;
     margin-top: $grid-gutter-width;
+    vertical-align: text-top;
 
     &-extras {
         > * + * {
@@ -165,8 +181,20 @@
         padding-top: $grid-gutter-width;
     }
 
+    @media (min-width: $md) {
+        margin-top: ($grid-gutter-width * 3) + $logo-height-md;
+    }
+
+    @media (min-width: $xl) {
+        margin-top: ($grid-gutter-width * 4) + $logo-height-md;
+    }
+
     .preview-info {
         max-width: none;
+    }
+
+    .preview-title {
+        font-size: 1.25rem;
     }
 
     .preview-subtitle::before {
@@ -244,5 +272,33 @@
         max-width: $img-max-width;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+//////////////////////////////////////////////////
+// Page Flair
+//////////////////////////////////////////////////
+
+.page-wrapper-flair-top {
+    @media (min-width: $md) {
+        position: relative;
+        top: calc(#{-($grid-gutter-width * 3 + $logo-height-md)} + 2px);
+        margin-top: -2px;
+        border-top: 2px solid;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            width: $grid-gutter-width / 2;
+            height: $grid-gutter-width / 2;
+            margin-top: $grid-gutter-width / 4;
+            border: 1px solid $body-border;
+        }
+    }
+
+    @media (min-width: $xl) {
+        top: calc(#{-($grid-gutter-width * 4 + $logo-height-md)} + 2px);
     }
 }

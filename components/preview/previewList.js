@@ -13,7 +13,7 @@ export default class PreviewList extends React.Component {
     render() {
         const { artworks } = this.props;
         return (
-            <div className="content-set">
+            <div className="preview-list content-set">
                 {artworks.map(item =>
                     <Preview
                         key={`${item.data.category}-${item.data.title}`}

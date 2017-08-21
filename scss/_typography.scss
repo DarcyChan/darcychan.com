@@ -16,12 +16,12 @@ html {
 
     @media (min-width: $md) {
         font-size: calc(
-            #{$font-size-base} + 3 * ((100vw - #{$md}) / #{($xl - $md) / 1px})
+            #{$font-size-base} + 2 * ((100vw - #{$md}) / #{($xl - $md) / 1px})
         );
     }
 
     @media (min-width: $xl) {
-        font-size: $font-size-base + 3;
+        font-size: $font-size-base + 2;
     }
 }
 
@@ -63,7 +63,7 @@ p {
 //////////////////////////////////////////////////
 
 .font-small {
-    font-size: 0.85em;
+    font-size: 0.9em;
 }
 
 .small-label {

@@ -93,6 +93,14 @@
     }
 }
 
+@media (min-width: $sm) {
+    .page-brand {
+        &-wrapper {
+            padding-left: $grid-gutter-width;
+        }
+    }
+}
+
 @media (min-width: $md) {
     .page-brand {
         display: flex;
@@ -123,13 +131,6 @@
             overflow: hidden;
         }
 
-        &-title,
-        &-subtitle {
-            visibility: hidden;
-            transform: translate(-105%, 0);
-            transition: all $transition-duration-base $transition-bezier;
-        }
-
         &-title {
             display: block;
             font-size: 1.2rem;
@@ -149,15 +150,6 @@
 
         &-category {
             display: none;
-        }
-
-        &:hover,
-        &:focus {
-            .page-brand-title,
-            .page-brand-subtitle {
-                visibility: visible;
-                transform: translate(0, 0);
-            }
         }
     }
 }

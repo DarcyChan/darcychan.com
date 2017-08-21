@@ -95,7 +95,7 @@ export default class HTML extends React.Component {
                     <meta name="application-name" content="Darcy Chan" />
                     <meta name="theme-color" content="#fefffd" />
                     <link
-                        href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700"
+                        href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700"
                         rel="stylesheet"
                     />
                     {css}

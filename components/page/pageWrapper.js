@@ -39,6 +39,7 @@ export default class PageWrapper extends React.Component {
                         style={{ opacity: x }}
                         {...props}
                     >
+                        <div className="page-wrapper-flair-top" />
                         <article className="page">
                             {children}
                         </article>

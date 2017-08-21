@@ -4,6 +4,8 @@
 
 .preview {
     &-link {
+        display: block;
+        position: relative;
         color: inherit;
         text-decoration: none;
         white-space: normal;
@@ -17,25 +19,30 @@
                 right: -$grid-gutter-width / 4;
                 bottom: -$grid-gutter-width / 4;
                 left: -$grid-gutter-width / 4;
-                border-color: $text-color;
+                border-color: $body-border;
             }
 
             .preview-title::after {
                 transform: scale(1, 1);
             }
         }
+
+        &:focus,
+        &:active {
+            .preview-image-wrapper::before {
+                border: 2px solid $text-color;
+            }
+        }
     }
 
     &-image {
         display: block;
-        max-width: 100%;
+        width: 100%;
         margin: auto;
 
         &-wrapper {
             display: block;
-            position: relative;
-            padding: $grid-gutter-width / 2;
-            border: 1px solid $body-border;
+            max-width: $preview-max-width;
             line-height: 0;
 
             &::before {
@@ -46,7 +53,7 @@
                 right: 0;
                 bottom: 0;
                 left: 0;
-                border: 2px solid transparent;
+                border: 1px solid transparent;
                 transition: all $transition-duration-base $transition-bezier;
             }
         }
@@ -63,14 +70,11 @@
     &-subtitle {
         display: block;
         position: relative;
-        font-size: 0.88888rem;
+        opacity: 0.6;
+        font-size: 0.7rem;
         line-height: 1.1;
-        letter-spacing: 0.075rem;
+        letter-spacing: 0.05rem;
         text-transform: uppercase;
-
-        @media (min-width: $md) {
-            font-size: 0.75rem;
-        }
     }
 
     &-title {
@@ -79,7 +83,7 @@
         position: relative;
         max-width: 100%;
         padding-bottom: $grid-gutter-width / 8;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         font-weight: 700;
         line-height: 1.25;
         overflow-wrap: break-word;
@@ -93,7 +97,6 @@
 
         &-arrow {
             flex: 0 0 auto;
-            width: 1.25em;
             height: 1.25em;
             margin-left: $grid-gutter-width / 6;
         }
@@ -113,7 +116,7 @@
     }
 }
 
-@media (min-width: $preview-max-width) {
+@media (min-width: $preview-max-width) and (max-width: $lg - 1) {
     .preview {
         &-link {
             &:hover,
@@ -130,10 +133,8 @@
         &-image {
             &-wrapper {
                 display: inline-block;
+                position: relative;
                 width: percentage(8/12);
-                max-width: calc(
-                    #{$preview-max-width + 2} + #{$grid-gutter-width}
-                );
                 height: auto;
             }
         }
@@ -161,14 +162,26 @@
     }
 }
 
-@media (min-width: 600px) {
+@media (min-width: $lg) {
+    .preview-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -$grid-gutter-width;
+    }
+
     .preview {
-        &-image {
-            &-wrapper {
-                max-width: calc(
-                    #{$preview-max-width + 2} + #{$grid-gutter-width * 2}
-                );
-                padding: $grid-gutter-width;
+        width: calc(#{percentage(4/12)} - #{($grid-gutter-width * 2)});
+        margin: $grid-gutter-width;
+
+        &-link {
+            &:hover,
+            &:focus {
+                .preview-image-wrapper::before {
+                    top: -$grid-gutter-width / 1.5;
+                    right: -$grid-gutter-width / 1.5;
+                    bottom: -$grid-gutter-width / 1.5;
+                    left: -$grid-gutter-width / 1.5;
+                }
             }
         }
     }

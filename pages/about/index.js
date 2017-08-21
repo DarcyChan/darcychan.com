@@ -23,7 +23,7 @@ exports.data = {
 export default class Projects extends React.Component {
     render() {
         return (
-            <PageWrapper className="page-content content-set">
+            <PageWrapper>
                 <PageJumbotron>
                     <PageTitle>About Me</PageTitle>
                     <PageLead>
@@ -72,20 +72,25 @@ export default class Projects extends React.Component {
                         </p>
                     </PageLead>
                 </PageJumbotron>
-                <p className="font-small">
-                    <em>
-                        This site was created with React and{' '}
-                        <ExternalLink href="https://www.gatsbyjs.org/" external>
-                            Gatsby
-                        </ExternalLink>. The code can be viewed on{' '}
-                        <ExternalLink
-                            href="https://github.com/DarcyChan/darcychan.com"
-                            external
-                        >
-                            my Github page
-                        </ExternalLink>.
-                    </em>
-                </p>
+                <div className="page-content">
+                    <p className="font-small">
+                        <em>
+                            This site was created with React and{' '}
+                            <ExternalLink
+                                href="https://www.gatsbyjs.org/"
+                                external
+                            >
+                                Gatsby
+                            </ExternalLink>. The code can be viewed on{' '}
+                            <ExternalLink
+                                href="https://github.com/DarcyChan/darcychan.com"
+                                external
+                            >
+                                my Github page
+                            </ExternalLink>.
+                        </em>
+                    </p>
+                </div>
             </PageWrapper>
         );
     }

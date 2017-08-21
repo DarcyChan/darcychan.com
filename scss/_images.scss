@@ -44,6 +44,7 @@ svg {
     left: 50%;
     width: 3rem;
     height: 3rem;
+    opacity: 0.1;
     transform: translate(-50%, -50%);
 }
 
@@ -70,7 +71,7 @@ $image-shadow: 0 ($grid-gutter-width / 8) ($grid-gutter-width / 2)
     background-color: #fff;
 }
 
-@media (min-width: $md) {
+@media (min-width: $sm) {
     .image-shadow-md {
         box-shadow: $image-shadow;
         background-color: #fff;

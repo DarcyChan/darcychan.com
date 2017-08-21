@@ -22,9 +22,8 @@ export default class Illustrations extends React.Component {
         const page = route.page.data;
         const artworks = getArtworksFromRoute(route, 'illustration');
         return (
-            <PageWrapper className="content-set">
+            <PageWrapper>
                 <PageJumbotron
-                    label="Casual"
                     title="Illustrations"
                     description="A collection of illustrations I have created in my spare time."
                 />

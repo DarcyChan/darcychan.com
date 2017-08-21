@@ -78,13 +78,13 @@ export default class Artwork extends React.Component {
                                 )[0].data.path
                             )}
                         >
-                            {data.category}
+                            {data.category} &#47;
                         </Link>
                     </SmallLabel>
                     <PageTitle>
                         {title || data.title}
                     </PageTitle>
-                    <PageLead>
+                    <PageLead className="page-lead-main">
                         {description}
                     </PageLead>
                     {(tasks || tools || site) &&
