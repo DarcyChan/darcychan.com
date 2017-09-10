@@ -119,6 +119,8 @@
 @media (min-width: $preview-max-width) and (max-width: $lg - 1) {
     .preview {
         &-link {
+            display: inline;
+
             &:hover,
             &:focus {
                 .preview-image-wrapper::before {

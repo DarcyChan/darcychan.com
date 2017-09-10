@@ -1,0 +1,76 @@
+.artwork-signupform {
+    //////////////////////////////////////////////////
+    // Containers
+    //////////////////////////////////////////////////
+    .form-group + .form-group {
+        margin: 1em 0;
+    }
+
+    //////////////////////////////////////////////////
+    // Labels
+    //////////////////////////////////////////////////
+
+    label {
+        display: block;
+    }
+
+    //////////////////////////////////////////////////
+    // Inputs
+    //////////////////////////////////////////////////
+
+    .form-control {
+        width: 100%;
+        padding: 0.5em 0.75em;
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        transition: border-color $transition-duration-base $transition-bezier;
+
+        &:focus {
+            border-color: #fff;
+            outline: none;
+        }
+    }
+
+    //////////////////////////////////////////////////
+    // Buttons
+    //////////////////////////////////////////////////
+
+    button {
+        position: relative;
+        margin-top: 2em;
+        padding: 0.5em 1em;
+        background-color: transparent;
+        border: 2px solid;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 100%;
+            bottom: 0;
+            left: 0;
+            background-color: currentColor;
+            opacity: 0.1;
+            transition: right $transition-duration-base $transition-bezier;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            outline: none;
+
+            &::before {
+                right: 0;
+            }
+        }
+    }
+
+    [type='submit'] {
+        padding: 0.75em 1.5em;
+        background-color: #e74c3c;
+        border: 0;
+        color: #fff;
+    }
+}

@@ -6,12 +6,12 @@ import { PreviewList } from 'components/preview';
 
 /* eslint-disable quotes */
 exports.data = {
-    id: 2,
+    id: 1,
     path: `/designs/`,
     category: `design`,
     showInMenu: true,
     title: `Designs`,
-    description: `Some miscillaneous and explorational designs I created, whether for clients or personal exercise.`,
+    description: `Some miscillaneous and explorational designs I have created, whether for clients or personal exercise.`,
     keywords: `Designs`
 };
 /* eslint-enable quotes */
@@ -25,7 +25,7 @@ export default class Designs extends React.Component {
             <PageWrapper>
                 <PageJumbotron
                     title="Designs"
-                    description="Some miscillaneous and explorational designs I created, whether for clients or personal exercise."
+                    description="Some miscillaneous and explorational designs I have created, whether for clients or personal exercise."
                 />
                 <PreviewList page={page} artworks={artworks} />
             </PageWrapper>

@@ -68,7 +68,7 @@ export default class SnazzyMaps extends React.Component {
                         src="images/screen-image-download.png"
                         alt="Snazzy Maps - Download Image Page"
                     />
-                    <div className="image-row image-shadow-md">
+                    <div className="image-row">
                         <div className="image-col">
                             <Image
                                 src="images/screen-explore-mobile.png"

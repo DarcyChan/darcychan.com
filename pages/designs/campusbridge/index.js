@@ -8,7 +8,7 @@ import { Image, SmallLabel } from 'components/common';
 
 /* eslint-disable quotes */
 exports.data = {
-    id: 0,
+    id: 1,
     path: `/designs/campusbridge/`,
     category: `design`,
     type: `artwork`,

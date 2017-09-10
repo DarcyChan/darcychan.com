@@ -71,18 +71,14 @@
 //////////////////////////////////////////////////
 
 .page-title {
-    margin: -0.05em 0 0;
+    margin: -0.15em 0 0;
     font-size: 4rem;
-    line-height: 0.9;
+    line-height: 1;
     overflow-wrap: break-word;
     word-wrap: break-word;
 
     @media (min-width: $md) {
         font-size: 5rem;
-    }
-
-    @media (min-width: $xl) {
-        font-size: 7rem;
     }
 
     .page-title-label + & {

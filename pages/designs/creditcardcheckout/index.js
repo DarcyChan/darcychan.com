@@ -6,7 +6,7 @@ import { Image } from 'components/common';
 
 /* eslint-disable quotes */
 exports.data = {
-    id: 1,
+    id: 2,
     path: `/designs/creditcardcheckout/`,
     category: `design`,
     type: `artwork`,
