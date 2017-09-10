@@ -37,6 +37,7 @@
     "scripts": {
         "develop": "gatsby develop",
         "build": "npm run lint && gatsby build",
+        "serve": "gatsby serve-build",
         "clean:public": "rimraf public",
         "clean": "npm run clean:public",
         "lint": "eslint --ext .js --ignore-pattern public ."

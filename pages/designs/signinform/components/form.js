@@ -98,9 +98,15 @@ export default class Form extends React.Component {
                                     info.defaultDesc && (
                                         <p>{info.defaultDesc}</p>
                                     )}
-                                    <button type="button" onClick={onSwitch}>
-                                        {info.toggleText}
-                                    </button>
+                                    {info &&
+                                    info.toggleText && (
+                                        <button
+                                            type="button"
+                                            onClick={onSwitch}
+                                        >
+                                            {info.toggleText}
+                                        </button>
+                                    )}
                                 </div>
                             )}
                         </Motion>
